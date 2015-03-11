@@ -9,6 +9,14 @@ package Deck;
  *
  * @author Altares
  */
-public class DeckTest {
+public class Deck {
+    private int[] list;
     
+    public Deck() {
+        list = new int[30];
+    }
+    
+    public int size() {
+        return list.length;
+    }
 }
