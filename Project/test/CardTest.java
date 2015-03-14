@@ -34,7 +34,7 @@ public class CardTest {
         String expectedString = "A Name, 1, A class, 1, 1, 1, SOME_ID";
         
         // Assertions
-        assertEquals(aCard.toString(), expectedString);
+        assertEquals(expectedString, aCard.toString());
     }
     
     @Test
@@ -94,8 +94,6 @@ public class CardTest {
         String name = "A Name";
         Object cost = 1;
         String playerClass = "A Class";
-        String text = "Some text";
-        String mechanics = "Some mechanics";
         Object attack = 1;
         Object health = 1;
         Object durability = 1;

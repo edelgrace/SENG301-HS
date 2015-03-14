@@ -28,7 +28,6 @@ public class Card {
         cost = 0;
         playerClass = null;
         attack = 0;
-        name = null;
         health = 0;
         durability = 0;
         id = null;
@@ -46,30 +45,41 @@ public class Card {
      */
     public Card(Object newName, Object newCost, Object newClass, Object newAttack, Object newHealth, Object newDurability, Object newID)
     {
+        // Change name
         if(newName != null) {  name = (String) newName; }
         
+        // Change cost
         if(newCost != null) {
             if(newCost instanceof Long) { cost = (int) (long) newCost; }
             else { cost = (int) newCost; }
         }
+        else { cost = 0; }
         
+        // Change class
         if(newClass != null) {  playerClass = (String) newClass; }
         
+        // Change attack
         if(newAttack != null) {
             if(newAttack instanceof Long) { attack = (int) (long) newAttack; }
-            else { cost = (int) newCost; }
+            else { attack = (int) newCost; }
         }
+        else { attack = 0; }
         
+        // Change health
         if(newHealth != null) {
             if(newHealth instanceof Long) { health = (int) (long) newHealth; }
-            else { cost = (int) newCost; }
+            else { health = (int) newCost; }
         }
+        else { health = 0; }
         
+        // Change durability
         if(newDurability != null) {
             if(newDurability instanceof Long) { durability = (int) (long) newDurability; }
-            else { cost = (int) newCost; }
+            else { durability = (int) newCost; }
         }
+        else { durability = 0; }
         
+        // Change ID
         if(newID != null) {  id = (String) newID; }
     }
     
