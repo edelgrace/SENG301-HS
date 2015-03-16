@@ -18,22 +18,24 @@ import java.io.*;
 import java.util.Iterator;
 
 public class CardCollection {
+    private Card[] cardList;
+    private int cardListSize = 210;
+  
     
-    
-    public static void main(String[] args) {
-        
-        JSONObject[] cardList;
-        cardList = new JSONObject[210];
+    public CardCollection() {
         
         try {
             FileReader path = new FileReader("C:\\Users\\Altares\\Desktop\\Copy\\SCHOOL\\[2015 - WINTER]\\SENG 301\\HS\\SENG301-HS\\Project\\src\\Cards\\Basic.enGB.json");
    
             // read the json file
             JSONParser jsonParser = new JSONParser();
-            JSONArray jsonarray = (JSONArray) jsonParser.parse(path);
+            JSONArray list;
+            list = (JSONArray) jsonParser.parse(path);
             
-            for(int i = 0; i < jsonarray.size(); i++) {
-                JSONObject card = (JSONObject) jsonarray.get(i);
+            cardList = new Card[list.size()];
+            
+            for(int i = 0; i < list.size(); i++) {
+                JSONObject card = (JSONObject) list.get(i);
                 
                 Object name = card.get("name");
                 Object cost = card.get("cost");
@@ -45,11 +47,19 @@ public class CardCollection {
                 
                 Card aCard = new Card(name, cost, playerClass, attack, health, durability, id);
                 
-                System.out.println(aCard);
+                cardList[i] = aCard;
             }
         }
         catch (Exception e){
             e.printStackTrace();
         }
+    }
+    
+    public Card get(int i) {
+        return cardList[i];
+    }
+    
+    public int getSize() {
+        return cardListSize;
     }
 }
