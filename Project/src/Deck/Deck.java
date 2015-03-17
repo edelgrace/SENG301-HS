@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Deck;
 
-/**
- *
- * @author Altares
- */
 public class Deck {
     private String[] list;              // Array that stores all the cards
     private int next = 0;               // Pointer pointing to next index of array
