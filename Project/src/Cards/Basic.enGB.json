@@ -1,11 +1,5 @@
 [
     {
-        "id":"GAME_004",
-        "name":"AFK",
-        "type":"Enchantment",
-        "text":"Your turns are shorter."
-    },
-    {
         "id":"EX1_066",
         "name":"Acidic Swamp Ooze",
         "type":"Minion",
@@ -19,9 +13,7 @@
         "artist":"Chris Rahn",
         "collectible":true,
         "howToGetGold":"Unlocked at Rogue Level 57.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
     {
         "id":"CS2_041",
@@ -38,16 +30,7 @@
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 15."
     },
-    {
-        "id":"CS2_041e",
-        "name":"Ancestral Infusion",
-        "type":"Enchantment",
-        "text":"Taunt.",
-        "playerClass":"Shaman",
-        "mechanics":[
-            "Taunt"
-        ]
-    },
+    
     {
         "id":"HERO_09",
         "name":"Anduin Wrynn",
@@ -116,9 +99,7 @@
         "playerClass":"Mage",
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 32.",
-        "mechanics":[
-            "ImmuneToSpellpower"
-        ]
+        "mechanics":["ImmuneToSpellpower"]
     },
     {
         "id":"DS1_185",
@@ -165,9 +146,7 @@
         "artist":"Steve Ellis",
         "collectible":true,
         "howToGetGold":"Unlocked at Mage Level 57.",
-        "mechanics":[
-            "Spellpower"
-        ]
+        "mechanics":["Spellpower"]
     },
     {
         "id":"CS2_102",
@@ -210,16 +189,7 @@
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 47."
     },
-    {
-        "id":"GAME_002",
-        "name":"Avatar of the Coin",
-        "type":"Minion",
-        "rarity":"Free",
-        "cost":0,
-        "attack":1,
-        "health":1,
-        "text":"<i>You lost the coin flip, but gained a friend.</i>"
-    },
+    
     {
         "id":"CS2_072",
         "name":"Backstab",
@@ -235,12 +205,7 @@
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 36."
     },
-    {
-        "id":"EX1_399e",
-        "name":"Berserking",
-        "type":"Enchantment",
-        "text":"This minion has increased Attack."
-    },
+  
     {
         "id":"CS2_092",
         "name":"Blessing of Kings",
@@ -256,13 +221,7 @@
         "howToGet":"Unlocked at Level 10.",
         "howToGetGold":"Unlocked at Level 49."
     },
-    {
-        "id":"CS2_092e",
-        "name":"Blessing of Kings",
-        "type":"Enchantment",
-        "text":"+4/+4.",
-        "playerClass":"Paladin"
-    },
+    
     {
         "id":"CS2_087",
         "name":"Blessing of Might",
@@ -278,14 +237,7 @@
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 45."
     },
-    {
-        "id":"CS2_087e",
-        "name":"Blessing of Might",
-        "type":"Enchantment",
-        "faction":"Neutral",
-        "text":"+3 Attack.",
-        "playerClass":"Paladin"
-    },
+  
     {
         "id":"CS2_172",
         "name":"Bloodfen Raptor",
@@ -301,16 +253,7 @@
         "race":"Beast",
         "howToGetGold":"Unlocked at Hunter Level 57."
     },
-    {
-        "id":"CS2_046e",
-        "name":"Bloodlust",
-        "type":"Enchantment",
-        "text":"+3 Attack this turn.",
-        "playerClass":"Shaman",
-        "mechanics":[
-            "OneTurnEffect"
-        ]
-    },
+  
     {
         "id":"CS2_046",
         "name":"Bloodlust",
@@ -341,21 +284,9 @@
         "collectible":true,
         "race":"Murloc",
         "howToGetGold":"Unlocked at Paladin Level 53.",
-        "mechanics":[
-            "Charge"
-        ]
+        "mechanics":["Charge"]
     },
-    {
-        "id":"CS2_boar",
-        "name":"Boar",
-        "type":"Minion",
-        "faction":"Neutral",
-        "rarity":"Common",
-        "cost":1,
-        "attack":1,
-        "health":1,
-        "race":"Beast"
-    },
+    
     {
         "id":"CS2_187",
         "name":"Booty Bay Bodyguard",
@@ -370,9 +301,7 @@
         "artist":"Matt Cavotta",
         "collectible":true,
         "howToGetGold":"Unlocked at Shaman Level 55.",
-        "mechanics":[
-            "Taunt"
-        ]
+        "mechanics":["Taunt"]
     },
     {
         "id":"CS2_200",
@@ -402,27 +331,7 @@
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 23."
     },
-    {
-        "id":"EX1_084e",
-        "name":"Charge",
-        "type":"Enchantment",
-        "text":"This minion has <b>Charge</b>.",
-        "playerClass":"Warrior"
-    },
-    {
-        "id":"DS1_178e",
-        "name":"Charge",
-        "type":"Enchantment",
-        "text":"Tundra Rhino grants <b>Charge</b>.",
-        "playerClass":"Hunter"
-    },
-    {
-        "id":"CS2_103e2",
-        "name":"Charge",
-        "type":"Enchantment",
-        "text":"+2 Attack and <b>Charge</b>.",
-        "playerClass":"Warrior"
-    },
+    
     {
         "id":"CS2_182",
         "name":"Chillwind Yeti",
@@ -437,16 +346,7 @@
         "collectible":true,
         "howToGetGold":"Unlocked at Warrior Level 55."
     },
-    {
-        "id":"CS2_005o",
-        "name":"Claw",
-        "type":"Enchantment",
-        "text":"+2 Attack this turn.",
-        "playerClass":"Druid",
-        "mechanics":[
-            "OneTurnEffect"
-        ]
-    },
+   
     {
         "id":"CS2_005",
         "name":"Claw",
@@ -462,16 +362,7 @@
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 32."
     },
-    {
-        "id":"CS2_017o",
-        "name":"Claws",
-        "type":"Enchantment",
-        "text":"Your hero has +1 Attack this turn.",
-        "playerClass":"Druid",
-        "mechanics":[
-            "OneTurnEffect"
-        ]
-    },
+    
     {
         "id":"CS2_114",
         "name":"Cleave",
@@ -487,25 +378,7 @@
         "howToGet":"Unlocked at Level 2.",
         "howToGetGold":"Unlocked at Level 40."
     },
-    {
-        "id":"EX1_019e",
-        "name":"Cleric's Blessing",
-        "type":"Enchantment",
-        "text":"+1/+1.",
-        "playerClass":"Priest"
-    },
-    {
-        "id":"GAME_003",
-        "name":"Coin's Vengeance",
-        "type":"Enchantment",
-        "text":"Going second makes your first minion stronger."
-    },
-    {
-        "id":"GAME_003e",
-        "name":"Coin's Vengence",
-        "type":"Enchantment",
-        "text":"Going second makes your first minion stronger."
-    },
+    
     {
         "id":"CS2_093",
         "name":"Consecration",
@@ -550,13 +423,7 @@
         "howToGet":"Unlocked at Level 2.",
         "howToGetGold":"Unlocked at Level 32."
     },
-    {
-        "id":"CS2_063e",
-        "name":"Corruption",
-        "type":"Enchantment",
-        "text":"At the start of the corrupting player's turn, destroy this minion.",
-        "playerClass":"Warlock"
-    },
+    
     {
         "id":"CS2_083b",
         "name":"Dagger Mastery",
@@ -581,9 +448,7 @@
         "artist":"Jim Nelson",
         "collectible":true,
         "howToGetGold":"Unlocked at Mage Level 59.",
-        "mechanics":[
-            "Spellpower"
-        ]
+        "mechanics":["Spellpower"]
     },
     {
         "id":"DS1_055",
@@ -599,16 +464,9 @@
         "artist":"Jesper Ejsing",
         "collectible":true,
         "howToGetGold":"Unlocked at Priest Level 55.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
-    {
-        "id":"CS2_074e",
-        "name":"Deadly Poison",
-        "type":"Enchantment",
-        "text":"+2 Attack."
-    },
+    
     {
         "id":"CS2_074",
         "name":"Deadly Poison",
@@ -624,13 +482,7 @@
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 43."
     },
-    {
-        "id":"CS2_236e",
-        "name":"Divine Spirit",
-        "type":"Enchantment",
-        "text":"This minion has double Health.",
-        "playerClass":"Priest"
-    },
+   
     {
         "id":"CS2_236",
         "name":"Divine Spirit",
@@ -659,9 +511,7 @@
         "artist":"Warren Mahy",
         "collectible":true,
         "howToGetGold":"Unlocked at Mage Level 53.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
     {
         "id":"CS2_061",
@@ -695,9 +545,7 @@
         "playerClass":"Warlock",
         "howToGet":"Unlocked at Level 10.",
         "howToGetGold":"Unlocked at Level 23.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
     {
         "id":"CS2_189",
@@ -713,24 +561,9 @@
         "artist":"Steve Prescott",
         "collectible":true,
         "howToGetGold":"Unlocked at Druid Level 57.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
-    {
-        "id":"CS2_122e",
-        "name":"Enhanced",
-        "type":"Enchantment",
-        "text":"Raid Leader is granting this minion +1 Attack."
-    },
-    {
-        "id":"CS2_013t",
-        "name":"Excess Mana",
-        "type":"Spell",
-        "cost":0,
-        "text":"Draw a card. <i>(You can only have 10 Mana in your tray.)</i>",
-        "playerClass":"Druid"
-    },
+  
     {
         "id":"CS2_108",
         "name":"Execute",
@@ -746,13 +579,7 @@
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 47."
     },
-    {
-        "id":"NEW1_033o",
-        "name":"Eye In The Sky",
-        "type":"Enchantment",
-        "text":"Leokk is granting this minion +1 Attack.",
-        "playerClass":"Hunter"
-    },
+    
     {
         "id":"EX1_129",
         "name":"Fan of Knives",
@@ -800,9 +627,7 @@
         "playerClass":"Shaman",
         "howToGet":"Unlocked at Level 10.",
         "howToGetGold":"Unlocked at Level 49.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
     {
         "id":"CS2_029",
@@ -844,13 +669,7 @@
         "howToGet":"Unlocked at Level 10.",
         "howToGetGold":"Unlocked at Level 51."
     },
-    {
-        "id":"EX1_565o",
-        "name":"Flametongue",
-        "type":"Enchantment",
-        "text":"+2 Attack from Flametongue Totem.",
-        "playerClass":"Shaman"
-    },
+    
     {
         "id":"EX1_565",
         "name":"Flametongue Totem",
@@ -869,26 +688,9 @@
         "playerClass":"Shaman",
         "howToGet":"Unlocked at Level 4.",
         "howToGetGold":"Unlocked at Level 43.",
-        "mechanics":[
-            "AdjacentBuff",
-            "Aura"
-        ]
+        "mechanics":["AdjacentBuff","Aura"]
     },
-    {
-        "id":"hexfrog",
-        "name":"Frog",
-        "type":"Minion",
-        "faction":"Neutral",
-        "rarity":"Common",
-        "attack":0,
-        "health":1,
-        "text":"<b>Taunt</b>",
-        "race":"Beast",
-        "mechanics":[
-            "Taunt"
-        ],
-        "cost":0
-    },
+    
     {
         "id":"CS2_026",
         "name":"Frost Nova",
@@ -903,9 +705,7 @@
         "playerClass":"Mage",
         "howToGet":"Unlocked at Level 6.",
         "howToGetGold":"Unlocked at Level 23.",
-        "mechanics":[
-            "Freeze"
-        ]
+        "mechanics":["Freeze"]
     },
     {
         "id":"CS2_037",
@@ -921,9 +721,7 @@
         "playerClass":"Shaman",
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 32.",
-        "mechanics":[
-            "Freeze"
-        ]
+        "mechanics":["Freeze"]
     },
     {
         "id":"CS2_024",
@@ -939,16 +737,9 @@
         "playerClass":"Mage",
         "howToGet":"Unlocked at Level 2.",
         "howToGetGold":"Unlocked at Level 40.",
-        "mechanics":[
-            "Freeze"
-        ]
+        "mechanics":["Freeze"]
     },
-    {
-        "id":"CS2_226e",
-        "name":"Frostwolf Banner",
-        "type":"Enchantment",
-        "text":"Increased stats."
-    },
+   
     {
         "id":"CS2_121",
         "name":"Frostwolf Grunt",
@@ -963,9 +754,7 @@
         "artist":"Richie Marella",
         "collectible":true,
         "howToGetGold":"Unlocked at Shaman Level 57.",
-        "mechanics":[
-            "Taunt"
-        ]
+        "mechanics":["Taunt"]
     },
     {
         "id":"CS2_226",
@@ -982,17 +771,9 @@
         "artist":"James Ryman",
         "collectible":true,
         "howToGetGold":"Unlocked at Shaman Level 53.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
-    {
-        "id":"DS1_175o",
-        "name":"Furious Howl",
-        "type":"Enchantment",
-        "text":"This Beast has +1 Attack from Timber Wolf.",
-        "playerClass":"Hunter"
-    },
+   
     {
         "id":"HERO_01",
         "name":"Garrosh Hellscream",
@@ -1017,9 +798,7 @@
         "artist":"Court Jones",
         "collectible":true,
         "howToGetGold":"Unlocked at Priest Level 57.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
     {
         "id":"CS1_042",
@@ -1035,9 +814,7 @@
         "artist":"Donato Giancola",
         "collectible":true,
         "howToGetGold":"Unlocked at Paladin Level 57.",
-        "mechanics":[
-            "Taunt"
-        ]
+        "mechanics":["Taunt"]
     },
     {
         "id":"EX1_508",
@@ -1055,9 +832,7 @@
         "collectible":true,
         "race":"Murloc",
         "howToGetGold":"Unlocked at Warlock Level 53.",
-        "mechanics":[
-            "Aura"
-        ]
+        "mechanics":["Aura"]
     },
     {
         "id":"CS2_088",
@@ -1075,9 +850,7 @@
         "playerClass":"Paladin",
         "howToGet":"Unlocked at Level 8.",
         "howToGetGold":"Unlocked at Level 47.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
     {
         "id":"HERO_07",
@@ -1134,18 +907,7 @@
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 23."
     },
-    {
-        "id":"NEW1_009",
-        "name":"Healing Totem",
-        "type":"Minion",
-        "rarity":"Free",
-        "cost":1,
-        "attack":0,
-        "health":2,
-        "text":"At the end of your turn, restore 1 Health to all friendly minions.",
-        "race":"Totem",
-        "playerClass":"Shaman"
-    },
+   
     {
         "id":"CS2_007",
         "name":"Healing Touch",
@@ -1176,16 +938,7 @@
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 49."
     },
-    {
-        "id":"CS2_105e",
-        "name":"Heroic Strike",
-        "type":"Enchantment",
-        "text":"+4 Attack this turn.",
-        "playerClass":"Warrior",
-        "mechanics":[
-            "OneTurnEffect"
-        ]
-    },
+    
     {
         "id":"CS2_105",
         "name":"Heroic Strike",
@@ -1216,16 +969,7 @@
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 47."
     },
-    {
-        "id":"EX1_246e",
-        "name":"Hexxed",
-        "type":"Enchantment",
-        "text":"This minion has been transformed!",
-        "playerClass":"Shaman",
-        "mechanics":[
-            "Morph"
-        ]
-    },
+    
     {
         "id":"CS2_089",
         "name":"Holy Light",
@@ -1288,33 +1032,9 @@
         "playerClass":"Hunter",
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 28.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
-    {
-        "id":"NEW1_034",
-        "name":"Huffer",
-        "type":"Minion",
-        "rarity":"Common",
-        "cost":3,
-        "attack":4,
-        "health":2,
-        "text":"<b>Charge</b>",
-        "race":"Beast",
-        "playerClass":"Hunter",
-        "mechanics":[
-            "Charge"
-        ]
-    },
-    {
-        "id":"EX1_360e",
-        "name":"Humility",
-        "type":"Enchantment",
-        "faction":"Neutral",
-        "text":"Attack has been changed to 1.",
-        "playerClass":"Paladin"
-    },
+
     {
         "id":"EX1_360",
         "name":"Humility",
@@ -1330,13 +1050,7 @@
         "howToGet":"Unlocked at Level 6.",
         "howToGetGold":"Unlocked at Level 28."
     },
-    {
-        "id":"CS2_084e",
-        "name":"Hunter's Mark",
-        "type":"Enchantment",
-        "text":"This minion has 1 Health.",
-        "playerClass":"Hunter"
-    },
+   
     {
         "id":"CS2_084",
         "name":"Hunter's Mark",
@@ -1383,9 +1097,7 @@
         "playerClass":"Druid",
         "howToGet":"Unlocked at Level 10.",
         "howToGetGold":"Unlocked at Level 49.",
-        "mechanics":[
-            "Taunt"
-        ]
+        "mechanics":["Taunt"]
     },
     {
         "id":"CS2_141",
@@ -1401,9 +1113,7 @@
         "artist":"Tooth",
         "collectible":true,
         "howToGetGold":"Unlocked at Mage Level 55.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
     {
         "id":"CS2_125",
@@ -1420,9 +1130,7 @@
         "collectible":true,
         "race":"Beast",
         "howToGetGold":"Unlocked at Hunter Level 59.",
-        "mechanics":[
-            "Taunt"
-        ]
+        "mechanics":["Taunt"]
     },
     {
         "id":"HERO_08",
@@ -1463,9 +1171,7 @@
         "artist":"Gabor Szikszai",
         "collectible":true,
         "howToGetGold":"Unlocked at Warlock Level 59.",
-        "mechanics":[
-            "Spellpower"
-        ]
+        "mechanics":["Spellpower"]
     },
     {
         "id":"NEW1_011",
@@ -1482,22 +1188,9 @@
         "playerClass":"Warrior",
         "howToGet":"Unlocked at Level 4.",
         "howToGetGold":"Unlocked at Level 44.",
-        "mechanics":[
-            "Charge"
-        ]
+        "mechanics":["Charge"]
     },
-    {
-        "id":"NEW1_033",
-        "name":"Leokk",
-        "type":"Minion",
-        "rarity":"Common",
-        "cost":3,
-        "attack":2,
-        "health":4,
-        "text":"Other friendly minions have +1 Attack.",
-        "race":"Beast",
-        "playerClass":"Hunter"
-    },
+    
     {
         "id":"CS1h_001",
         "name":"Lesser Heal",
@@ -1548,16 +1241,9 @@
         "artist":"E.M. Gist",
         "collectible":true,
         "howToGetGold":"Unlocked at Priest Level 59.",
-        "mechanics":[
-            "Taunt"
-        ]
+        "mechanics":["Taunt"]
     },
-    {
-        "id":"GAME_001",
-        "name":"Luck of the Coin",
-        "type":"Enchantment",
-        "text":"Going second grants you increased Health."
-    },
+    
     {
         "id":"CS2_118",
         "name":"Magma Rager",
@@ -1596,37 +1282,7 @@
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 28."
     },
-    {
-        "id":"CS2_009e",
-        "name":"Mark of the Wild",
-        "type":"Enchantment",
-        "text":"This minion has +2/+2 and <b>Taunt</b>.",
-        "playerClass":"Druid"
-    },
-    {
-        "id":"DS1_070o",
-        "name":"Master's Presence",
-        "type":"Enchantment",
-        "text":"+2/+2 and <b>Taunt</b>.",
-        "playerClass":"Hunter"
-    },
-    {
-        "id":"EX1_025t",
-        "name":"Mechanical Dragonling",
-        "type":"Minion",
-        "faction":"Neutral",
-        "rarity":"Common",
-        "cost":1,
-        "attack":2,
-        "health":1,
-        "race":"Mech"
-    },
-    {
-        "id":"CS2_222o",
-        "name":"Might of Stormwind",
-        "type":"Enchantment",
-        "text":"Has +1/+1."
-    },
+   
     {
         "id":"DS1_233",
         "name":"Mind Blast",
@@ -1657,15 +1313,7 @@
         "howToGet":"Unlocked at Level 10.",
         "howToGetGold":"Unlocked at Level 49."
     },
-    {
-        "id":"CS1_113e",
-        "name":"Mind Control",
-        "type":"Enchantment",
-        "faction":"Neutral",
-        "rarity":"Common",
-        "text":"This minion has switched controllers.",
-        "playerClass":"Priest"
-    },
+    
     {
         "id":"CS2_003",
         "name":"Mind Vision",
@@ -1681,21 +1329,7 @@
         "howToGet":"Unlocked at Level 4.",
         "howToGetGold":"Unlocked at Level 32."
     },
-    {
-        "id":"CS2_mirror",
-        "name":"Mirror Image",
-        "type":"Minion",
-        "faction":"Neutral",
-        "rarity":"Common",
-        "cost":0,
-        "attack":0,
-        "health":2,
-        "text":"<b>Taunt</b>",
-        "playerClass":"Mage",
-        "mechanics":[
-            "Taunt"
-        ]
-    },
+    
     {
         "id":"CS2_027",
         "name":"Mirror Image",
@@ -1711,27 +1345,7 @@
         "howToGet":"Unlocked at Level 4.",
         "howToGetGold":"Unlocked at Level 36."
     },
-    {
-        "id":"NEW1_032",
-        "name":"Misha",
-        "type":"Minion",
-        "rarity":"Common",
-        "cost":3,
-        "attack":4,
-        "health":4,
-        "text":"<b>Taunt</b>",
-        "race":"Beast",
-        "playerClass":"Hunter",
-        "mechanics":[
-            "Taunt"
-        ]
-    },
-    {
-        "id":"EX1_508o",
-        "name":"Mlarggragllabl!",
-        "type":"Enchantment",
-        "text":"This Murloc has +1 Attack."
-    },
+    
     {
         "id":"CS2_008",
         "name":"Moonfire",
@@ -1792,17 +1406,7 @@
         "race":"Murloc",
         "howToGetGold":"Unlocked at Priest Level 51."
     },
-    {
-        "id":"EX1_506a",
-        "name":"Murloc Scout",
-        "type":"Minion",
-        "faction":"Neutral",
-        "rarity":"Common",
-        "cost":0,
-        "attack":1,
-        "health":1,
-        "race":"Murloc"
-    },
+    
     {
         "id":"EX1_506",
         "name":"Murloc Tidehunter",
@@ -1822,14 +1426,7 @@
             "Battlecry"
         ]
     },
-    {
-        "id":"GAME_006",
-        "name":"NOOOOOOOOOOOO",
-        "type":"Spell",
-        "cost":2,
-        "text":"Somehow, the card you USED to have has been deleted.  Here, have this one instead!",
-        "flavor":"Even your flavor text has been deleted. Dang."
-    },
+    
     {
         "id":"EX1_593",
         "name":"Nightblade",
@@ -1844,9 +1441,7 @@
         "artist":"Raymond Swanland",
         "collectible":true,
         "howToGetGold":"Unlocked at Druid Level 53.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
     {
         "id":"CS2_235",
@@ -1863,9 +1458,7 @@
         "playerClass":"Priest",
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 40.",
-        "mechanics":[
-            "HealTarget"
-        ]
+        "mechanics":["HealTarget"]
     },
     {
         "id":"EX1_015",
@@ -1881,9 +1474,7 @@
         "artist":"Karl Richardson",
         "collectible":true,
         "howToGetGold":"Unlocked at Druid Level 59.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
     {
         "id":"CS2_119",
@@ -1913,22 +1504,9 @@
         "artist":"James Ryman",
         "collectible":true,
         "howToGetGold":"Unlocked at Warlock Level 55.",
-        "mechanics":[
-            "Spellpower"
-        ]
+        "mechanics":["Spellpower"]
     },
-    {
-        "id":"CS2_022e",
-        "name":"Polymorph",
-        "type":"Enchantment",
-        "faction":"Neutral",
-        "rarity":"Common",
-        "text":"This minion has been transformed into a 1/1 Sheep.",
-        "playerClass":"Mage",
-        "mechanics":[
-            "Morph"
-        ]
-    },
+    
     {
         "id":"CS2_022",
         "name":"Polymorph",
@@ -1959,13 +1537,7 @@
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 47."
     },
-    {
-        "id":"CS2_004e",
-        "name":"Power Word: Shield",
-        "type":"Enchantment",
-        "text":"+2 Health.",
-        "playerClass":"Priest"
-    },
+    
     {
         "id":"CS2_122",
         "name":"Raid Leader",
@@ -1980,9 +1552,7 @@
         "artist":"Phill Gonzales",
         "collectible":true,
         "howToGetGold":"Unlocked at Warrior Level 57.",
-        "mechanics":[
-            "Aura"
-        ]
+        "mechanics":["Aura"]
     },
     {
         "id":"CS2_196",
@@ -1998,9 +1568,7 @@
         "artist":"Clint Langley",
         "collectible":true,
         "howToGetGold":"Unlocked at Hunter Level 55.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
     {
         "id":"CS2_213",
@@ -2016,9 +1584,7 @@
         "artist":"John Polidora",
         "collectible":true,
         "howToGetGold":"Unlocked at Shaman Level 59.",
-        "mechanics":[
-            "Charge"
-        ]
+        "mechanics":["Charge"]
     },
     {
         "id":"CS2_101",
@@ -2054,16 +1620,7 @@
         "race":"Beast",
         "howToGetGold":"Unlocked at Druid Level 55."
     },
-    {
-        "id":"CS2_045e",
-        "name":"Rockbiter Weapon",
-        "type":"Enchantment",
-        "text":"This character has +3 Attack this turn.",
-        "playerClass":"Shaman",
-        "mechanics":[
-            "OneTurnEffect"
-        ]
-    },
+    
     {
         "id":"CS2_045",
         "name":"Rockbiter Weapon",
@@ -2123,28 +1680,7 @@
         "howToGet":"Unlocked at Level 4.",
         "howToGetGold":"Unlocked at Level 43."
     },
-    {
-        "id":"CS2_011o",
-        "name":"Savage Roar",
-        "type":"Enchantment",
-        "text":"+2 Attack this turn.",
-        "playerClass":"Druid",
-        "mechanics":[
-            "OneTurnEffect"
-        ]
-    },
-    {
-        "id":"CS2_050",
-        "name":"Searing Totem",
-        "type":"Minion",
-        "faction":"Neutral",
-        "rarity":"Free",
-        "cost":1,
-        "attack":1,
-        "health":1,
-        "race":"Totem",
-        "playerClass":"Shaman"
-    },
+    
     {
         "id":"CS2_179",
         "name":"Sen'jin Shieldmasta",
@@ -2159,9 +1695,7 @@
         "artist":"Brian Despain",
         "collectible":true,
         "howToGetGold":"Unlocked at Rogue Level 59.",
-        "mechanics":[
-            "Taunt"
-        ]
+        "mechanics":["Taunt"]
     },
     {
         "id":"CS2_057",
@@ -2216,16 +1750,7 @@
         "text":"<b>Hero Power</b>\n+1 Attack this turn.\n+1 Armor.",
         "playerClass":"Druid"
     },
-    {
-        "id":"CS2_083e",
-        "name":"Sharpened",
-        "type":"Enchantment",
-        "text":"+1 Attack this turn.",
-        "playerClass":"Rogue",
-        "mechanics":[
-            "OneTurnEffect"
-        ]
-    },
+   
     {
         "id":"EX1_019",
         "name":"Shattered Sun Cleric",
@@ -2240,21 +1765,9 @@
         "artist":"Doug Alexander",
         "collectible":true,
         "howToGetGold":"Unlocked at Priest Level 53.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
-    {
-        "id":"CS2_tk1",
-        "name":"Sheep",
-        "type":"Minion",
-        "faction":"Neutral",
-        "rarity":"Common",
-        "attack":1,
-        "health":1,
-        "race":"Beast",
-        "cost":0
-    },
+    
     {
         "id":"EX1_606",
         "name":"Shield Block",
@@ -2285,16 +1798,7 @@
         "howToGet":"Unlocked at Level 6.",
         "howToGetGold":"Unlocked at Level 45."
     },
-    {
-        "id":"CS2_101t",
-        "name":"Silver Hand Recruit",
-        "type":"Minion",
-        "rarity":"Free",
-        "cost":1,
-        "attack":1,
-        "health":1,
-        "playerClass":"Paladin"
-    },
+    
     {
         "id":"CS2_127",
         "name":"Silverback Patriarch",
@@ -2310,9 +1814,7 @@
         "collectible":true,
         "race":"Beast",
         "howToGetGold":"Unlocked at Warrior Level 53.",
-        "mechanics":[
-            "Taunt"
-        ]
+        "mechanics":["Taunt"]
     },
     {
         "id":"CS2_075",
@@ -2329,17 +1831,7 @@
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 15."
     },
-    {
-        "id":"skele11",
-        "name":"Skeleton",
-        "type":"Minion",
-        "faction":"Neutral",
-        "rarity":"Common",
-        "cost":1,
-        "attack":1,
-        "health":1,
-        "text":"<b></b>"
-    },
+    
     {
         "id":"EX1_308",
         "name":"Soulfire",
@@ -2413,22 +1905,7 @@
         "text":"<b>Hero Power</b>\nDeal 2 damage to the enemy hero.",
         "playerClass":"Hunter"
     },
-    {
-        "id":"CS2_051",
-        "name":"Stoneclaw Totem",
-        "type":"Minion",
-        "faction":"Neutral",
-        "rarity":"Free",
-        "cost":1,
-        "attack":0,
-        "health":2,
-        "text":"<b>Taunt</b>",
-        "race":"Totem",
-        "playerClass":"Shaman",
-        "mechanics":[
-            "Taunt"
-        ]
-    },
+   
     {
         "id":"CS2_171",
         "name":"Stonetusk Boar",
@@ -2444,9 +1921,7 @@
         "collectible":true,
         "race":"Beast",
         "howToGetGold":"Unlocked at Hunter Level 53.",
-        "mechanics":[
-            "Charge"
-        ]
+        "mechanics":["Charge"]
     },
     {
         "id":"CS2_150",
@@ -2462,9 +1937,7 @@
         "artist":"Kev Walker",
         "collectible":true,
         "howToGetGold":"Unlocked at Paladin Level 51.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
     {
         "id":"CS2_222",
@@ -2481,9 +1954,7 @@
         "artist":"Doug Alexander",
         "collectible":true,
         "howToGetGold":"Unlocked at Paladin Level 59.",
-        "mechanics":[
-            "Aura"
-        ]
+        "mechanics":["Aura"]
     },
     {
         "id":"CS2_131",
@@ -2499,9 +1970,7 @@
         "artist":"Ladronn",
         "collectible":true,
         "howToGetGold":"Unlocked at Paladin Level 55.",
-        "mechanics":[
-            "Charge"
-        ]
+        "mechanics":["Charge"]
     },
     {
         "id":"EX1_306",
@@ -2520,9 +1989,7 @@
         "playerClass":"Warlock",
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 40.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
     {
         "id":"CS2_012",
@@ -2539,17 +2006,7 @@
         "howToGet":"Unlocked at Level 8.",
         "howToGetGold":"Unlocked at Level 47."
     },
-    {
-        "id":"GAME_005",
-        "name":"The Coin",
-        "type":"Spell",
-        "text":"Gain 1 Mana Crystal this turn only."
-    },
-    {
-        "id":"GAME_005e",
-        "name":"The Coin",
-        "type":"Enchantment"
-    },
+   
     {
         "id":"HERO_02",
         "name":"Thrall",
@@ -2577,9 +2034,7 @@
         "playerClass":"Hunter",
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 23.",
-        "mechanics":[
-            "Aura"
-        ]
+        "mechanics":["Aura"]
     },
     {
         "id":"CS2_049",
@@ -2591,13 +2046,7 @@
         "text":"<b>Hero Power</b>\nSummon a random Totem.",
         "playerClass":"Shaman"
     },
-    {
-        "id":"EX1_244e",
-        "name":"Totemic Might",
-        "type":"Enchantment",
-        "text":"+2 Health.",
-        "playerClass":"Shaman"
-    },
+    
     {
         "id":"EX1_244",
         "name":"Totemic Might",
@@ -2713,9 +2162,7 @@
         "playerClass":"Warlock",
         "howToGet":"Unlocked at Level 1.",
         "howToGetGold":"Unlocked at Level 36.",
-        "mechanics":[
-            "Taunt"
-        ]
+        "mechanics":["Taunt"]
     },
     {
         "id":"EX1_011",
@@ -2731,9 +2178,7 @@
         "artist":"Karl Richardson",
         "collectible":true,
         "howToGetGold":"Unlocked at Rogue Level 55.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
     {
         "id":"CS2_186",
@@ -2783,9 +2228,7 @@
         "playerClass":"Mage",
         "howToGet":"Unlocked at Level 8.",
         "howToGetGold":"Unlocked at Level 49.",
-        "mechanics":[
-            "Freeze"
-        ]
+        "mechanics":["Freeze"]
     },
     {
         "id":"EX1_400",
@@ -2802,17 +2245,7 @@
         "howToGet":"Unlocked at Level 6.",
         "howToGetGold":"Unlocked at Level 32."
     },
-    {
-        "id":"CS2_082",
-        "name":"Wicked Knife",
-        "type":"Weapon",
-        "faction":"Neutral",
-        "rarity":"Free",
-        "cost":1,
-        "attack":1,
-        "durability":2,
-        "playerClass":"Rogue"
-    },
+    
     {
         "id":"CS2_013",
         "name":"Wild Growth",
@@ -2859,9 +2292,7 @@
         "playerClass":"Shaman",
         "howToGet":"Unlocked at Level 8.",
         "howToGetGold":"Unlocked at Level 45.",
-        "mechanics":[
-            "Battlecry"
-        ]
+        "mechanics":["Battlecry"]
     },
     {
         "id":"CS2_124",
@@ -2877,9 +2308,7 @@
         "artist":"Dany Orizio",
         "collectible":true,
         "howToGetGold":"Unlocked at Warrior Level 59.",
-        "mechanics":[
-            "Charge"
-        ]
+        "mechanics":["Charge"]
     },
     {
         "id":"CS2_052",
@@ -2893,8 +2322,6 @@
         "text":"<b>Spell Damage +1</b>",
         "race":"Totem",
         "playerClass":"Shaman",
-        "mechanics":[
-            "Spellpower"
-        ]
+        "mechanics":["Spellpower"]
     }
 ]
