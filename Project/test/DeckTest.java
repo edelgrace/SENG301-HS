@@ -57,8 +57,4 @@ public class DeckTest {
         assertArrayEquals("Deck is empty.", expectedList, aDeck.toArray());
         assertEquals("Size of deck does not equal 30.", expectedSize, aDeck.size());
     }
-    
-    /* CONTROLLER TESTS */
-    
-    /* VIEW TESTS */
 }

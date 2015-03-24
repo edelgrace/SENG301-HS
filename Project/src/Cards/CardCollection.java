@@ -71,6 +71,7 @@ public class CardCollection {
         String[] result = new String[cardListSize];
         int pointer = 0;
         
+        /* find card */
         for(int i = 0; i < cardListSize; i++) {
             Card aCard = this.get(i);
             String aCardName = aCard.getName();

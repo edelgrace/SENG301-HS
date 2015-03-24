@@ -3,9 +3,10 @@ package Deck;
 public class Deck {
     private String[] list;              // Array that stores all the cards
     private int next = 0;               // Pointer pointing to next index of array
+    private int listSize = 30;
     
     public Deck() {
-        list = new String[30];
+        list = new String[listSize];
     }
     
     public void add(String cardID) {
@@ -14,7 +15,7 @@ public class Deck {
     }
     
     public int size() {
-        return list.length;
+        return listSize;
     }
     
     public String[] toArray() {

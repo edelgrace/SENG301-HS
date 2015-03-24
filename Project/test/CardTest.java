@@ -4,8 +4,6 @@ import static org.junit.Assert.*;
 
 public class CardTest {
     
-    /* MODEL TESTS */
-    
     @Test
     public void Test_toString() {
         String name = "A Name";

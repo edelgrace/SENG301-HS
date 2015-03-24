@@ -24,16 +24,6 @@ public class Card {
         id = null;
     }
     
-    /**
-     *
-     * @param newName
-     * @param newCost
-     * @param newClass
-     * @param newAttack
-     * @param newHealth
-     * @param newDurability
-     * @param newID
-     */
     public Card(Object newName, Object newCost, Object newClass, Object newAttack, Object newHealth, Object newDurability, Object newID)
     {
         // Change name
