@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 public class CardTest {
     
+    /* MODEL TESTS */
+    
     @Test
     public void Test_toString() {
         String name = "A Name";
@@ -102,5 +104,205 @@ public class CardTest {
         
         // Assertion
         assertArrayEquals("Creating a new instance of cards with specified values did not work as expected", expectedCard, aCard.toArray());
+    }
+    
+    @Test
+    public void Test_GetName () {
+        // Get name of card
+        Card aCard = new Card("name", 1, "class", 1, 1, 1, "ID");
+        String name = aCard.getName();
+        
+        // Expected result
+        String expected = "name";
+        
+        // Assertions
+        assertEquals("Name is not the same.", expected, name);
+    }
+    
+    @Test
+    public void Test_GetCost () {
+        // Get cost of card
+        Card aCard = new Card("name", 1, "class", 1, 1, 1, "ID");
+        int cost = aCard.getCost();
+        
+        // Expected result
+        int expected = 1;
+        
+        // Assertions
+        assertEquals("Cost is not the same.", expected, cost);
+    }
+    
+    @Test
+    public void Test_GetPlayerClass () {
+        // Get class of card
+        Card aCard = new Card("name", 1, "class", 1, 1, 1, "ID");
+        String playerClass = aCard.getPlayerClass();
+        
+        // Expected result
+        String expected = "class";
+        
+        // Assertions
+        assertEquals("Class is not the same.", expected, playerClass);
+    }
+    
+    @Test
+    public void Test_GetAttack () {
+        // Get attack of card
+        Card aCard = new Card("name", 1, "class", 1, 1, 1, "ID");
+        int attack = aCard.getAttack();
+        
+        // Expected result
+        int expected = 1;
+        
+        // Assertions
+        assertEquals("Attack is not the same.", expected, attack);
+    }
+    
+    @Test
+    public void Test_GetHealth () {
+        // Get health of card
+        Card aCard = new Card("name", 1, "class", 1, 1, 1, "ID");
+        int health = aCard.getHealth();
+        
+        // Expected result
+        int expected = 1;
+        
+        // Assertions
+        assertEquals("Health is not the same.", expected, health);
+    }
+    
+    @Test
+    public void Test_GetDurability () {
+        // Get durability of card
+        Card aCard = new Card("name", 1, "class", 1, 1, 1, "ID");
+        int durability = aCard.getDurability();
+        
+        // Expected result
+        int expected = 1;
+        
+        // Assertions
+        assertEquals("Durability is not the same.", expected, durability);
+    }
+    
+    @Test
+    public void Test_getID() {
+        // Get ID of card
+        Card aCard = new Card("name", 1, "class", 1, 1, 1, "ID");
+        String id = aCard.getID();
+        
+        // Expected result
+        String expected = "ID";
+        
+        // Assertions
+        assertEquals("ID is not the same.", expected, id);
+    }
+    
+    @Test
+    public void Test_SetName () {
+        // Set name of card
+        Card aCard = new Card("name", 1, "class", 1, 1, 1, "ID");
+        aCard.setName("new");
+        String name = aCard.getName();
+        
+        // Expected result
+        String expected = "new";
+        
+        // Assertions
+        assertEquals("Name is not the same.", expected, name);
+    }
+    
+    @Test
+    public void Test_SetCost () { }
+    
+    @Test
+    public void Test_SetPlayerClass () { }
+    
+    @Test
+    public void Test_SetAttack () { }
+    
+    @Test
+    public void Test_SetHealth () { }
+    
+    @Test
+    public void Test_SetDurability () { }
+    
+    /* SEARCHING CARD COLLECTION */
+    @Test
+    public void Test_NullSearch() {
+        // Null earch query
+        CardCollection cards = new CardCollection();
+        String searchQuery = null;
+        String[] results = cards.query(searchQuery);
+        
+        // Expected result
+        String[] expected = new String[1];
+        expected[0] = "No search term was entered. Please try again.";
+        
+        // Assertion
+        assertArrayEquals("Search cannot handle null strings.", expected, results);
+    }
+    
+    @Test
+    public void Test_EmptyStringSearch() {
+        // Empty search query
+        CardCollection cards = new CardCollection();
+        String searchQuery = "";
+        String[] results = cards.query(searchQuery);
+        
+        // Expected results
+        String[] expected = new String[1];
+        expected[0] = "No search term was entered. Please try again.";
+        
+        // Assertion
+        assertArrayEquals("Search cannot handle empty strings.", expected, results);
+    }
+    
+    @Test
+    public void Test_NoResults() {
+        // No results
+        CardCollection cards = new CardCollection();
+        String searchQuery = "Example";
+        String[] results = cards.findCard(searchQuery);
+        
+        // Expected results
+        String[] expected = new String[1];
+        expected[0] = "No results.";
+        
+        // Assertion
+        assertArrayEquals("Search cannot handle no results.", expected, results);
+    }
+    
+    @Test
+    public void Test_OneResult() {
+        // One result
+        CardCollection cards = new CardCollection();
+        String searchQuery = "Swamp";
+        String[] results = cards.findCard(searchQuery);
+        
+        // Expected results
+        String[] expected = new String[cards.getSize()];
+        Card aCard = new Card("Acidic Swamp Ooze", 2, null, 3, 2, null, "EX1_066");
+        expected[0] = aCard.getName();
+        
+        // Assertion
+        assertArrayEquals("Search cannot handle one result.", expected, results);
+    }
+    
+    @Test
+    public void Test_TwoResults() {
+        // One result
+        CardCollection cards = new CardCollection();
+        String searchQuery = "Wolf";
+        String[] results = cards.findCard(searchQuery);
+        
+        // Expected results
+        String[] expected = new String[cards.getSize()];
+        Card aCard1 = new Card("Wolfrider", 3, null, 3, 1, null, "CS2_124");
+        Card aCard2 = new Card("Timber Wolf", 1, null, 1, 1, null, "DS1_175");
+        expected[0] = aCard2.getName();
+        expected[1] = aCard1.getName();
+        
+        // Assertion
+        assertArrayEquals("Search cannot handle one result.", expected, results);
     }
 }

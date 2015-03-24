@@ -10,20 +10,20 @@ import java.util.Iterator;
 
 public class CardCollection {
     private Card[] cardList;
-<span class="fc" id="L13">    private int cardListSize = 210;</span>
+    private int cardListSize;
   
     
 <span class="fc" id="L16">    public CardCollection() {</span>
-        
         try {
-<span class="fc" id="L19">            FileReader path = new FileReader(&quot;C:\\Users\\Altares\\Desktop\\Copy\\SCHOOL\\[2015 - WINTER]\\SENG 301\\HS\\SENG301-HS\\Project\\src\\Cards\\Basic.enGB.json&quot;);</span>
+<span class="fc" id="L18">            FileReader path = new FileReader(&quot;C:\\Users\\Altares\\Desktop\\Copy\\SCHOOL\\[2015 - WINTER]\\SENG 301\\HS\\SENG301-HS\\Project\\src\\Cards\\Basic.enGB.json&quot;);</span>
    
             // read the json file
-<span class="fc" id="L22">            JSONParser jsonParser = new JSONParser();</span>
+<span class="fc" id="L21">            JSONParser jsonParser = new JSONParser();</span>
             JSONArray list;
-<span class="fc" id="L24">            list = (JSONArray) jsonParser.parse(path);</span>
+<span class="fc" id="L23">            list = (JSONArray) jsonParser.parse(path);</span>
             
-<span class="fc" id="L26">            cardList = new Card[list.size()];</span>
+<span class="fc" id="L25">            cardList = new Card[list.size()];</span>
+<span class="fc" id="L26">            cardListSize = list.size();</span>
             
 <span class="fc bfc" id="L28" title="All 2 branches covered.">            for(int i = 0; i &lt; list.size(); i++) {</span>
 <span class="fc" id="L29">                JSONObject card = (JSONObject) list.get(i);</span>
@@ -52,6 +52,46 @@ public class CardCollection {
     
     public int getSize() {
 <span class="fc" id="L54">        return cardListSize;</span>
+    }
+    
+    public String[] query(String searchTerm) {
+<span class="fc" id="L58">        String[] result = new String[1];</span>
+                
+<span class="pc bpc" id="L60" title="1 of 4 branches missed.">        if(searchTerm == null || searchTerm.isEmpty()) {</span>
+<span class="fc" id="L61">            result[0] = &quot;No search term was entered. Please try again.&quot;;</span>
+<span class="fc" id="L62">            return result;</span>
+        }
+        
+<span class="nc" id="L65">        result = findCard(searchTerm);</span>
+        
+<span class="nc" id="L67">        return result;</span>
+    }
+    
+    public String[] findCard(String searchTerm) {
+<span class="fc" id="L71">        String[] result = new String[cardListSize];</span>
+<span class="fc" id="L72">        int pointer = 0;</span>
+        
+        /* find card */
+<span class="fc bfc" id="L75" title="All 2 branches covered.">        for(int i = 0; i &lt; cardListSize; i++) {</span>
+<span class="fc" id="L76">            Card aCard = this.get(i);</span>
+<span class="fc" id="L77">            String aCardName = aCard.getName();</span>
+            
+<span class="fc bfc" id="L79" title="All 2 branches covered.">            if(aCardName.contains(searchTerm)) {</span>
+<span class="fc" id="L80">                result[pointer] = aCardName;</span>
+<span class="fc" id="L81">                pointer++;</span>
+            }
+        }
+        
+<span class="fc bfc" id="L85" title="All 2 branches covered.">        for(int i = 0; i &lt; cardListSize; i++) {</span>
+<span class="fc bfc" id="L86" title="All 2 branches covered.">            if(result[i] != null) {</span>
+<span class="fc" id="L87">                return result;</span>
+            }
+        }
+        
+<span class="fc" id="L91">        result = new String[1];</span>
+<span class="fc" id="L92">        result[0] = &quot;No results.&quot;;</span>
+        
+<span class="fc" id="L94">        return result;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.4.201502262128</span></div></body></html>
