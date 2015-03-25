@@ -227,6 +227,7 @@ public class CardTest {
     public void Test_SetDurability () { }
     
     /* SEARCHING CARD COLLECTION */
+    
     @Test
     public void Test_NullSearch() {
         // Null earch query

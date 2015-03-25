@@ -16,6 +16,125 @@ import static org.junit.Assert.*;
 
 public class DeckTest {
     
+    /* CHOOSING DECK CLASS */
+    
+    @Test
+    public void Test_ChooseDruidClass() {
+        // Choose a class
+        CardCollection classCards = new CardCollection("Druid");
+        CardCollection allCards = new CardCollection();
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 85];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for druid class.", expected.length, classCards.getSize());
+    }
+    
+    @Test
+    public void Test_ChooseHunterClass() {
+        // Choose a class
+        CardCollection classCards = new CardCollection("Hunter");
+        CardCollection allCards = new CardCollection();
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 85];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for hunter class.", expected.length, classCards.getSize());
+    }
+    
+    @Test
+    public void Test_ChooseMageClass() {
+        // Choose a class
+        CardCollection classCards = new CardCollection("Mage");
+        CardCollection allCards = new CardCollection();
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 85];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for mage class.", expected.length, classCards.getSize());
+    }
+    
+    @Test
+    public void Test_ChoosePaladinClass() {
+        // Choose a class
+        CardCollection classCards = new CardCollection("Paladin");
+        CardCollection allCards = new CardCollection();
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 85];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for paladin class.", expected.length, classCards.getSize());
+    }
+    
+    @Test
+    public void Test_ChoosePriestClass() {
+        // Choose a class
+        CardCollection classCards = new CardCollection("Priest");
+        CardCollection allCards = new CardCollection();
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 85];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for priest class.", expected.length, classCards.getSize());
+    }
+    
+    @Test
+    public void Test_ChooseRogueClass() {
+        // Choose a class
+        CardCollection classCards = new CardCollection("Rogue");
+        CardCollection allCards = new CardCollection();
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 85];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for rogue class.", expected.length, classCards.getSize());
+    }
+    
+    @Test
+    public void Test_ChooseShamanClass() {
+        // Choose a class
+        CardCollection classCards = new CardCollection("Shaman");
+        CardCollection allCards = new CardCollection();
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 84];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for shaman class.", expected.length, classCards.getSize());
+    }
+    
+    @Test
+    public void Test_ChooseWarriorClass() {
+        // Choose a class
+        CardCollection classCards = new CardCollection("Warrior");
+        CardCollection allCards = new CardCollection();
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 85];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for warrior class.", expected.length, classCards.getSize());
+    }
+    
+    @Test
+    public void Test_ChooseWarlockClass() {
+        // Choose a class
+        CardCollection classCards = new CardCollection("Warlock");
+        CardCollection allCards = new CardCollection();
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 85];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for warlock class.", expected.length, classCards.getSize());
+    }
+    
     /* INITIALIZING DECKS */
     
     @Test
@@ -123,16 +242,51 @@ public class DeckTest {
     /* REMOVING CARDS FROM DECK */
     
     @Test
-    public void Test_RemoveOneCard() {
+    public void Test_RemoveOneCopy() {
         // Remove a card
         Deck aDeck = new Deck();
         aDeck.add("A");
         String removed = aDeck.remove("A");
+        int count = aDeck.getCardCopies("A");
         
         // Excpected
         String expected = "Removed 1 card(s) with ID A";
+        int expectedCount = 0;
         
-        assertEquals("Card was not removed.", expected, removed);
+        // Assertion
+        assertEquals("Card was not removed properly.", expected, removed);
+        assertEquals("Card was not removed properly.", expectedCount, count);
+    }
+    
+    @Test
+    public void Test_RemoveOneOfTwo() {
+        // Remove a card with two copies
+        Deck aDeck = new Deck();
+        aDeck.add("A");
+        aDeck.add("A");
+        String removed = aDeck.remove("A");
+        int copyCount = aDeck.getCardCopies("A");
+        
+        // Expected
+        String expectedString = "Removed 1 card(s) with ID A";
+        int expectedCopyCount = 1;
+        
+        // Assertion
+        assertEquals("Cards were not removed properly.", expectedString, removed);
+        assertEquals("Cards were not removed properly.", expectedCopyCount, copyCount);
+    }
+    
+    @Test
+    public void Test_RemoveNonExistingCard() {
+        // Remove a card with no copies in deck
+        Deck aDeck = new Deck();
+        String removed = aDeck.remove("A");
+        
+        // Expected
+        String expected = "Cannot remove card from deck. Card not found.";
+        
+        // Assertion
+        assertEquals("Non existant card removal not working properly.", expected, removed);
     }
     
     /* CONTROLLER TESTS */

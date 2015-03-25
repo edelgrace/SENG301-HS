@@ -6,44 +6,97 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import java.io.*;
-import java.util.Iterator;
 
 public class CardCollection {
     private Card[] cardList;
     private int cardListSize;
-  
+    private int totalClassCard = 97;
     
     public CardCollection() {
+        JSONArray list = parseCards();
+            
+        cardList = new Card[list.size()];
+        cardListSize = list.size();
+        
+        for(int i = 0; i < list.size(); i++) {
+            JSONObject card = (JSONObject) list.get(i);
+
+            Object name = card.get("name");
+            Object cost = card.get("cost");
+            Object playerClass = card.get("playerClass");
+            Object attack = card.get("attack");
+            Object health = card.get("health");
+            Object durability = card.get("durability");
+            Object id = card.get("id");
+
+            Card aCard = new Card(name, cost, playerClass, attack, health, durability, id);
+
+            cardList[i] = aCard;
+        }
+    }
+    
+    
+    public CardCollection(String chosenClass) {
+        JSONArray list = parseCards();
+            
+        int classCount = 0;
+        
+        switch(chosenClass) {
+            case "Shaman":
+                classCount = 13;        // Number of shaman cards
+                break;
+            default:
+                classCount = 12;        // Number of cards per class
+                break;
+        }
+        
+        cardListSize = list.size() - totalClassCard + classCount;
+        
+        cardList = new Card[cardListSize];
+        int index = 0;
+            
+        for(int i = 0; i < list.size(); i++) {
+            JSONObject card = (JSONObject) list.get(i);
+            
+            Object name = card.get("name");
+            Object cost = card.get("cost");
+            Object playerClass = card.get("playerClass");
+            Object attack = card.get("attack");
+            Object health = card.get("health");
+            Object durability = card.get("durability");
+            Object id = card.get("id");
+
+            Card aCard = new Card(name, cost, playerClass, attack, health, durability, id);
+
+            if(aCard.getPlayerClass() != null) {
+                if(aCard.getPlayerClass().equalsIgnoreCase(chosenClass) || 
+                    aCard.getPlayerClass().isEmpty()) {
+                    cardList[index] = aCard;
+                    index++;
+                }
+            }
+            else { cardList[index] = aCard; }
+        }
+    }
+    
+    private JSONArray parseCards() {
         try {
-            FileReader path = new FileReader("C:\\Users\\Altares\\Desktop\\Copy\\SCHOOL\\[2015 - WINTER]\\SENG 301\\HS\\SENG301-HS\\Project\\src\\Cards\\Basic.enGB.json");
-   
+            FileReader path = new FileReader("src\\Cards\\Basic.enGB.json");
+
             // read the json file
             JSONParser jsonParser = new JSONParser();
             JSONArray list;
             list = (JSONArray) jsonParser.parse(path);
             
-            cardList = new Card[list.size()];
-            cardListSize = list.size();
+            path.close();
             
-            for(int i = 0; i < list.size(); i++) {
-                JSONObject card = (JSONObject) list.get(i);
-                
-                Object name = card.get("name");
-                Object cost = card.get("cost");
-                Object playerClass = card.get("playerClass");
-                Object attack = card.get("attack");
-                Object health = card.get("health");
-                Object durability = card.get("durability");
-                Object id = card.get("id");
-                
-                Card aCard = new Card(name, cost, playerClass, attack, health, durability, id);
-                
-                cardList[i] = aCard;
-            }
+            return list;
         }
-        catch (Exception e){
+        catch (Exception e) {
             e.printStackTrace();
         }
+        
+        return null;
     }
     
     public Card get(int i) {

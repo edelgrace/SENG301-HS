@@ -7,6 +7,7 @@ public class Deck {
     private int next = 0;               // Pointer pointing to next index of array
     private int deckSize = 30;
     private int maxCopies = 2;
+    private String playerClass;
     
     public Deck() {
         list = new String[deckSize];
@@ -44,11 +45,16 @@ public class Deck {
                 if(list[i].equals(cardID)) {
                     list[i] = null;
                     removeCount++;
+                    return "Removed " + removeCount + " card(s) with ID " + cardID;
                 }
             }
         }
         
-        return "Removed " + removeCount + " card(s) with ID " + cardID;
+        return cannotRemove();
+    }
+    
+    public String cannotRemove() {
+        return "Cannot remove card from deck. Card not found.";
     }
     
     public int size() {

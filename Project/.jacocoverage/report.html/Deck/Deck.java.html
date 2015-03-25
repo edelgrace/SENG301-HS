@@ -7,78 +7,84 @@ public class Deck {
 <span class="fc" id="L7">    private int next = 0;               // Pointer pointing to next index of array</span>
 <span class="fc" id="L8">    private int deckSize = 30;</span>
 <span class="fc" id="L9">    private int maxCopies = 2;</span>
+    private String playerClass;
     
-<span class="fc" id="L11">    public Deck() {</span>
-<span class="fc" id="L12">        list = new String[deckSize];</span>
-<span class="fc" id="L13">    }</span>
+<span class="fc" id="L12">    public Deck() {</span>
+<span class="fc" id="L13">        list = new String[deckSize];</span>
+<span class="fc" id="L14">    }</span>
     
     public String add(String cardID) {
-<span class="fc bfc" id="L16" title="All 2 branches covered.">        if(next != deckSize) {</span>
-<span class="fc bfc" id="L17" title="All 2 branches covered.">            if(getCardCopies(cardID) &lt; maxCopies) {</span>
-<span class="fc" id="L18">                list[next] = cardID;</span>
-<span class="fc" id="L19">                next++;</span>
-<span class="fc" id="L20">                return null;</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">        if(next != deckSize) {</span>
+<span class="fc bfc" id="L18" title="All 2 branches covered.">            if(getCardCopies(cardID) &lt; maxCopies) {</span>
+<span class="fc" id="L19">                list[next] = cardID;</span>
+<span class="fc" id="L20">                next++;</span>
+<span class="fc" id="L21">                return null;</span>
             }
             else {
-<span class="fc" id="L23">                return cannotAddTwo();</span>
+<span class="fc" id="L24">                return cannotAddTwo();</span>
             }
         }
         else {
-<span class="fc" id="L27">            return cannotAddFull();</span>
+<span class="fc" id="L28">            return cannotAddFull();</span>
         }
     }
     
     public String cannotAddFull() {
-<span class="fc" id="L32">        return &quot;Cannot add card to deck. Deck is full.&quot;;</span>
+<span class="fc" id="L33">        return &quot;Cannot add card to deck. Deck is full.&quot;;</span>
     }
 
     public String cannotAddTwo() {
-<span class="fc" id="L36">        return &quot;Cannot add more than two copies of a card to a deck.&quot;;</span>
+<span class="fc" id="L37">        return &quot;Cannot add more than two copies of a card to a deck.&quot;;</span>
     }
     
     public String remove(String cardID) {
-<span class="fc" id="L40">        int removeCount = 0;</span>
+<span class="fc" id="L41">        int removeCount = 0;</span>
         
-<span class="fc bfc" id="L42" title="All 2 branches covered.">        for(int i = 0; i &lt; deckSize; i++) {</span>
-<span class="fc bfc" id="L43" title="All 2 branches covered.">            if(list[i] != null) {</span>
-<span class="pc bpc" id="L44" title="1 of 2 branches missed.">                if(list[i].equals(cardID)) {</span>
-<span class="fc" id="L45">                    list[i] = null;</span>
-<span class="fc" id="L46">                    removeCount++;</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">        for(int i = 0; i &lt; deckSize; i++) {</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">            if(list[i] != null) {</span>
+<span class="pc bpc" id="L45" title="1 of 2 branches missed.">                if(list[i].equals(cardID)) {</span>
+<span class="fc" id="L46">                    list[i] = null;</span>
+<span class="fc" id="L47">                    removeCount++;</span>
+<span class="fc" id="L48">                    return &quot;Removed &quot; + removeCount + &quot; card(s) with ID &quot; + cardID;</span>
                 }
             }
         }
         
-<span class="fc" id="L51">        return &quot;Removed &quot; + removeCount + &quot; card(s) with ID &quot; + cardID;</span>
+<span class="fc" id="L53">        return cannotRemove();</span>
+    }
+    
+    public String cannotRemove() {
+<span class="fc" id="L57">        return &quot;Cannot remove card from deck. Card not found.&quot;;</span>
     }
     
     public int size() {
-<span class="fc" id="L55">        return list.length;</span>
+<span class="fc" id="L61">        return list.length;</span>
     }
     
     public String[] toArray() {
-<span class="fc" id="L59">        return list;</span>
+<span class="fc" id="L65">        return list;</span>
     }
     
     static public boolean isValid(Deck aDeck) {
-<span class="pc bpc" id="L63" title="1 of 2 branches missed.">        if(aDeck == null) {</span>
-<span class="fc" id="L64">            return false;</span>
+<span class="pc bpc" id="L69" title="1 of 2 branches missed.">        if(aDeck == null) {</span>
+<span class="fc" id="L70">            return false;</span>
         }
         
-<span class="nc" id="L67">        return true;</span>
+<span class="nc" id="L73">        return true;</span>
     }
     
     public int getCardCopies(String cardID) {
-<span class="fc" id="L71">        int numOfCopies = 0;</span>
+<span class="fc" id="L77">        int numOfCopies = 0;</span>
         
-<span class="fc bfc" id="L73" title="All 2 branches covered.">        for(int i = 0; i &lt; deckSize; i++) {</span>
-<span class="fc bfc" id="L74" title="All 2 branches covered.">            if(list[i] != null) {</span>
-<span class="fc bfc" id="L75" title="All 2 branches covered.">                if(list[i].contains(cardID)) {</span>
-<span class="fc" id="L76">                    numOfCopies++;</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        for(int i = 0; i &lt; deckSize; i++) {</span>
+<span class="fc bfc" id="L80" title="All 2 branches covered.">            if(list[i] != null) {</span>
+<span class="fc bfc" id="L81" title="All 2 branches covered.">                if(list[i].contains(cardID)) {</span>
+<span class="fc" id="L82">                    numOfCopies++;</span>
                 }
             }
         }
         
-<span class="fc" id="L81">        return numOfCopies;</span>
+<span class="fc" id="L87">        return numOfCopies;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.4.201502262128</span></div></body></html>
