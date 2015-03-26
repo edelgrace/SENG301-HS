@@ -4,7 +4,18 @@ import static org.junit.Assert.*;
 
 public class CardTest {
     
-    /* MODEL TESTS */
+    @Test
+    public void Test_toStringNull() {
+        // A card
+        Card newCard = new Card(null,0,null,0,0,0,null);
+        String aCard = newCard.toString();
+        
+        // Expected
+        String expected = " , 0, , 0, 0, 0, ";
+        
+        // Assertion
+        assertEquals("Null card initialization did not work as expected.", expected, aCard);
+    }
     
     @Test
     public void Test_toString() {
@@ -196,35 +207,6 @@ public class CardTest {
         // Assertions
         assertEquals("ID is not the same.", expected, id);
     }
-    
-    @Test
-    public void Test_SetName () {
-        // Set name of card
-        Card aCard = new Card("name", 1, "class", 1, 1, 1, "ID");
-        aCard.setName("new");
-        String name = aCard.getName();
-        
-        // Expected result
-        String expected = "new";
-        
-        // Assertions
-        assertEquals("Name is not the same.", expected, name);
-    }
-    
-    @Test
-    public void Test_SetCost () { }
-    
-    @Test
-    public void Test_SetPlayerClass () { }
-    
-    @Test
-    public void Test_SetAttack () { }
-    
-    @Test
-    public void Test_SetHealth () { }
-    
-    @Test
-    public void Test_SetDurability () { }
     
     /* SEARCHING CARD COLLECTION */
     

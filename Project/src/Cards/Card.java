@@ -28,6 +28,7 @@ public class Card {
     {
         // Change name
         if(newName != null) {  name = (String) newName; }
+        else { return; }
         
         // Change cost
         if(newCost != null) {
@@ -94,36 +95,6 @@ public class Card {
         return id;
     }
     
-    /* SETTERS */
-    
-    public void setName(String newName) {
-        name = newName;
-    }
-    
-    public void setCost(int newCost) {
-        cost = newCost;
-    }
-    
-    public void setPlayerClass(String newClass) {
-        playerClass = newClass;
-    }
-    
-    public void setAttack(int newAttack) {
-        attack = newAttack;
-    }
-    
-    public void setHealth(int newHealth) {
-        health = newHealth;
-    }
-    
-    public void setDurability(int newDurability) {
-        durability = newDurability;
-    }
-    
-    public void setID(String newID) {
-        id = newID;
-    }
-    
     /* CONVERSION METHODS */
     
     public Object[] toArray() {
@@ -157,7 +128,6 @@ public class Card {
         
         if(id != null) { string += id; }
         
-        if(this == null) { return "Card is null and cannot be converted to string."; }
         return string;
     }
 }

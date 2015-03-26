@@ -9,7 +9,15 @@ public class ControllerTest {
     
     @Test
     public void Test_DisplayNullList() {
+        /*// Create a null list to display
+        Card[] cardDisplay = null;
         
+        
+        // Expected
+        String expected = "Error displaying cards.";
+        
+        // Assertion
+        assertEquals("", expected,cardDisplay); */
     }
     
     @Test

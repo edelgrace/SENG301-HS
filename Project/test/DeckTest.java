@@ -289,6 +289,57 @@ public class DeckTest {
         assertEquals("Non existant card removal not working properly.", expected, removed);
     }
     
+    /* GETTING CARDS */
+    
+    @Test
+    public void Test_GetACardFromEmpty() {
+        // Get a card from an empty deck
+        Deck aDeck = new Deck();
+        String card = aDeck.get(0);
+        
+        // Expected
+        String expected = null;
+        
+        // Assertion
+        assertEquals("Retreiving a card by index from empty deck did not work as expected.", expected, card);
+    }
+    
+    @Test
+    public void Test_GetACardWithIndexOutOfBounds() {
+        // Get a card from an empty deck
+        Deck aDeck = new Deck();
+        aDeck.add("A");
+        aDeck.add("B");
+        aDeck.add("C");
+        
+        String card = aDeck.get(5);
+        
+        // Expected
+        String expected = null;
+        
+        // Assertion
+        assertEquals("Retreiving a card by index from empty deck did not work as expected.", expected, card);
+    }
+    
+    @Test
+    public void Test_GetACardWithIndex() {
+        // Get a card from an empty deck
+        Deck aDeck = new Deck();
+        aDeck.add("E");
+        aDeck.add("D");
+        aDeck.add("C");
+        aDeck.add("B");
+        aDeck.add("A");
+        
+        String card = aDeck.get(3);
+        
+        // Expected
+        String expected = "B";
+        
+        // Assertion
+        assertEquals("Retreiving a card by index from empty deck did not work as expected.", expected, card);
+    }
+    
     /* CONTROLLER TESTS */
     
     /* VIEW TESTS */

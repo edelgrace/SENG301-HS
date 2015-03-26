@@ -27,138 +27,108 @@ public class Card {
     public Card(Object newName, Object newCost, Object newClass, Object newAttack, Object newHealth, Object newDurability, Object newID)
 <span class="fc" id="L28">    {</span>
         // Change name
-<span class="pc bpc" id="L30" title="1 of 2 branches missed.">        if(newName != null) {  name = (String) newName; }</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        if(newName != null) {  name = (String) newName; }</span>
+<span class="fc" id="L31">        else { return; }</span>
         
         // Change cost
-<span class="fc bfc" id="L33" title="All 2 branches covered.">        if(newCost != null) {</span>
-<span class="fc bfc" id="L34" title="All 2 branches covered.">            if(newCost instanceof Long) { cost = (int) (long) newCost; }</span>
-<span class="fc" id="L35">            else { cost = (int) newCost; }</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        if(newCost != null) {</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">            if(newCost instanceof Long) { cost = (int) (long) newCost; }</span>
+<span class="fc" id="L36">            else { cost = (int) newCost; }</span>
         }
-<span class="fc" id="L37">        else { cost = 0; }</span>
+<span class="fc" id="L38">        else { cost = 0; }</span>
         
         // Change class
-<span class="fc bfc" id="L40" title="All 2 branches covered.">        if(newClass != null) {  playerClass = (String) newClass; }</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">        if(newClass != null) {  playerClass = (String) newClass; }</span>
         
         // Change attack
-<span class="fc bfc" id="L43" title="All 2 branches covered.">        if(newAttack != null) {</span>
-<span class="fc bfc" id="L44" title="All 2 branches covered.">            if(newAttack instanceof Long) { attack = (int) (long) newAttack; }</span>
-<span class="fc" id="L45">            else { attack = (int) newCost; }</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        if(newAttack != null) {</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">            if(newAttack instanceof Long) { attack = (int) (long) newAttack; }</span>
+<span class="fc" id="L46">            else { attack = (int) newCost; }</span>
         }
-<span class="fc" id="L47">        else { attack = 0; }</span>
+<span class="fc" id="L48">        else { attack = 0; }</span>
         
         // Change health
-<span class="fc bfc" id="L50" title="All 2 branches covered.">        if(newHealth != null) {</span>
-<span class="fc bfc" id="L51" title="All 2 branches covered.">            if(newHealth instanceof Long) { health = (int) (long) newHealth; }</span>
-<span class="fc" id="L52">            else { health = (int) newCost; }</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">        if(newHealth != null) {</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">            if(newHealth instanceof Long) { health = (int) (long) newHealth; }</span>
+<span class="fc" id="L53">            else { health = (int) newCost; }</span>
         }
-<span class="fc" id="L54">        else { health = 0; }</span>
+<span class="fc" id="L55">        else { health = 0; }</span>
         
         // Change durability
-<span class="fc bfc" id="L57" title="All 2 branches covered.">        if(newDurability != null) {</span>
-<span class="fc bfc" id="L58" title="All 2 branches covered.">            if(newDurability instanceof Long) { durability = (int) (long) newDurability; }</span>
-<span class="fc" id="L59">            else { durability = (int) newCost; }</span>
+<span class="fc bfc" id="L58" title="All 2 branches covered.">        if(newDurability != null) {</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">            if(newDurability instanceof Long) { durability = (int) (long) newDurability; }</span>
+<span class="fc" id="L60">            else { durability = (int) newCost; }</span>
         }
-<span class="fc" id="L61">        else { durability = 0; }</span>
+<span class="fc" id="L62">        else { durability = 0; }</span>
         
         // Change ID
-<span class="pc bpc" id="L64" title="1 of 2 branches missed.">        if(newID != null) {  id = (String) newID; }</span>
-<span class="fc" id="L65">    }</span>
+<span class="pc bpc" id="L65" title="1 of 2 branches missed.">        if(newID != null) {  id = (String) newID; }</span>
+<span class="fc" id="L66">    }</span>
     
     /* GETTERS */
     
     public String getName() {
-<span class="fc" id="L70">        return name;</span>
+<span class="fc" id="L71">        return name;</span>
     }
     
     public int getCost() {
-<span class="fc" id="L74">        return cost;</span>
+<span class="fc" id="L75">        return cost;</span>
     }
     
     public String getPlayerClass() {
-<span class="fc" id="L78">        return playerClass;</span>
+<span class="fc" id="L79">        return playerClass;</span>
     }
     
     public int getAttack() {
-<span class="fc" id="L82">        return attack;</span>
+<span class="fc" id="L83">        return attack;</span>
     }
     
     public int getHealth() {
-<span class="fc" id="L86">        return health;</span>
+<span class="fc" id="L87">        return health;</span>
     }
     
     public int getDurability() {
-<span class="fc" id="L90">        return durability;</span>
+<span class="fc" id="L91">        return durability;</span>
     }
     
     public String getID() {
-<span class="fc" id="L94">        return id;</span>
+<span class="fc" id="L95">        return id;</span>
     }
-    
-    /* SETTERS */
-    
-    public void setName(String newName) {
-<span class="fc" id="L100">        name = newName;</span>
-<span class="fc" id="L101">    }</span>
-    
-    public void setCost(int newCost) {
-<span class="nc" id="L104">        cost = newCost;</span>
-<span class="nc" id="L105">    }</span>
-    
-    public void setPlayerClass(String newClass) {
-<span class="nc" id="L108">        playerClass = newClass;</span>
-<span class="nc" id="L109">    }</span>
-    
-    public void setAttack(int newAttack) {
-<span class="nc" id="L112">        attack = newAttack;</span>
-<span class="nc" id="L113">    }</span>
-    
-    public void setHealth(int newHealth) {
-<span class="nc" id="L116">        health = newHealth;</span>
-<span class="nc" id="L117">    }</span>
-    
-    public void setDurability(int newDurability) {
-<span class="nc" id="L120">        durability = newDurability;</span>
-<span class="nc" id="L121">    }</span>
-    
-    public void setID(String newID) {
-<span class="nc" id="L124">        id = newID;</span>
-<span class="nc" id="L125">    }</span>
     
     /* CONVERSION METHODS */
     
     public Object[] toArray() {
-<span class="fc" id="L130">        Object[] array = new Object[7];</span>
+<span class="fc" id="L101">        Object[] array = new Object[7];</span>
         
-<span class="fc" id="L132">        array[0] = name;</span>
-<span class="fc" id="L133">        array[1] = cost;</span>
-<span class="fc" id="L134">        array[2] = playerClass;</span>
-<span class="fc" id="L135">        array[3] = attack;</span>
-<span class="fc" id="L136">        array[4] = health;</span>
-<span class="fc" id="L137">        array[5] = durability;</span>
-<span class="fc" id="L138">        array[6] = id;</span>
+<span class="fc" id="L103">        array[0] = name;</span>
+<span class="fc" id="L104">        array[1] = cost;</span>
+<span class="fc" id="L105">        array[2] = playerClass;</span>
+<span class="fc" id="L106">        array[3] = attack;</span>
+<span class="fc" id="L107">        array[4] = health;</span>
+<span class="fc" id="L108">        array[5] = durability;</span>
+<span class="fc" id="L109">        array[6] = id;</span>
         
-<span class="fc" id="L140">        return array;</span>
+<span class="fc" id="L111">        return array;</span>
     }
     
     public String toString() {
-<span class="fc" id="L144">        String string = &quot;&quot;;</span>
+<span class="fc" id="L115">        String string = &quot;&quot;;</span>
         
-<span class="fc bfc" id="L146" title="All 2 branches covered.">        if(name != null) { string += name + &quot;, &quot;; }</span>
-<span class="fc" id="L147">        else { string += &quot; , &quot;; }</span>
+<span class="fc bfc" id="L117" title="All 2 branches covered.">        if(name != null) { string += name + &quot;, &quot;; }</span>
+<span class="fc" id="L118">        else { string += &quot; , &quot;; }</span>
         
-<span class="fc" id="L149">        string += cost + &quot;, &quot;;</span>
+<span class="fc" id="L120">        string += cost + &quot;, &quot;;</span>
         
-<span class="fc bfc" id="L151" title="All 2 branches covered.">        if(playerClass != null) { string += playerClass + &quot;, &quot;; }</span>
-<span class="fc" id="L152">        else { string += &quot;, &quot;; }</span>
+<span class="fc bfc" id="L122" title="All 2 branches covered.">        if(playerClass != null) { string += playerClass + &quot;, &quot;; }</span>
+<span class="fc" id="L123">        else { string += &quot;, &quot;; }</span>
         
-<span class="fc" id="L154">        string += attack + &quot;, &quot;;</span>
-<span class="fc" id="L155">        string += health + &quot;, &quot;;</span>
-<span class="fc" id="L156">        string += durability + &quot;, &quot;;</span>
+<span class="fc" id="L125">        string += attack + &quot;, &quot;;</span>
+<span class="fc" id="L126">        string += health + &quot;, &quot;;</span>
+<span class="fc" id="L127">        string += durability + &quot;, &quot;;</span>
         
-<span class="fc bfc" id="L158" title="All 2 branches covered.">        if(id != null) { string += id; }</span>
+<span class="fc bfc" id="L129" title="All 2 branches covered.">        if(id != null) { string += id; }</span>
         
-<span class="pc bpc" id="L160" title="1 of 2 branches missed.">        if(this == null) { return &quot;Card is null and cannot be converted to string.&quot;; }</span>
-<span class="fc" id="L161">        return string;</span>
+<span class="fc" id="L131">        return string;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.4.201502262128</span></div></body></html>

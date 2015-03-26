@@ -86,4 +86,8 @@ public class Deck {
         
         return numOfCopies;
     }
+    
+    public String get(int i) {
+        return list[i];
+    }
 }

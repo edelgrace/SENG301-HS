@@ -41,13 +41,11 @@ public class CardCollection {
             
         int classCount = 0;
         
-        switch(chosenClass) {
-            case "Shaman":
+        if(chosenClass.equalsIgnoreCase("Shaman")) {
                 classCount = 13;        // Number of shaman cards
-                break;
-            default:
+        }
+        else {
                 classCount = 12;        // Number of cards per class
-                break;
         }
         
         cardListSize = list.size() - totalClassCard + classCount;
