@@ -8,48 +8,83 @@ import java.sql.Timestamp;
 <span class="fc" id="L8">    int deckSize = 30;</span>
     
     public void DeckFile() {
-<span class="nc" id="L11">        deckSize = 30;</span>
-<span class="nc" id="L12">    }</span>
+<span class="nc" id="L11">    }</span>
+    
+    /* SAVING A DECK */
     
     public String[] save(Deck someDeck) {
-<span class="fc bfc" id="L15" title="All 2 branches covered.">        if(someDeck == null ) {</span>
-<span class="fc" id="L16">            return null;</span>
+<span class="fc bfc" id="L16" title="All 2 branches covered.">        if(someDeck == null ) {</span>
+<span class="fc" id="L17">            return null;</span>
         }
         
-<span class="fc" id="L19">        String[] savedDeck = new String[deckSize];</span>
-<span class="fc" id="L20">        String[] aDeck = someDeck.toArray();</span>
+<span class="fc" id="L20">        String[] savedDeck = new String[deckSize];</span>
+<span class="fc" id="L21">        String[] aDeck = someDeck.toArray();</span>
         
         FileWriter aWriter;
         PrintWriter pw;
         FileReader aReader;
         BufferedReader aBuffer;
                 
-<span class="fc" id="L27">        String path =&quot;src\\&quot;;</span>
+<span class="fc" id="L28">        String path =&quot;src\\&quot;;</span>
 
-<span class="fc" id="L29">        Timestamp timestamp = new Timestamp(System.currentTimeMillis());</span>
-<span class="fc" id="L30">        String time = new SimpleDateFormat(&quot;MM-dd-yyyy-hh-mm&quot;).format(timestamp);</span>
+<span class="fc" id="L30">        Timestamp timestamp = new Timestamp(System.currentTimeMillis());</span>
+<span class="fc" id="L31">        String time = new SimpleDateFormat(&quot;MM-dd-yyyy-hh-mm&quot;).format(timestamp);</span>
 
-<span class="fc" id="L32">        path += time + &quot;s.txt&quot;;</span>
+<span class="fc" id="L33">        path += time + &quot;s.txt&quot;;</span>
 
         try {
-<span class="fc" id="L35">            aWriter = new FileWriter(path);</span>
-<span class="fc" id="L36">            pw = new PrintWriter(aWriter);</span>
+<span class="fc" id="L36">            aWriter = new FileWriter(path);</span>
+<span class="fc" id="L37">            pw = new PrintWriter(aWriter);</span>
             
-<span class="fc bfc" id="L38" title="All 2 branches covered.">            for(int i = 0; i &lt; deckSize; i++) {</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">            for(int i = 0; i &lt; deckSize; i++) {</span>
                 
-<span class="fc" id="L40">                pw.println(aDeck[i]);</span>
+<span class="fc" id="L41">                pw.println(aDeck[i]);</span>
                 
-<span class="fc" id="L42">                savedDeck[i] = aDeck[i];</span>
+<span class="fc" id="L43">                savedDeck[i] = aDeck[i];</span>
             }
             
-<span class="fc" id="L45">            aWriter.close();</span>
+<span class="fc" id="L46">            aWriter.close();</span>
         }
-<span class="nc" id="L47">        catch (Exception e) {</span>
-<span class="nc" id="L48">            e.printStackTrace();</span>
-<span class="nc" id="L49">            return savedDeck;</span>
-<span class="fc" id="L50">        }</span>
+<span class="nc" id="L48">        catch (Exception e) {</span>
+<span class="nc" id="L49">            e.printStackTrace();</span>
+<span class="nc" id="L50">            return savedDeck;</span>
+<span class="fc" id="L51">        }</span>
         
-<span class="fc" id="L52">        return savedDeck;</span>
+<span class="fc" id="L53">        return savedDeck;</span>
+    }
+    
+    public Deck load(String filename) {
+<span class="fc" id="L57">        Deck aDeck = new Deck();</span>
+        
+<span class="fc bfc" id="L59" title="All 2 branches covered.">        if(filename == null) {</span>
+<span class="fc" id="L60">            aDeck.add(&quot;There was an error with this save file.&quot;);</span>
+<span class="fc" id="L61">            return aDeck;</span>
+        }
+        
+        FileReader aReader;
+        BufferedReader aBuffer;
+        
+<span class="fc" id="L67">        String path = &quot;src\\&quot; + filename;</span>
+        
+        try {
+<span class="nc" id="L70">            aReader = new FileReader(path);</span>
+<span class="nc" id="L71">            aBuffer = new BufferedReader(aReader);</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">            while(aBuffer.readLine() != null) {</span>
+<span class="nc" id="L73">                aDeck.add(aBuffer.readLine());</span>
+            }
+        }
+<span class="fc" id="L76">        catch (FileNotFoundException e) {</span>
+<span class="fc" id="L77">            e.printStackTrace();</span>
+<span class="fc" id="L78">            aDeck.add(&quot;The save file was not found.&quot;);</span>
+<span class="fc" id="L79">            return aDeck;</span>
+        }
+<span class="nc" id="L81">        catch (Exception e) {</span>
+<span class="nc" id="L82">            e.printStackTrace();</span>
+<span class="nc" id="L83">            aDeck.add(&quot;Something went wrong with loading this deck.&quot;);</span>
+<span class="nc" id="L84">            return aDeck;</span>
+<span class="nc" id="L85">        }</span>
+        
+<span class="nc" id="L87">        return aDeck;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.4.201502262128</span></div></body></html>

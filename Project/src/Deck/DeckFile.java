@@ -10,6 +10,8 @@ public class DeckFile {
     public void DeckFile() {
     }
     
+    /* SAVING A DECK */
+    
     public String[] save(Deck someDeck) {
         if(someDeck == null ) {
             return null;
@@ -49,5 +51,42 @@ public class DeckFile {
         }
         
         return savedDeck;
+    }
+    
+    public Deck load(String filename) {
+        Deck aDeck = new Deck();
+        
+        if(filename == null) {
+            aDeck.add("There was an error with this save file.");
+            return aDeck;
+        }
+        
+        FileReader aReader;
+        BufferedReader aBuffer;
+        
+        String path = "src\\" + filename;
+        
+        try {
+            aReader = new FileReader(path);
+            aBuffer = new BufferedReader(aReader);
+            
+            while(aBuffer.readLine() != null) {
+                aDeck.add(aBuffer.readLine());
+            }
+            
+            aReader.close();
+            
+            return aDeck;
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+            aDeck.add("The save file was not found.");
+            return aDeck;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            aDeck.add("Something went wrong with loading this deck.");
+            return aDeck;
+        }
     }
 }

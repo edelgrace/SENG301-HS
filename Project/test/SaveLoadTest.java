@@ -32,7 +32,7 @@ public class SaveLoadTest {
         String[] expected = new String[deckSize];
         
         // Assertion
-        assertArrayEquals("Save did not work as expected.", expected, save);
+        assertArrayEquals("Save did not work as expected for an empty deck.", expected, save);
     }
     
     @Test
@@ -89,7 +89,7 @@ public class SaveLoadTest {
         }
         
         // Assertion
-        assertArrayEquals("Save did not work as expected for two cards.", expected, save);
+        assertArrayEquals("Save did not work as expected for full deck.", expected, save);
     }
     
     @Test
@@ -110,7 +110,7 @@ public class SaveLoadTest {
         }
         
         // Assertion
-        assertArrayEquals("Save did not work as expected for two cards.", expected, save);
+        assertArrayEquals("Save did not work as expected for 31 cards.", expected, save);
     }
     
     @Test
@@ -131,25 +131,41 @@ public class SaveLoadTest {
         }
         
         // Assertion
-        assertArrayEquals("Save did not work as expected for two cards.", expected, save);
+        assertArrayEquals("Save did not work as expected for 29 cards.", expected, save);
     }
     
     /* LOADING */
     
     @Test
-    public void Test_HandleFailLoad() {
+    public void Test_HandleNonExistentSave() {
+        // Fail load
+        DeckFile aDeckFile = new DeckFile();
+        String filename = "non-existent.txt";
+        String[] loaded = aDeckFile.load(filename).toArray();
         
+        // Expected
+        String[] expected = new String[30];
+        expected[0] = "The save file was not found.";
+        
+        // Assertion
+        assertArrayEquals("Loading a non existent save is not handled correctly.", expected, loaded);
     }
     
     @Test
     public void Test_HandleNullLoad() {
+        // Fail load
+        DeckFile aDeckFile = new DeckFile();
+        String filename = null;
+        String[] loaded = aDeckFile.load(filename).toArray();
         
+        // Expected
+        String[] expected = new String[30];
+        expected[0] = "There was an error with this save file.";
+        
+        // Assertion
+        assertArrayEquals("Loading a null save is not handled correctly.", expected, loaded);
     }
     
-    @Test
-    public void Test_LoadTimestamp() {
-        
-    }
     @Test
     public void Test_LoadEmptyDeck() {
         
@@ -166,17 +182,17 @@ public class SaveLoadTest {
     }
     
     @Test
-    public void Test_FullDeck() {
+    public void Test_LoadFullDeck() {
         
     }
     
     @Test
-    public void Test_29Cards() {
+    public void Test_Load29Cards() {
         
     }
     
     @Test
-    public void Test_31Cards() {
+    public void Test_Load31Cards() {
         
     }
 }
