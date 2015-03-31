@@ -67,24 +67,27 @@ import java.sql.Timestamp;
 <span class="fc" id="L67">        String path = &quot;src\\&quot; + filename;</span>
         
         try {
-<span class="nc" id="L70">            aReader = new FileReader(path);</span>
-<span class="nc" id="L71">            aBuffer = new BufferedReader(aReader);</span>
-<span class="nc bnc" id="L72" title="All 2 branches missed.">            while(aBuffer.readLine() != null) {</span>
-<span class="nc" id="L73">                aDeck.add(aBuffer.readLine());</span>
+<span class="fc" id="L70">            aReader = new FileReader(path);</span>
+<span class="fc" id="L71">            aBuffer = new BufferedReader(aReader);</span>
+            
+<span class="fc bfc" id="L73" title="All 2 branches covered.">            while(aBuffer.readLine() != null) {</span>
+<span class="fc" id="L74">                aDeck.add(aBuffer.readLine());</span>
             }
-        }
-<span class="fc" id="L76">        catch (FileNotFoundException e) {</span>
-<span class="fc" id="L77">            e.printStackTrace();</span>
-<span class="fc" id="L78">            aDeck.add(&quot;The save file was not found.&quot;);</span>
+            
+<span class="fc" id="L77">            aReader.close();</span>
+            
 <span class="fc" id="L79">            return aDeck;</span>
         }
-<span class="nc" id="L81">        catch (Exception e) {</span>
-<span class="nc" id="L82">            e.printStackTrace();</span>
-<span class="nc" id="L83">            aDeck.add(&quot;Something went wrong with loading this deck.&quot;);</span>
-<span class="nc" id="L84">            return aDeck;</span>
-<span class="nc" id="L85">        }</span>
-        
-<span class="nc" id="L87">        return aDeck;</span>
+<span class="fc" id="L81">        catch (FileNotFoundException e) {</span>
+<span class="fc" id="L82">            aDeck.add(&quot;The save file was not found.&quot;);</span>
+<span class="fc" id="L83">            System.out.println(aDeck.get(0));</span>
+<span class="fc" id="L84">            return aDeck;</span>
+        }
+<span class="nc" id="L86">        catch (Exception e) {</span>
+<span class="nc" id="L87">            aDeck.add(&quot;Something went wrong with loading this deck.&quot;);</span>
+<span class="nc" id="L88">            System.out.println(aDeck.get(0));</span>
+<span class="nc" id="L89">            return aDeck;</span>
+        }
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.4.201502262128</span></div></body></html>

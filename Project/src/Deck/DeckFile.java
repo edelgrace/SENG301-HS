@@ -79,13 +79,13 @@ public class DeckFile {
             return aDeck;
         }
         catch (FileNotFoundException e) {
-            e.printStackTrace();
             aDeck.add("The save file was not found.");
+            System.out.println(aDeck.get(0));
             return aDeck;
         }
         catch (Exception e) {
-            e.printStackTrace();
             aDeck.add("Something went wrong with loading this deck.");
+            System.out.println(aDeck.get(0));
             return aDeck;
         }
     }

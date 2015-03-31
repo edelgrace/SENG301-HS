@@ -340,6 +340,21 @@ public class DeckTest {
         assertEquals("Retreiving a card by index from empty deck did not work as expected.", expected, card);
     }
     
+    /* MISC TESTS */
+    
+    @Test
+    public void Test_ValidDeck() {
+        // Create a deck
+        Deck aDeck = new Deck();
+        boolean validity = Deck.isValid(aDeck);
+        
+        // Expected
+        boolean expected = true;
+        
+        // Assertion
+        assertEquals("Validity of deck is shaky.", expected, validity);
+    }
+    
     /* CONTROLLER TESTS */
     
     /* VIEW TESTS */

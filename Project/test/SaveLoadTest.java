@@ -168,12 +168,34 @@ public class SaveLoadTest {
     
     @Test
     public void Test_LoadEmptyDeck() {
+        // Fail load
+        DeckFile aDeckFile = new DeckFile();
+        String filename = "emptydeck.txt";
+        String[] loaded = aDeckFile.load(filename).toArray();
         
+        // Expected
+        String[] expected = new String[deckSize];
+        for(int i = 0; i < deckSize; i++) {
+            expected[i] = "null";
+        }
+        
+        // Assertion
+        assertArrayEquals("Loading an empty save is not handled correctly.", expected, loaded);
     }
     
     @Test
     public void Test_LoadOneCard() {
+        // Fail load
+        DeckFile aDeckFile = new DeckFile();
+        String filename = "onecard.txt";
+        String[] loaded = aDeckFile.load(filename).toArray();
         
+        // Expected
+        String[] expected = new String[deckSize];
+        expected[0] = "A";
+        
+        // Assertion
+        assertArrayEquals("Loading a save with one card is not handled correctly.", expected, loaded);
     }
     
     @Test
