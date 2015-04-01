@@ -3,17 +3,6 @@ import Cards.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-
-/* Test structure
- *  @Test
- *  public void TestName(parameters) {
- *      // Act
- *
- *      // Assert
- *      assertEquals(error message, expected value, what the value actually is);
- *  }
- */
-
 public class DeckTest {
     
     /* CHOOSING DECK CLASS */

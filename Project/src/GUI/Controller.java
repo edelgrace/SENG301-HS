@@ -1,5 +1,6 @@
 package GUI;
 import Cards.*;
+import javax.swing.*;
 
 public class Controller {
     CardCollection cards;
