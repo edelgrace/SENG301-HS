@@ -144,4 +144,8 @@ public class CardCollection {
         
         return result;
     }
+    
+    public Card[] toArray() {
+        return cardList;
+    }
 }

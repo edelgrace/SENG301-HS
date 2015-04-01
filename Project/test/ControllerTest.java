@@ -1,9 +1,133 @@
+import GUI.*;
 import Deck.*;
 import Cards.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ControllerTest {
+    
+    /* CHOOSING A CLASS */
+    
+    @Test
+    public void Test_ChooseDruid() {
+        // Choose a druid
+        CardCollection allCards = new CardCollection();
+        
+        Controller aController = new Controller();
+        Card[] classCards = aController.chooseClass("Druid");
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 85];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for druid class.", expected.length, classCards.length);
+    }
+    
+    @Test
+    public void Test_ChooseHunter() {
+        // Choose a hunter
+        CardCollection allCards = new CardCollection();
+        
+        Controller aController = new Controller();
+        Card[] classCards = aController.chooseClass("Hunter");
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 85];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for hunter class.", expected.length, classCards.length);
+    }
+    
+    @Test
+    public void Test_ChooseMage() {
+        // Choose a mage
+        CardCollection allCards = new CardCollection();
+        
+        Controller aController = new Controller();
+        Card[] classCards = aController.chooseClass("Mage");
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 85];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for mage class.", expected.length, classCards.length);
+    }
+    
+    @Test
+    public void Test_ChoosePaladin() {
+        // Choose a paladin
+        CardCollection allCards = new CardCollection();
+        
+        Controller aController = new Controller();
+        Card[] classCards = aController.chooseClass("Paladin");
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 85];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for paladin class.", expected.length, classCards.length);
+    }
+    
+    @Test
+    public void Test_ChoosePriest() {
+        // Choose a priest
+        CardCollection allCards = new CardCollection();
+        
+        Controller aController = new Controller();
+        Card[] classCards = aController.chooseClass("Priest");
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 85];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for priest class.", expected.length, classCards.length);
+    }
+    
+    @Test
+    public void Test_ChooseShaman() {
+        // Choose a shaman
+        CardCollection allCards = new CardCollection();
+        
+        Controller aController = new Controller();
+        Card[] classCards = aController.chooseClass("Shaman");
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 84];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for shaman class.", expected.length, classCards.length);
+    }
+    
+    @Test
+    public void Test_ChooseWarrior() {
+        // Choose a warrior
+        CardCollection allCards = new CardCollection();
+        
+        Controller aController = new Controller();
+        Card[] classCards = aController.chooseClass("Warrior");
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 85];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for warrior class.", expected.length, classCards.length);
+    }
+    
+    @Test
+    public void Test_ChooseWarlock() {
+        // Choose a warlock
+        CardCollection allCards = new CardCollection();
+        
+        Controller aController = new Controller();
+        Card[] classCards = aController.chooseClass("Warlock");
+        
+        // Expected
+        Card[] expected = new Card[allCards.getSize() - 85];
+        
+        // Assertions
+        assertEquals("Card collection is not as expected for warlock class.", expected.length, classCards.length);
+    }
+    
     
     /* DISPLAYING CARD COLLECTION */
     

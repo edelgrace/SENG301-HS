@@ -1,14 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package GUI;
+import Cards.*;
 
-/**
- *
- * @author Altares
- */
 public class Controller {
+    CardCollection cards;
     
+    public void Controller() {
+        
+    }
+    
+    public Card[] chooseClass(String chosenClass) {
+        
+        cards = new CardCollection(chosenClass);
+        
+        return cards.toArray();
+    }
 }

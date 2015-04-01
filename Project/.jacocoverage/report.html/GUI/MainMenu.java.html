@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>MainMenu.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Project&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">GUI</a> &gt; <span class="el_source">MainMenu.java</span></div><h1>MainMenu.java</h1><pre class="source lang-java linenums">package GUI;
+
+public class MainMenu extends javax.swing.JFrame {
+
+<span class="nc" id="L5">    public MainMenu() {</span>
+<span class="nc" id="L6">        initComponents();</span>
+<span class="nc" id="L7">    }</span>
+
+ 
+    @SuppressWarnings(&quot;unchecked&quot;)
+    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+<span class="nc" id="L14">        jDesktopPane1 = new javax.swing.JDesktopPane();</span>
+<span class="nc" id="L15">        jLabel1 = new javax.swing.JLabel();</span>
+<span class="nc" id="L16">        jButton1 = new javax.swing.JButton();</span>
+<span class="nc" id="L17">        jButton2 = new javax.swing.JButton();</span>
+<span class="nc" id="L18">        jButton3 = new javax.swing.JButton();</span>
+
+<span class="nc" id="L20">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+
+<span class="nc" id="L22">        jDesktopPane1.setBackground(new java.awt.Color(204, 204, 255));</span>
+
+<span class="nc" id="L24">        jLabel1.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 48)); // NOI18N</span>
+<span class="nc" id="L25">        jLabel1.setForeground(new java.awt.Color(255, 255, 0));</span>
+<span class="nc" id="L26">        jLabel1.setText(&quot;HEARTHSTONE DECK BUILDERINO&quot;);</span>
+
+<span class="nc" id="L28">        jButton1.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 36)); // NOI18N</span>
+<span class="nc" id="L29">        jButton1.setText(&quot;NEW DECK&quot;);</span>
+<span class="nc" id="L30">        jButton1.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L32">                jButton1ActionPerformed(evt);</span>
+<span class="nc" id="L33">            }</span>
+        });
+
+<span class="nc" id="L36">        jButton2.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 36)); // NOI18N</span>
+<span class="nc" id="L37">        jButton2.setText(&quot;LOAD DECK&quot;);</span>
+<span class="nc" id="L38">        jButton2.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L40">                jButton2ActionPerformed(evt);</span>
+<span class="nc" id="L41">            }</span>
+        });
+
+<span class="nc" id="L44">        jButton3.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 36)); // NOI18N</span>
+<span class="nc" id="L45">        jButton3.setText(&quot;EXIT&quot;);</span>
+<span class="nc" id="L46">        jButton3.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L48">                jButton3ActionPerformed(evt);</span>
+<span class="nc" id="L49">            }</span>
+        });
+
+<span class="nc" id="L52">        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);</span>
+<span class="nc" id="L53">        jDesktopPane1.setLayout(jDesktopPane1Layout);</span>
+<span class="nc" id="L54">        jDesktopPane1Layout.setHorizontalGroup(</span>
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(329, 329, 329)
+                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(67, 67, 67)
+                        .addComponent(jLabel1)))
+                .addContainerGap(57, Short.MAX_VALUE))
+        );
+<span class="nc" id="L69">        jDesktopPane1Layout.setVerticalGroup(</span>
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(83, 83, 83)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(136, Short.MAX_VALUE))
+        );
+<span class="nc" id="L82">        jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);</span>
+<span class="nc" id="L83">        jDesktopPane1.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);</span>
+<span class="nc" id="L84">        jDesktopPane1.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);</span>
+<span class="nc" id="L85">        jDesktopPane1.setLayer(jButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);</span>
+
+<span class="nc" id="L87">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="nc" id="L88">        getContentPane().setLayout(layout);</span>
+<span class="nc" id="L89">        layout.setHorizontalGroup(</span>
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jDesktopPane1)
+                .addContainerGap())
+        );
+<span class="nc" id="L95">        layout.setVerticalGroup(</span>
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jDesktopPane1)
+                .addGap(22, 22, 22))
+        );
+
+<span class="nc" id="L103">        pack();</span>
+<span class="nc" id="L104">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+<span class="nc bnc" id="L107" title="All 2 branches missed.">        if(evt.getSource() == jButton2)</span>
+        {
+            
+        }
+<span class="nc" id="L111">    }//GEN-LAST:event_jButton2ActionPerformed</span>
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+<span class="nc bnc" id="L114" title="All 2 branches missed.">        if(evt.getSource() == jButton1)</span>
+        {
+            
+        }
+<span class="nc" id="L118">    }//GEN-LAST:event_jButton1ActionPerformed</span>
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+<span class="nc bnc" id="L121" title="All 2 branches missed.">        if(evt.getSource() == jButton3) </span>
+<span class="nc" id="L122">               System.exit(0);</span>
+<span class="nc" id="L123">    }//GEN-LAST:event_jButton3ActionPerformed</span>
+
+    public static void main(String args[]) {
+     
+<span class="nc" id="L127">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
+            @Override public void run() {
+<span class="nc" id="L129">                new MainMenu().setVisible(true);</span>
+<span class="nc" id="L130">            }</span>
+        });
+<span class="nc" id="L132">    }</span>
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JLabel jLabel1;
+    // End of variables declaration//GEN-END:variables
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.4.201502262128</span></div></body></html>

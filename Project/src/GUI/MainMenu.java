@@ -19,7 +19,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jDesktopPane1.setBackground(new java.awt.Color(0, 51, 255));
+        jDesktopPane1.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel1.setFont(new java.awt.Font("Lucida Console", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 0));
