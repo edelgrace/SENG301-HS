@@ -1,141 +1,108 @@
 package GUI;
 
 public class MainMenu extends javax.swing.JFrame {
-
     public MainMenu() {
         initComponents();
     }
-
- 
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane1 = new javax.swing.JDesktopPane();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        MainMenuPanel = new javax.swing.JPanel();
+        MenuTitle = new java.awt.Label();
+        NewDeck = new java.awt.Button();
+        LoadDeck = new java.awt.Button();
+        Exit = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(600, 600));
+        setMinimumSize(new java.awt.Dimension(600, 600));
+        setResizable(false);
 
-        jDesktopPane1.setBackground(new java.awt.Color(204, 204, 255));
+        MainMenuPanel.setBackground(new java.awt.Color(0, 51, 102));
+        MainMenuPanel.setMaximumSize(new java.awt.Dimension(960, 640));
+        MainMenuPanel.setMinimumSize(new java.awt.Dimension(600, 600));
+        MainMenuPanel.setPreferredSize(new java.awt.Dimension(600, 600));
+        MainMenuPanel.setLayout(new java.awt.GridLayout(4, 1, 0, 20));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Console", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 0));
-        jLabel1.setText("HEARTHSTONE DECK BUILDERINO");
+        MenuTitle.setAlignment(java.awt.Label.CENTER);
+        MenuTitle.setFont(new java.awt.Font("Lucida Console", 0, 34)); // NOI18N
+        MenuTitle.setForeground(new java.awt.Color(255, 255, 0));
+        MenuTitle.setText("HEARTHSTONE DECK BUILDERINO");
+        MainMenuPanel.add(MenuTitle);
 
-        jButton1.setFont(new java.awt.Font("Lucida Console", 1, 36)); // NOI18N
-        jButton1.setText("NEW DECK");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        NewDeck.setActionCommand("NewDeck");
+        NewDeck.setBackground(new java.awt.Color(204, 204, 255));
+        NewDeck.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
+        NewDeck.setForeground(new java.awt.Color(51, 51, 51));
+        NewDeck.setLabel("NEW DECK");
+        NewDeck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                NewDeckActionPerformed(evt);
             }
         });
+        MainMenuPanel.add(NewDeck);
+        NewDeck.getAccessibleContext().setAccessibleName("NewDeck");
 
-        jButton2.setFont(new java.awt.Font("Lucida Console", 1, 36)); // NOI18N
-        jButton2.setText("LOAD DECK");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        LoadDeck.setActionCommand("LoadDeck");
+        LoadDeck.setBackground(new java.awt.Color(204, 204, 255));
+        LoadDeck.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
+        LoadDeck.setForeground(new java.awt.Color(51, 51, 51));
+        LoadDeck.setLabel("LOAD DECK");
+        LoadDeck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                LoadDeckActionPerformed(evt);
             }
         });
+        MainMenuPanel.add(LoadDeck);
+        LoadDeck.getAccessibleContext().setAccessibleName("LoadDeck");
+        LoadDeck.getAccessibleContext().setAccessibleDescription("");
 
-        jButton3.setFont(new java.awt.Font("Lucida Console", 1, 36)); // NOI18N
-        jButton3.setText("EXIT");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Exit.setActionCommand("Exit");
+        Exit.setBackground(new java.awt.Color(204, 204, 255));
+        Exit.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
+        Exit.setForeground(new java.awt.Color(51, 51, 51));
+        Exit.setLabel("EXIT");
+        Exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ExitActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addGap(329, 329, 329)
-                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addComponent(jLabel1)))
-                .addContainerGap(57, Short.MAX_VALUE))
-        );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(136, Short.MAX_VALUE))
-        );
-        jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        MainMenuPanel.add(Exit);
+        Exit.getAccessibleContext().setAccessibleName("Exit");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jDesktopPane1)
-                .addContainerGap())
+            .addComponent(MainMenuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jDesktopPane1)
-                .addGap(22, 22, 22))
+            .addComponent(MainMenuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        if(evt.getSource() == jButton2)
-        {
-            
-        }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void NewDeckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewDeckActionPerformed
+        Controller.newDeck();
+    }//GEN-LAST:event_NewDeckActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(evt.getSource() == jButton1)
-        {
-            
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void LoadDeckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoadDeckActionPerformed
+        Controller.loadDeck();
+    }//GEN-LAST:event_LoadDeckActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        if(evt.getSource() == jButton3) 
-               System.exit(0);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    public static void main(String args[]) {
-     
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override public void run() {
-                new MainMenu().setVisible(true);
-            }
-        });
-    }
+    private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_ExitActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JLabel jLabel1;
+    private java.awt.Button Exit;
+    private java.awt.Button LoadDeck;
+    private javax.swing.JPanel MainMenuPanel;
+    private java.awt.Label MenuTitle;
+    private java.awt.Button NewDeck;
     // End of variables declaration//GEN-END:variables
 }

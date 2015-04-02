@@ -1,243 +1,273 @@
 package GUI;
-
-public class ChooseClass extends javax.swing.JInternalFrame {
-    Controller control;
-    
+public class ChooseClass extends javax.swing.JFrame {
+   
     public ChooseClass() {
-        control = new Controller();
         initComponents();
     }
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
-        jLabel1 = new javax.swing.JLabel();
-        Druid = new javax.swing.JButton();
-        Hunter = new javax.swing.JButton();
-        Mage = new javax.swing.JButton();
-        Paladin = new javax.swing.JButton();
-        Priest = new javax.swing.JButton();
-        Rogue = new javax.swing.JButton();
-        Shaman = new javax.swing.JButton();
-        Warlock = new javax.swing.JButton();
-        Warrior = new javax.swing.JButton();
-        ChooseBack = new javax.swing.JButton();
+        ClassPanel = new javax.swing.JPanel();
+        Druid = new java.awt.Button();
+        Hunter = new java.awt.Button();
+        Mage = new java.awt.Button();
+        Paladin = new java.awt.Button();
+        Priest = new java.awt.Button();
+        Shaman = new java.awt.Button();
+        Rogue = new java.awt.Button();
+        Warrior = new java.awt.Button();
+        Warlock = new java.awt.Button();
+        Back = new java.awt.Button();
+        ClassTitle = new java.awt.Label();
 
-        jLabel1.setFont(new java.awt.Font("Lucida Console", 1, 48)); // NOI18N
-        jLabel1.setText("CHOOSE YOUR CLASS");
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        Druid.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        Druid.setText("DRUID");
+        ClassPanel.setBackground(new java.awt.Color(0, 51, 102));
+        ClassPanel.setMaximumSize(new java.awt.Dimension(250, 250));
+        ClassPanel.setMinimumSize(new java.awt.Dimension(250, 250));
+        ClassPanel.setName(""); // NOI18N
+        ClassPanel.setPreferredSize(new java.awt.Dimension(250, 250));
+        ClassPanel.setLayout(new java.awt.GridBagLayout());
+
+        Druid.setBackground(new java.awt.Color(204, 204, 255));
+        Druid.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Druid.setLabel("Druid");
         Druid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DruidActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        ClassPanel.add(Druid, gridBagConstraints);
 
-        Hunter.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        Hunter.setText("HUNTER");
+        Hunter.setBackground(new java.awt.Color(204, 204, 255));
+        Hunter.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Hunter.setLabel("Hunter");
         Hunter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HunterActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        ClassPanel.add(Hunter, gridBagConstraints);
 
-        Mage.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        Mage.setText("MAGE");
+        Mage.setBackground(new java.awt.Color(204, 204, 255));
+        Mage.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Mage.setLabel("Mage");
         Mage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MageActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        ClassPanel.add(Mage, gridBagConstraints);
 
-        Paladin.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        Paladin.setText("PALADIN");
+        Paladin.setBackground(new java.awt.Color(204, 204, 255));
+        Paladin.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Paladin.setLabel("Paladin");
         Paladin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PaladinActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        ClassPanel.add(Paladin, gridBagConstraints);
 
-        Priest.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        Priest.setText("PRIEST");
+        Priest.setBackground(new java.awt.Color(204, 204, 255));
+        Priest.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Priest.setLabel("Priest");
         Priest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PriestActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        ClassPanel.add(Priest, gridBagConstraints);
 
-        Rogue.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        Rogue.setText("ROGUE");
-        Rogue.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RogueActionPerformed(evt);
-            }
-        });
-
-        Shaman.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        Shaman.setText("SHAMAN");
+        Shaman.setBackground(new java.awt.Color(204, 204, 255));
+        Shaman.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Shaman.setLabel("Shaman");
         Shaman.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ShamanActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        ClassPanel.add(Shaman, gridBagConstraints);
 
-        Warlock.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        Warlock.setText("WARLOCK");
-        Warlock.addActionListener(new java.awt.event.ActionListener() {
+        Rogue.setBackground(new java.awt.Color(204, 204, 255));
+        Rogue.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Rogue.setLabel("Rogue");
+        Rogue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WarlockActionPerformed(evt);
+                RogueActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        ClassPanel.add(Rogue, gridBagConstraints);
 
-        Warrior.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        Warrior.setText("WARRIOR");
+        Warrior.setBackground(new java.awt.Color(204, 204, 255));
+        Warrior.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Warrior.setLabel("Warrior");
         Warrior.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 WarriorActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        ClassPanel.add(Warrior, gridBagConstraints);
 
-        ChooseBack.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        ChooseBack.setText("BACK");
-        ChooseBack.addActionListener(new java.awt.event.ActionListener() {
+        Warlock.setBackground(new java.awt.Color(204, 204, 255));
+        Warlock.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Warlock.setLabel("Warlock");
+        Warlock.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ChooseBackActionPerformed(evt);
+                WarlockActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        ClassPanel.add(Warlock, gridBagConstraints);
+
+        Back.setLabel("BACK");
+        Back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        ClassPanel.add(Back, gridBagConstraints);
+
+        ClassTitle.setFont(new java.awt.Font("Lucida Console", 1, 24)); // NOI18N
+        ClassTitle.setForeground(new java.awt.Color(255, 255, 0));
+        ClassTitle.setText("CHOOSE A CLASS");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        ClassPanel.add(ClassTitle, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(191, 191, 191)
-                .addComponent(jLabel1)
-                .addContainerGap(219, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(67, 67, 67)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Druid, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Shaman, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Paladin, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ChooseBack, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Warlock, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
-                    .addComponent(Priest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Hunter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(96, 96, 96)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(Mage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Warrior, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-                    .addComponent(Rogue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(74, 74, 74))
+            .addComponent(ClassPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Druid, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
-                    .addComponent(Hunter, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Mage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Rogue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(6, 6, 6))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Priest, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Paladin, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(Shaman, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Warlock, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Warrior, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(49, 49, 49)
-                .addComponent(ChooseBack, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(ClassPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    // Druid class
-    private void DruidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DruidActionPerformed
-        control.chooseClass("Druid");
-    }//GEN-LAST:event_DruidActionPerformed
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        Controller.back();
+    }                                     
 
-    // Hunter class
-    private void HunterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HunterActionPerformed
-        control.chooseClass("Hunter");
-    }//GEN-LAST:event_HunterActionPerformed
+    private void DruidActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        Controller.chooseClass("Druid");
+    }                                     
 
-    // Mage class
-    private void MageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MageActionPerformed
-        control.chooseClass("Mage");
-    }//GEN-LAST:event_MageActionPerformed
+    private void HunterActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        Controller.chooseClass("Hunter");
+    }                                     
 
-    // Paladin class
-    private void PaladinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PaladinActionPerformed
-        control.chooseClass("Paladin");
-    }//GEN-LAST:event_PaladinActionPerformed
+    private void MageActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        Controller.chooseClass("Mage");
+    }                                     
 
-    // Priest class
-    private void PriestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PriestActionPerformed
-        control.chooseClass("Priest");
-    }//GEN-LAST:event_PriestActionPerformed
+    private void PaladinActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        Controller.chooseClass("Paladin");
+    }                                    
 
-    // Rogue class
-    private void RogueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RogueActionPerformed
-        control.chooseClass("Rogue");
-    }//GEN-LAST:event_RogueActionPerformed
+    private void PriestActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        Controller.chooseClass("Priest");
+    }                                     
 
-    // Shaman class
-    private void ShamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShamanActionPerformed
-        control.chooseClass("Shaman");
-    }//GEN-LAST:event_ShamanActionPerformed
+    private void RogueActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        Controller.chooseClass("Rogue");
+    }                                     
 
-    // Warlock class
-    private void WarlockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WarlockActionPerformed
-        control.chooseClass("Warlock");
-    }//GEN-LAST:event_WarlockActionPerformed
+    private void ShamanActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        Controller.chooseClass("Shaman");
+    }                                     
 
-    // Warrior class
-    private void WarriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WarriorActionPerformed
-        control.chooseClass("Warrior");
-    }//GEN-LAST:event_WarriorActionPerformed
+    private void WarriorActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        Controller.chooseClass("Warrior");
+    }                                     
 
-    // Back button
-    private void ChooseBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChooseBackActionPerformed
-        this.dispose();
-    }//GEN-LAST:event_ChooseBackActionPerformed
+    private void WarlockActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        Controller.chooseClass("Warlock");
+    }                                  
 
-    public static void main(String args[]) {
-       
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ChooseClass().setVisible(true);
-            }
-        });
-    }
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ChooseBack;
-    private javax.swing.JButton Druid;
-    private javax.swing.JButton Hunter;
-    private javax.swing.JButton Mage;
-    private javax.swing.JButton Paladin;
-    private javax.swing.JButton Priest;
-    private javax.swing.JButton Rogue;
-    private javax.swing.JButton Shaman;
-    private javax.swing.JButton Warlock;
-    private javax.swing.JButton Warrior;
-    private javax.swing.JLabel jLabel1;
-    // End of variables declaration//GEN-END:variables
+    // Variables declaration - do not modify                     
+    private java.awt.Button Back;
+    private java.awt.Button Druid;
+    private java.awt.Button Hunter;
+    private java.awt.Button Mage;
+    private java.awt.Button Paladin;
+    private java.awt.Button Priest;
+    private java.awt.Button Shaman;
+    private java.awt.Button Rogue;
+    private java.awt.Button Warrior;
+    private java.awt.Button Warlock;
+    private javax.swing.JPanel ClassPanel;
+    private java.awt.Label ClassTitle;
+    // End of variables declaration                   
 }

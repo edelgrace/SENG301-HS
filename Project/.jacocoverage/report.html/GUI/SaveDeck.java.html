@@ -1,132 +1,229 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>SaveDeck.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Project&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">GUI</a> &gt; <span class="el_source">SaveDeck.java</span></div><h1>SaveDeck.java</h1><pre class="source lang-java linenums">package GUI;
-public class SaveDeck extends javax.swing.JDialog {
-
-    public SaveDeck(java.awt.Frame parent, boolean modal) {
-<span class="nc" id="L5">        super(parent, modal);</span>
-<span class="nc" id="L6">        initComponents();</span>
-<span class="nc" id="L7">    }</span>
-
+public class SaveDeck extends javax.swing.JFrame {
+   
+<span class="nc" id="L4">    public SaveDeck() {</span>
+<span class="nc" id="L5">        initComponents();</span>
+<span class="nc" id="L6">    }</span>
+    
     @SuppressWarnings(&quot;unchecked&quot;)
-    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;                          
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
-<span class="nc" id="L13">        jLabel1 = new javax.swing.JLabel();</span>
-<span class="nc" id="L14">        jButton1 = new javax.swing.JButton();</span>
-<span class="nc" id="L15">        jButton2 = new javax.swing.JButton();</span>
-<span class="nc" id="L16">        jButton3 = new javax.swing.JButton();</span>
-<span class="nc" id="L17">        jButton4 = new javax.swing.JButton();</span>
-<span class="nc" id="L18">        jButton5 = new javax.swing.JButton();</span>
-<span class="nc" id="L19">        jButton6 = new javax.swing.JButton();</span>
-<span class="nc" id="L20">        jButton7 = new javax.swing.JButton();</span>
+<span class="nc" id="L13">        SavePanel = new javax.swing.JPanel();</span>
+<span class="nc" id="L14">        Save1 = new java.awt.Button();</span>
+<span class="nc" id="L15">        Save2 = new java.awt.Button();</span>
+<span class="nc" id="L16">        Save3 = new java.awt.Button();</span>
+<span class="nc" id="L17">        Save4 = new java.awt.Button();</span>
+<span class="nc" id="L18">        Save5 = new java.awt.Button();</span>
+<span class="nc" id="L19">        Save6 = new java.awt.Button();</span>
+<span class="nc" id="L20">        Save7 = new java.awt.Button();</span>
+<span class="nc" id="L21">        Save8 = new java.awt.Button();</span>
+<span class="nc" id="L22">        Save9 = new java.awt.Button();</span>
+<span class="nc" id="L23">        Back = new java.awt.Button();</span>
+<span class="nc" id="L24">        SaveTitle = new java.awt.Label();</span>
 
-<span class="nc" id="L22">        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);</span>
+<span class="nc" id="L26">        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);</span>
 
-<span class="nc" id="L24">        jLabel1.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 48)); // NOI18N</span>
-<span class="nc" id="L25">        jLabel1.setText(&quot;SAVE DECK&quot;);</span>
+<span class="nc" id="L28">        SavePanel.setBackground(new java.awt.Color(0, 51, 102));</span>
+<span class="nc" id="L29">        SavePanel.setMaximumSize(new java.awt.Dimension(250, 250));</span>
+<span class="nc" id="L30">        SavePanel.setMinimumSize(new java.awt.Dimension(250, 250));</span>
+<span class="nc" id="L31">        SavePanel.setName(&quot;&quot;); // NOI18N</span>
+<span class="nc" id="L32">        SavePanel.setPreferredSize(new java.awt.Dimension(250, 250));</span>
+<span class="nc" id="L33">        SavePanel.setLayout(new java.awt.GridBagLayout());</span>
 
-<span class="nc" id="L27">        jButton1.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 18)); // NOI18N</span>
-<span class="nc" id="L28">        jButton1.setText(&quot;SLOT 1&quot;);</span>
+<span class="nc" id="L35">        Save1.setBackground(new java.awt.Color(204, 204, 255));</span>
+<span class="nc" id="L36">        Save1.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L37">        Save1.setLabel(&quot;DECK1&quot;);</span>
+<span class="nc" id="L38">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="nc" id="L39">        gridBagConstraints.gridx = 0;</span>
+<span class="nc" id="L40">        gridBagConstraints.gridy = 1;</span>
+<span class="nc" id="L41">        gridBagConstraints.ipadx = 8;</span>
+<span class="nc" id="L42">        gridBagConstraints.ipady = 8;</span>
+<span class="nc" id="L43">        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);</span>
+<span class="nc" id="L44">        SavePanel.add(Save1, gridBagConstraints);</span>
 
-<span class="nc" id="L30">        jButton2.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 18)); // NOI18N</span>
-<span class="nc" id="L31">        jButton2.setText(&quot;SLOT 2&quot;);</span>
+<span class="nc" id="L46">        Save2.setBackground(new java.awt.Color(204, 204, 255));</span>
+<span class="nc" id="L47">        Save2.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L48">        Save2.setLabel(&quot;DECK2&quot;);</span>
+<span class="nc" id="L49">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="nc" id="L50">        gridBagConstraints.gridx = 1;</span>
+<span class="nc" id="L51">        gridBagConstraints.gridy = 1;</span>
+<span class="nc" id="L52">        gridBagConstraints.ipadx = 8;</span>
+<span class="nc" id="L53">        gridBagConstraints.ipady = 8;</span>
+<span class="nc" id="L54">        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);</span>
+<span class="nc" id="L55">        SavePanel.add(Save2, gridBagConstraints);</span>
 
-<span class="nc" id="L33">        jButton3.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 18)); // NOI18N</span>
-<span class="nc" id="L34">        jButton3.setText(&quot;SLOT 3&quot;);</span>
-<span class="nc" id="L35">        jButton3.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L57">        Save3.setBackground(new java.awt.Color(204, 204, 255));</span>
+<span class="nc" id="L58">        Save3.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L59">        Save3.setLabel(&quot;DECK3&quot;);</span>
+<span class="nc" id="L60">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="nc" id="L61">        gridBagConstraints.gridx = 2;</span>
+<span class="nc" id="L62">        gridBagConstraints.gridy = 1;</span>
+<span class="nc" id="L63">        gridBagConstraints.ipadx = 8;</span>
+<span class="nc" id="L64">        gridBagConstraints.ipady = 8;</span>
+<span class="nc" id="L65">        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);</span>
+<span class="nc" id="L66">        SavePanel.add(Save3, gridBagConstraints);</span>
+
+<span class="nc" id="L68">        Save4.setBackground(new java.awt.Color(204, 204, 255));</span>
+<span class="nc" id="L69">        Save4.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L70">        Save4.setLabel(&quot;DECK4&quot;);</span>
+<span class="nc" id="L71">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="nc" id="L72">        gridBagConstraints.gridx = 0;</span>
+<span class="nc" id="L73">        gridBagConstraints.gridy = 2;</span>
+<span class="nc" id="L74">        gridBagConstraints.ipadx = 8;</span>
+<span class="nc" id="L75">        gridBagConstraints.ipady = 8;</span>
+<span class="nc" id="L76">        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);</span>
+<span class="nc" id="L77">        SavePanel.add(Save4, gridBagConstraints);</span>
+
+<span class="nc" id="L79">        Save5.setBackground(new java.awt.Color(204, 204, 255));</span>
+<span class="nc" id="L80">        Save5.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L81">        Save5.setLabel(&quot;DECK5&quot;);</span>
+<span class="nc" id="L82">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="nc" id="L83">        gridBagConstraints.gridx = 1;</span>
+<span class="nc" id="L84">        gridBagConstraints.gridy = 2;</span>
+<span class="nc" id="L85">        gridBagConstraints.ipadx = 8;</span>
+<span class="nc" id="L86">        gridBagConstraints.ipady = 8;</span>
+<span class="nc" id="L87">        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);</span>
+<span class="nc" id="L88">        SavePanel.add(Save5, gridBagConstraints);</span>
+
+<span class="nc" id="L90">        Save6.setBackground(new java.awt.Color(204, 204, 255));</span>
+<span class="nc" id="L91">        Save6.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L92">        Save6.setLabel(&quot;DECK6&quot;);</span>
+<span class="nc" id="L93">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="nc" id="L94">        gridBagConstraints.gridx = 2;</span>
+<span class="nc" id="L95">        gridBagConstraints.gridy = 2;</span>
+<span class="nc" id="L96">        gridBagConstraints.ipadx = 8;</span>
+<span class="nc" id="L97">        gridBagConstraints.ipady = 8;</span>
+<span class="nc" id="L98">        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);</span>
+<span class="nc" id="L99">        SavePanel.add(Save6, gridBagConstraints);</span>
+
+<span class="nc" id="L101">        Save7.setBackground(new java.awt.Color(204, 204, 255));</span>
+<span class="nc" id="L102">        Save7.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L103">        Save7.setLabel(&quot;DECK7&quot;);</span>
+<span class="nc" id="L104">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="nc" id="L105">        gridBagConstraints.gridx = 0;</span>
+<span class="nc" id="L106">        gridBagConstraints.gridy = 3;</span>
+<span class="nc" id="L107">        gridBagConstraints.ipadx = 8;</span>
+<span class="nc" id="L108">        gridBagConstraints.ipady = 8;</span>
+<span class="nc" id="L109">        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);</span>
+<span class="nc" id="L110">        SavePanel.add(Save7, gridBagConstraints);</span>
+
+<span class="nc" id="L112">        Save8.setBackground(new java.awt.Color(204, 204, 255));</span>
+<span class="nc" id="L113">        Save8.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L114">        Save8.setLabel(&quot;DECK8&quot;);</span>
+<span class="nc" id="L115">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="nc" id="L116">        gridBagConstraints.gridx = 1;</span>
+<span class="nc" id="L117">        gridBagConstraints.gridy = 3;</span>
+<span class="nc" id="L118">        gridBagConstraints.ipadx = 8;</span>
+<span class="nc" id="L119">        gridBagConstraints.ipady = 8;</span>
+<span class="nc" id="L120">        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);</span>
+<span class="nc" id="L121">        SavePanel.add(Save8, gridBagConstraints);</span>
+
+<span class="nc" id="L123">        Save9.setBackground(new java.awt.Color(204, 204, 255));</span>
+<span class="nc" id="L124">        Save9.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L125">        Save9.setLabel(&quot;DECK9&quot;);</span>
+<span class="nc" id="L126">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="nc" id="L127">        gridBagConstraints.gridx = 2;</span>
+<span class="nc" id="L128">        gridBagConstraints.gridy = 3;</span>
+<span class="nc" id="L129">        gridBagConstraints.ipadx = 8;</span>
+<span class="nc" id="L130">        gridBagConstraints.ipady = 8;</span>
+<span class="nc" id="L131">        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);</span>
+<span class="nc" id="L132">        SavePanel.add(Save9, gridBagConstraints);</span>
+
+<span class="nc" id="L134">        Back.setLabel(&quot;BACK&quot;);</span>
+<span class="nc" id="L135">        Back.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L37">                jButton3ActionPerformed(evt);</span>
-<span class="nc" id="L38">            }</span>
+<span class="nc" id="L137">                BackActionPerformed(evt);</span>
+<span class="nc" id="L138">            }</span>
         });
+<span class="nc" id="L140">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="nc" id="L141">        gridBagConstraints.gridx = 1;</span>
+<span class="nc" id="L142">        gridBagConstraints.gridy = 4;</span>
+<span class="nc" id="L143">        gridBagConstraints.ipadx = 8;</span>
+<span class="nc" id="L144">        gridBagConstraints.ipady = 8;</span>
+<span class="nc" id="L145">        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);</span>
+<span class="nc" id="L146">        SavePanel.add(Back, gridBagConstraints);</span>
 
-<span class="nc" id="L41">        jButton4.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 18)); // NOI18N</span>
-<span class="nc" id="L42">        jButton4.setText(&quot;SLOT 4&quot;);</span>
+<span class="nc" id="L148">        SaveTitle.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 24)); // NOI18N</span>
+<span class="nc" id="L149">        SaveTitle.setForeground(new java.awt.Color(255, 255, 0));</span>
+<span class="nc" id="L150">        SaveTitle.setText(&quot;SAVE A DECK&quot;);</span>
+<span class="nc" id="L151">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="nc" id="L152">        gridBagConstraints.gridx = 0;</span>
+<span class="nc" id="L153">        gridBagConstraints.gridy = 0;</span>
+<span class="nc" id="L154">        gridBagConstraints.gridwidth = 3;</span>
+<span class="nc" id="L155">        gridBagConstraints.ipadx = 8;</span>
+<span class="nc" id="L156">        gridBagConstraints.ipady = 8;</span>
+<span class="nc" id="L157">        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);</span>
+<span class="nc" id="L158">        SavePanel.add(SaveTitle, gridBagConstraints);</span>
 
-<span class="nc" id="L44">        jButton5.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 18)); // NOI18N</span>
-<span class="nc" id="L45">        jButton5.setText(&quot;SLOT 5&quot;);</span>
-
-<span class="nc" id="L47">        jButton6.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 18)); // NOI18N</span>
-<span class="nc" id="L48">        jButton6.setText(&quot;SLOT 6&quot;);</span>
-
-<span class="nc" id="L50">        jButton7.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 18)); // NOI18N</span>
-<span class="nc" id="L51">        jButton7.setText(&quot;BACK&quot;);</span>
-
-<span class="nc" id="L53">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
-<span class="nc" id="L54">        getContentPane().setLayout(layout);</span>
-<span class="nc" id="L55">        layout.setHorizontalGroup(</span>
+<span class="nc" id="L160">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="nc" id="L161">        getContentPane().setLayout(layout);</span>
+<span class="nc" id="L162">        layout.setHorizontalGroup(</span>
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(143, 143, 143)
-                .addComponent(jLabel1)
-                .addContainerGap(150, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-                        .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
-                .addGap(32, 32, 32))
+            .addComponent(SavePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-<span class="nc" id="L78">        layout.setVerticalGroup(</span>
+<span class="nc" id="L166">        layout.setVerticalGroup(</span>
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel1)
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(65, 65, 65)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(42, Short.MAX_VALUE))
+            .addComponent(SavePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-<span class="nc" id="L98">        pack();</span>
-<span class="nc" id="L99">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+<span class="nc" id="L171">        pack();</span>
+<span class="nc" id="L172">    }// &lt;/editor-fold&gt;                        </span>
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {                                     
+<span class="nc" id="L175">        Controller.back();</span>
+<span class="nc" id="L176">    }            </span>
+    
+    private void Save1ActionPerformed(java.awt.event.ActionEvent evt) {                                      
         // TODO add your handling code here:
-<span class="nc" id="L103">    }//GEN-LAST:event_jButton3ActionPerformed</span>
+<span class="nc" id="L180">    }                                     </span>
 
-    public static void main(String args[]) {
-  
-<span class="nc" id="L107">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
-            public void run() {
-<span class="nc" id="L109">                SaveDeck dialog = new SaveDeck(new javax.swing.JFrame(), true);</span>
-<span class="nc" id="L110">                dialog.addWindowListener(new java.awt.event.WindowAdapter() {</span>
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-<span class="nc" id="L113">                        System.exit(0);</span>
-<span class="nc" id="L114">                    }</span>
-                });
-<span class="nc" id="L116">                dialog.setVisible(true);</span>
-<span class="nc" id="L117">            }</span>
-        });
-<span class="nc" id="L119">    }</span>
+    private void Save2ActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+<span class="nc" id="L184">    }                                     </span>
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
-    // End of variables declaration//GEN-END:variables
+    private void Save3ActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+<span class="nc" id="L188">    }                                     </span>
+
+    private void Save4ActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+<span class="nc" id="L192">    }                                     </span>
+
+    private void Save5ActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+<span class="nc" id="L196">    }                                     </span>
+
+    private void Save6ActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+<span class="nc" id="L200">    }                                     </span>
+
+    private void Save7ActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+<span class="nc" id="L204">    }                                     </span>
+
+    private void Save8ActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+<span class="nc" id="L208">    }                                     </span>
+
+    private void Save9ActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+<span class="nc" id="L212">    }                                 </span>
+    
+    // Variables declaration - do not modify                     
+    private java.awt.Button Back;
+    private java.awt.Button Save1;
+    private java.awt.Button Save2;
+    private java.awt.Button Save3;
+    private java.awt.Button Save4;
+    private java.awt.Button Save5;
+    private java.awt.Button Save6;
+    private java.awt.Button Save7;
+    private java.awt.Button Save8;
+    private java.awt.Button Save9;
+    private javax.swing.JPanel SavePanel;
+    private java.awt.Label SaveTitle;
+    // End of variables declaration                   
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.4.201502262128</span></div></body></html>

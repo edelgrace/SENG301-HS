@@ -1,153 +1,273 @@
 package GUI;
-public class LoadDeck extends javax.swing.JDialog {
-
+public class LoadDeck extends javax.swing.JFrame {
    
-    public LoadDeck(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
+    public LoadDeck() {
         initComponents();
     }
-
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        LoadPanel = new javax.swing.JPanel();
+        Load1 = new java.awt.Button();
+        Load2 = new java.awt.Button();
+        Load3 = new java.awt.Button();
+        Load4 = new java.awt.Button();
+        Load5 = new java.awt.Button();
+        Load6 = new java.awt.Button();
+        Load7 = new java.awt.Button();
+        Load8 = new java.awt.Button();
+        Load9 = new java.awt.Button();
+        Back = new java.awt.Button();
+        LoadTitle = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Console", 1, 48)); // NOI18N
-        jLabel1.setText("LOAD DECK");
+        LoadPanel.setBackground(new java.awt.Color(0, 51, 102));
+        LoadPanel.setMaximumSize(new java.awt.Dimension(250, 250));
+        LoadPanel.setMinimumSize(new java.awt.Dimension(250, 250));
+        LoadPanel.setName(""); // NOI18N
+        LoadPanel.setPreferredSize(new java.awt.Dimension(250, 250));
+        LoadPanel.setLayout(new java.awt.GridBagLayout());
 
-        jButton1.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        jButton1.setText("DECK 1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Load1.setBackground(new java.awt.Color(204, 204, 255));
+        Load1.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Load1.setLabel("DECK1");
+        Load1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                Load1ActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        LoadPanel.add(Load1, gridBagConstraints);
 
-        jButton2.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        jButton2.setText("DECK 2");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Load2.setBackground(new java.awt.Color(204, 204, 255));
+        Load2.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Load2.setLabel("DECK2");
+        Load2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                Load2ActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        LoadPanel.add(Load2, gridBagConstraints);
 
-        jButton3.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        jButton3.setText("DECK 3");
-
-        jButton4.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        jButton4.setText("DECK 4");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        Load3.setBackground(new java.awt.Color(204, 204, 255));
+        Load3.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Load3.setLabel("DECK3");
+        Load3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                Load3ActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        LoadPanel.add(Load3, gridBagConstraints);
 
-        jButton5.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        jButton5.setText("DECK 5");
+        Load4.setBackground(new java.awt.Color(204, 204, 255));
+        Load4.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Load4.setLabel("DECK4");
+        Load4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Load4ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        LoadPanel.add(Load4, gridBagConstraints);
 
-        jButton6.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        jButton6.setText("DECK 6");
+        Load5.setBackground(new java.awt.Color(204, 204, 255));
+        Load5.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Load5.setLabel("DECK5");
+        Load5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Load5ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        LoadPanel.add(Load5, gridBagConstraints);
 
-        jButton10.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        jButton10.setText("BACK");
+        Load6.setBackground(new java.awt.Color(204, 204, 255));
+        Load6.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Load6.setLabel("DECK6");
+        Load6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Load6ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        LoadPanel.add(Load6, gridBagConstraints);
+
+        Load7.setBackground(new java.awt.Color(204, 204, 255));
+        Load7.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Load7.setLabel("DECK7");
+        Load7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Load7ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        LoadPanel.add(Load7, gridBagConstraints);
+
+        Load8.setBackground(new java.awt.Color(204, 204, 255));
+        Load8.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Load8.setLabel("DECK8");
+        Load8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Load8ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        LoadPanel.add(Load8, gridBagConstraints);
+
+        Load9.setBackground(new java.awt.Color(204, 204, 255));
+        Load9.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
+        Load9.setLabel("DECK9");
+        Load9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Load9ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        LoadPanel.add(Load9, gridBagConstraints);
+
+        Back.setLabel("BACK");
+        Back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        LoadPanel.add(Back, gridBagConstraints);
+
+        LoadTitle.setFont(new java.awt.Font("Lucida Console", 1, 24)); // NOI18N
+        LoadTitle.setForeground(new java.awt.Color(255, 255, 0));
+        LoadTitle.setText("LOAD A DECK");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.insets = new java.awt.Insets(9, 9, 9, 9);
+        LoadPanel.add(LoadTitle, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(145, 145, 145)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(37, 37, 37)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE))
-                        .addGap(37, 37, 37)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
-                            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(36, Short.MAX_VALUE))
+            .addComponent(LoadPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(48, 48, 48)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
-                .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
-                .addGap(45, 45, 45))
+            .addComponent(LoadPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
+        Controller.back();
+    }//GEN-LAST:event_BackActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void Load1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Load1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_Load1ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void Load2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Load2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_Load2ActionPerformed
 
-   
-    public static void main(String args[]) {
-     
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                LoadDeck dialog = new LoadDeck(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
+    private void Load3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Load3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Load3ActionPerformed
+
+    private void Load4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Load4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Load4ActionPerformed
+
+    private void Load5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Load5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Load5ActionPerformed
+
+    private void Load6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Load6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Load6ActionPerformed
+
+    private void Load7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Load7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Load7ActionPerformed
+
+    private void Load8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Load8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Load8ActionPerformed
+
+    private void Load9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Load9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Load9ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel1;
+    private java.awt.Button Back;
+    private java.awt.Button Load1;
+    private java.awt.Button Load2;
+    private java.awt.Button Load3;
+    private java.awt.Button Load4;
+    private java.awt.Button Load5;
+    private java.awt.Button Load6;
+    private java.awt.Button Load7;
+    private java.awt.Button Load8;
+    private java.awt.Button Load9;
+    private javax.swing.JPanel LoadPanel;
+    private java.awt.Label LoadTitle;
     // End of variables declaration//GEN-END:variables
 }

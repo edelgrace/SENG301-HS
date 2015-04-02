@@ -73,7 +73,10 @@ public class CardCollection {
                     index++;
                 }
             }
-            else { cardList[index] = aCard; }
+            else {
+                cardList[index] = aCard;
+                index++;
+            }
         }
     }
     
@@ -101,6 +104,26 @@ public class CardCollection {
         return cardList[i];
     }
     
+    public Card get(String ID) {
+        Card aCard = new Card();
+        
+        for(int i = 0; i < cardListSize; i++) {
+            Card card = cardList[i];
+            
+            if(card != null) {
+                String cardID = card.getID();
+
+                if(cardID.equalsIgnoreCase(ID)) {
+                    aCard = card;
+                    return aCard;
+                }
+            }
+        }
+        
+        return aCard;
+    }
+    
+    
     public int getSize() {
         return cardListSize;
     }
@@ -119,17 +142,21 @@ public class CardCollection {
     }
     
     public String[] findCard(String searchTerm) {
+        searchTerm = searchTerm.toLowerCase();
         String[] result = new String[cardListSize];
         int pointer = 0;
         
         /* find card */
         for(int i = 0; i < cardListSize; i++) {
             Card aCard = this.get(i);
-            String aCardName = aCard.getName();
             
-            if(aCardName.contains(searchTerm)) {
-                result[pointer] = aCardName;
-                pointer++;
+            if(aCard != null) {
+                String aCardName = aCard.getName();
+
+                if(aCardName.toLowerCase().contains(searchTerm)) {
+                    result[pointer] = aCardName;
+                    pointer++;
+                }
             }
         }
         

@@ -90,4 +90,8 @@ public class Deck {
     public String get(int i) {
         return list[i];
     }
+    
+    public int getNext() {
+        return next;
+    }
 }
