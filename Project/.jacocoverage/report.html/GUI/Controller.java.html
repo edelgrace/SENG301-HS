@@ -27,16 +27,16 @@ import javax.swing.*;
 <span class="nc" id="L27">    }</span>
     
     public static Deck newDeck() {
-<span class="fc" id="L30">        chooseClass = new ChooseClass();</span>
-<span class="fc" id="L31">        chooseClass.setVisible(true);</span>
+<span class="nc" id="L30">        chooseClass = new ChooseClass();</span>
+<span class="nc" id="L31">        chooseClass.setVisible(true);</span>
         
-<span class="fc" id="L33">        JFrame previousFrame = windowStack[stackPointer-1];</span>
+<span class="nc" id="L33">        JFrame previousFrame = windowStack[stackPointer-1];</span>
         
-<span class="fc" id="L35">        windowStack[stackPointer] = chooseClass;</span>
+<span class="nc" id="L35">        windowStack[stackPointer] = chooseClass;</span>
         
-<span class="fc" id="L37">        previousFrame.setVisible(false);</span>
+<span class="nc" id="L37">        previousFrame.setVisible(false);</span>
         
-<span class="fc" id="L39">        return deck;</span>
+<span class="nc" id="L39">        return deck;</span>
     }
     
     public static String[] search(JTextField search) {
@@ -52,17 +52,17 @@ import javax.swing.*;
     }
     
     public static JFrame mainMenu() {
-<span class="fc" id="L55">        JFrame previousFrame = windowStack[stackPointer-1];</span>
+<span class="nc" id="L55">        JFrame previousFrame = windowStack[stackPointer-1];</span>
         
-<span class="fc" id="L57">        previousFrame.setVisible(false);</span>
+<span class="nc" id="L57">        previousFrame.setVisible(false);</span>
         
-<span class="fc" id="L59">        main.setVisible(true);</span>
+<span class="nc" id="L59">        main.setVisible(true);</span>
         
-<span class="fc" id="L61">        windowStack[stackPointer-1] = main;</span>
+<span class="nc" id="L61">        windowStack[stackPointer-1] = main;</span>
         
-<span class="fc" id="L63">        stackPointer -= 1;</span>
+<span class="nc" id="L63">        stackPointer -= 1;</span>
         
-<span class="fc" id="L65">        return windowStack[stackPointer];</span>
+<span class="nc" id="L65">        return windowStack[stackPointer];</span>
     }
         
     public static JFrame[] loadDeck() {
@@ -205,9 +205,46 @@ import javax.swing.*;
     public static Deck add(JButton button) {
 <span class="fc" id="L206">        String buttonID = button.getName();</span>
         
-<span class="fc" id="L208">        deck.add(buttonID);</span>
+<span class="fc" id="L208">        String addTrue = deck.add(buttonID);</span>
         
-<span class="fc" id="L210">        return deck;</span>
+<span class="pc bpc" id="L210" title="1 of 2 branches missed.">        if(addTrue == null) {</span>
+            // Grab card from card collection
+<span class="fc" id="L212">            Card aCard = cards.get(buttonID);</span>
+
+<span class="fc" id="L214">            String buttonName = aCard.getName();</span>
+
+<span class="fc" id="L216">            System.out.println(aCard);</span>
+
+<span class="fc" id="L218">            deckScreen.addCardLabel(buttonID, buttonName, deck.getNext());</span>
+<span class="fc" id="L219">            deckScreen.addRemoveButton(buttonID, deck.getNext());</span>
+
+<span class="fc" id="L221">            deckScreen.revalidate();</span>
+<span class="fc" id="L222">            deckScreen.repaint();</span>
+        }
+        
+<span class="fc" id="L225">        return deck;</span>
+    }
+    
+    public static Deck remove(JButton button) {
+<span class="nc" id="L229">        String buttonID = button.getName();</span>
+        
+<span class="nc" id="L231">        String removeTrue = deck.remove(buttonID);</span>
+        
+<span class="nc bnc" id="L233" title="All 2 branches missed.">        if(removeTrue == null) {</span>
+            // Grab card from card collection
+<span class="nc" id="L235">            Card aCard = cards.get(buttonID);</span>
+
+<span class="nc" id="L237">            String buttonName = aCard.getName();</span>
+
+<span class="nc" id="L239">            System.out.println(aCard);</span>
+
+            //deckScreen.remove(buttonID);
+
+<span class="nc" id="L243">            deckScreen.revalidate();</span>
+<span class="nc" id="L244">            deckScreen.repaint();</span>
+        }
+        
+<span class="nc" id="L247">        return deck;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.4.201502262128</span></div></body></html>

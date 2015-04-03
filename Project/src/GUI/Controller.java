@@ -117,7 +117,7 @@ public class Controller {
     }
     
     public static Card[] displayCards(Card[] cardList) {
-        resetDeckScreen();
+        resetCardScreen();
         
         if(cardList == null) {
             String buttonText = "Error displaying cards";
@@ -142,14 +142,20 @@ public class Controller {
         return cardList;
     } 
     
-    private static void resetDeckScreen() {
+    private static void resetCardScreen() {
         deckScreen.jPanel1.removeAll();
         deckScreen.jPanel1.revalidate();
         deckScreen.jPanel1.repaint();
     }
     
+    private static void resetDeckScreen() {
+        deckScreen.DeckPane.removeAll();
+        deckScreen.DeckPane.revalidate();
+        deckScreen.DeckPane.repaint();
+    }
+    
     public static String[] displayCards(String[] cardList) {
-        resetDeckScreen();
+        resetCardScreen();
         
         if(cardList == null) {
             String buttonText = "Error displaying cards";
@@ -230,16 +236,22 @@ public class Controller {
         
         String removeTrue = deck.remove(buttonID);
         
-        if(removeTrue == null) {
-            // Grab card from card collection
-            Card aCard = cards.get(buttonID);
+        System.out.println(buttonID);
+        System.out.println(removeTrue);
+        
+        if(removeTrue != deck.cannotRemove()) {
+            resetDeckScreen();
+            for(int i = 0; i < deck.size(); i++) {
+                String newID = deck.get(i);
+                if(newID != null) {
+                    // Look for card in card collection
+                    String newName = cards.get(newID).getName();
 
-            String buttonName = aCard.getName();
-
-            System.out.println(aCard);
-
-            deckScreen.remove(buttonID);
-
+                    deckScreen.addCardLabel(newID, newName, i);
+                    deckScreen.addRemoveButton(newID, i);
+                }
+            }
+            
             deckScreen.revalidate();
             deckScreen.repaint();
         }

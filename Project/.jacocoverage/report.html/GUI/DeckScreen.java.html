@@ -7,830 +7,281 @@ public class DeckScreen extends javax.swing.JFrame {
     
 <span class="fc" id="L8">    public DeckScreen(String init) {</span>
 <span class="fc" id="L9">        initComponents();</span>
-        
-<span class="pc bpc" id="L11" title="1 of 2 branches missed.">        if(init.equalsIgnoreCase(&quot;load&quot;)) {</span>
-            
-        }
-        
-        // If initializing screen for the first time
-        // set deck elements to invisible
-        else {
-<span class="fc" id="L18">            initDeckLabels();</span>
-<span class="fc" id="L19">            initDeckButtons();</span>
-        }
-        // End initialization
-        
-<span class="fc" id="L23">    }</span>
-    
-    private void initDeckLabels() {
-<span class="fc" id="L26">        card1.setVisible(false);</span>
-<span class="fc" id="L27">        card2.setVisible(false);</span>
-<span class="fc" id="L28">        card3.setVisible(false);</span>
-<span class="fc" id="L29">        card4.setVisible(false);</span>
-<span class="fc" id="L30">        card5.setVisible(false);</span>
-<span class="fc" id="L31">        card6.setVisible(false);</span>
-<span class="fc" id="L32">        card7.setVisible(false);</span>
-<span class="fc" id="L33">        card8.setVisible(false);</span>
-<span class="fc" id="L34">        card9.setVisible(false);</span>
-<span class="fc" id="L35">        card10.setVisible(false);</span>
-<span class="fc" id="L36">        card11.setVisible(false);</span>
-<span class="fc" id="L37">        card12.setVisible(false);</span>
-<span class="fc" id="L38">        card13.setVisible(false);</span>
-<span class="fc" id="L39">        card14.setVisible(false);</span>
-<span class="fc" id="L40">        card15.setVisible(false);</span>
-<span class="fc" id="L41">        card16.setVisible(false);</span>
-<span class="fc" id="L42">        card17.setVisible(false);</span>
-<span class="fc" id="L43">        card18.setVisible(false);</span>
-<span class="fc" id="L44">        card19.setVisible(false);</span>
-<span class="fc" id="L45">        card20.setVisible(false);</span>
-<span class="fc" id="L46">        card21.setVisible(false);</span>
-<span class="fc" id="L47">        card22.setVisible(false);</span>
-<span class="fc" id="L48">        card23.setVisible(false);</span>
-<span class="fc" id="L49">        card24.setVisible(false);</span>
-<span class="fc" id="L50">        card25.setVisible(false);</span>
-<span class="fc" id="L51">        card26.setVisible(false);</span>
-<span class="fc" id="L52">        card27.setVisible(false);</span>
-<span class="fc" id="L53">        card28.setVisible(false);</span>
-<span class="fc" id="L54">        card29.setVisible(false);</span>
-<span class="fc" id="L55">        card30.setVisible(false);</span>
-<span class="fc" id="L56">    }</span>
-    
-    private void initDeckButtons() {
-<span class="fc" id="L59">        remove1.setVisible(false);</span>
-<span class="fc" id="L60">        remove2.setVisible(false);</span>
-<span class="fc" id="L61">        remove3.setVisible(false);</span>
-<span class="fc" id="L62">        remove4.setVisible(false);</span>
-<span class="fc" id="L63">        remove5.setVisible(false);</span>
-<span class="fc" id="L64">        remove6.setVisible(false);</span>
-<span class="fc" id="L65">        remove7.setVisible(false);</span>
-<span class="fc" id="L66">        remove8.setVisible(false);</span>
-<span class="fc" id="L67">        remove9.setVisible(false);</span>
-<span class="fc" id="L68">        remove10.setVisible(false);</span>
-<span class="fc" id="L69">        remove11.setVisible(false);</span>
-<span class="fc" id="L70">        remove12.setVisible(false);</span>
-<span class="fc" id="L71">        remove13.setVisible(false);</span>
-<span class="fc" id="L72">        remove14.setVisible(false);</span>
-<span class="fc" id="L73">        remove15.setVisible(false);</span>
-<span class="fc" id="L74">        remove16.setVisible(false);</span>
-<span class="fc" id="L75">        remove17.setVisible(false);</span>
-<span class="fc" id="L76">        remove18.setVisible(false);</span>
-<span class="fc" id="L77">        remove19.setVisible(false);</span>
-<span class="fc" id="L78">        remove20.setVisible(false);</span>
-<span class="fc" id="L79">        remove21.setVisible(false);</span>
-<span class="fc" id="L80">        remove22.setVisible(false);</span>
-<span class="fc" id="L81">        remove23.setVisible(false);</span>
-<span class="fc" id="L82">        remove24.setVisible(false);</span>
-<span class="fc" id="L83">        remove25.setVisible(false);</span>
-<span class="fc" id="L84">        remove26.setVisible(false);</span>
-<span class="fc" id="L85">        remove27.setVisible(false);</span>
-<span class="fc" id="L86">        remove28.setVisible(false);</span>
-<span class="fc" id="L87">        remove29.setVisible(false);</span>
-<span class="fc" id="L88">        remove30.setVisible(false);</span>
-<span class="fc" id="L89">    }</span>
+<span class="fc" id="L10">    }</span>
 
     @SuppressWarnings(&quot;unchecked&quot;)
     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-<span class="fc" id="L96">        button22 = new java.awt.Button();</span>
-<span class="fc" id="L97">        save = new java.awt.Button();</span>
-<span class="fc" id="L98">        Load = new java.awt.Button();</span>
-<span class="fc" id="L99">        mainMenu = new java.awt.Button();</span>
-<span class="fc" id="L100">        deckListTitle = new java.awt.Label();</span>
-<span class="fc" id="L101">        CardCollectionPane = new javax.swing.JScrollPane();</span>
-<span class="fc" id="L102">        jPanel1 = new javax.swing.JPanel();</span>
-<span class="fc" id="L103">        searchField = new javax.swing.JTextField();</span>
-<span class="fc" id="L104">        searchButton = new java.awt.Button();</span>
-<span class="fc" id="L105">        DeckScrollPane = new javax.swing.JScrollPane();</span>
-<span class="fc" id="L106">        DeckPane = new javax.swing.JPanel();</span>
-<span class="fc" id="L107">        remove1 = new java.awt.Button();</span>
-<span class="fc" id="L108">        remove2 = new java.awt.Button();</span>
-<span class="fc" id="L109">        remove3 = new java.awt.Button();</span>
-<span class="fc" id="L110">        remove4 = new java.awt.Button();</span>
-<span class="fc" id="L111">        remove5 = new java.awt.Button();</span>
-<span class="fc" id="L112">        remove6 = new java.awt.Button();</span>
-<span class="fc" id="L113">        remove7 = new java.awt.Button();</span>
-<span class="fc" id="L114">        remove8 = new java.awt.Button();</span>
-<span class="fc" id="L115">        remove9 = new java.awt.Button();</span>
-<span class="fc" id="L116">        remove10 = new java.awt.Button();</span>
-<span class="fc" id="L117">        remove11 = new java.awt.Button();</span>
-<span class="fc" id="L118">        remove12 = new java.awt.Button();</span>
-<span class="fc" id="L119">        remove13 = new java.awt.Button();</span>
-<span class="fc" id="L120">        remove14 = new java.awt.Button();</span>
-<span class="fc" id="L121">        remove15 = new java.awt.Button();</span>
-<span class="fc" id="L122">        remove16 = new java.awt.Button();</span>
-<span class="fc" id="L123">        remove17 = new java.awt.Button();</span>
-<span class="fc" id="L124">        remove18 = new java.awt.Button();</span>
-<span class="fc" id="L125">        remove19 = new java.awt.Button();</span>
-<span class="fc" id="L126">        remove20 = new java.awt.Button();</span>
-<span class="fc" id="L127">        remove21 = new java.awt.Button();</span>
-<span class="fc" id="L128">        remove22 = new java.awt.Button();</span>
-<span class="fc" id="L129">        remove23 = new java.awt.Button();</span>
-<span class="fc" id="L130">        remove24 = new java.awt.Button();</span>
-<span class="fc" id="L131">        remove25 = new java.awt.Button();</span>
-<span class="fc" id="L132">        remove26 = new java.awt.Button();</span>
-<span class="fc" id="L133">        remove27 = new java.awt.Button();</span>
-<span class="fc" id="L134">        remove28 = new java.awt.Button();</span>
-<span class="fc" id="L135">        remove29 = new java.awt.Button();</span>
-<span class="fc" id="L136">        remove30 = new java.awt.Button();</span>
-<span class="fc" id="L137">        card1 = new java.awt.Label();</span>
-<span class="fc" id="L138">        card2 = new java.awt.Label();</span>
-<span class="fc" id="L139">        card3 = new java.awt.Label();</span>
-<span class="fc" id="L140">        card4 = new java.awt.Label();</span>
-<span class="fc" id="L141">        card5 = new java.awt.Label();</span>
-<span class="fc" id="L142">        card6 = new java.awt.Label();</span>
-<span class="fc" id="L143">        card7 = new java.awt.Label();</span>
-<span class="fc" id="L144">        card8 = new java.awt.Label();</span>
-<span class="fc" id="L145">        card9 = new java.awt.Label();</span>
-<span class="fc" id="L146">        card10 = new java.awt.Label();</span>
-<span class="fc" id="L147">        card11 = new java.awt.Label();</span>
-<span class="fc" id="L148">        card12 = new java.awt.Label();</span>
-<span class="fc" id="L149">        card13 = new java.awt.Label();</span>
-<span class="fc" id="L150">        card14 = new java.awt.Label();</span>
-<span class="fc" id="L151">        card15 = new java.awt.Label();</span>
-<span class="fc" id="L152">        card16 = new java.awt.Label();</span>
-<span class="fc" id="L153">        card17 = new java.awt.Label();</span>
-<span class="fc" id="L154">        card18 = new java.awt.Label();</span>
-<span class="fc" id="L155">        card19 = new java.awt.Label();</span>
-<span class="fc" id="L156">        card20 = new java.awt.Label();</span>
-<span class="fc" id="L157">        card21 = new java.awt.Label();</span>
-<span class="fc" id="L158">        card22 = new java.awt.Label();</span>
-<span class="fc" id="L159">        card23 = new java.awt.Label();</span>
-<span class="fc" id="L160">        card24 = new java.awt.Label();</span>
-<span class="fc" id="L161">        card25 = new java.awt.Label();</span>
-<span class="fc" id="L162">        card26 = new java.awt.Label();</span>
-<span class="fc" id="L163">        card27 = new java.awt.Label();</span>
-<span class="fc" id="L164">        card28 = new java.awt.Label();</span>
-<span class="fc" id="L165">        card29 = new java.awt.Label();</span>
-<span class="fc" id="L166">        card30 = new java.awt.Label();</span>
+<span class="fc" id="L17">        button22 = new java.awt.Button();</span>
+<span class="fc" id="L18">        save = new java.awt.Button();</span>
+<span class="fc" id="L19">        Load = new java.awt.Button();</span>
+<span class="fc" id="L20">        mainMenu = new java.awt.Button();</span>
+<span class="fc" id="L21">        deckListTitle = new java.awt.Label();</span>
+<span class="fc" id="L22">        CardCollectionPane = new javax.swing.JScrollPane();</span>
+<span class="fc" id="L23">        jPanel1 = new javax.swing.JPanel();</span>
+<span class="fc" id="L24">        searchField = new javax.swing.JTextField();</span>
+<span class="fc" id="L25">        searchButton = new java.awt.Button();</span>
+<span class="fc" id="L26">        DeckScrollPane = new javax.swing.JScrollPane();</span>
+<span class="fc" id="L27">        DeckPane = new javax.swing.JPanel();</span>
 
-<span class="fc" id="L168">        button22.setLabel(&quot;button22&quot;);</span>
+<span class="fc" id="L29">        button22.setLabel(&quot;button22&quot;);</span>
 
-<span class="fc" id="L170">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
-<span class="fc" id="L171">        setBackground(new java.awt.Color(0, 51, 102));</span>
-<span class="fc" id="L172">        setForeground(new java.awt.Color(255, 255, 0));</span>
-<span class="fc" id="L173">        setMaximumSize(new java.awt.Dimension(1000, 700));</span>
-<span class="fc" id="L174">        setPreferredSize(new java.awt.Dimension(500, 600));</span>
-<span class="fc" id="L175">        setResizable(false);</span>
-<span class="fc" id="L176">        getContentPane().setLayout(new java.awt.GridBagLayout());</span>
+<span class="fc" id="L31">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+<span class="fc" id="L32">        setBackground(new java.awt.Color(0, 51, 102));</span>
+<span class="fc" id="L33">        setForeground(new java.awt.Color(255, 255, 0));</span>
+<span class="fc" id="L34">        setMaximumSize(new java.awt.Dimension(1000, 700));</span>
+<span class="fc" id="L35">        setPreferredSize(new java.awt.Dimension(700, 600));</span>
+<span class="fc" id="L36">        setResizable(false);</span>
+<span class="fc" id="L37">        getContentPane().setLayout(new java.awt.GridBagLayout());</span>
 
-<span class="fc" id="L178">        save.setActionCommand(&quot;saveDeck&quot;);</span>
-<span class="fc" id="L179">        save.setBackground(new java.awt.Color(204, 204, 255));</span>
-<span class="fc" id="L180">        save.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 14)); // NOI18N</span>
-<span class="fc" id="L181">        save.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L182">        save.setLabel(&quot;SAVE&quot;);</span>
-<span class="fc" id="L183">        save.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="fc" id="L39">        save.setActionCommand(&quot;saveDeck&quot;);</span>
+<span class="fc" id="L40">        save.setBackground(new java.awt.Color(204, 204, 255));</span>
+<span class="fc" id="L41">        save.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 14)); // NOI18N</span>
+<span class="fc" id="L42">        save.setForeground(new java.awt.Color(51, 51, 51));</span>
+<span class="fc" id="L43">        save.setLabel(&quot;SAVE&quot;);</span>
+<span class="fc" id="L44">        save.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L185">                saveActionPerformed(evt);</span>
-<span class="nc" id="L186">            }</span>
+<span class="nc" id="L46">                saveActionPerformed(evt);</span>
+<span class="nc" id="L47">            }</span>
         });
-<span class="fc" id="L188">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L189">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L190">        gridBagConstraints.gridy = 0;</span>
-<span class="fc" id="L191">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
-<span class="fc" id="L192">        gridBagConstraints.ipadx = 20;</span>
-<span class="fc" id="L193">        gridBagConstraints.ipady = 2;</span>
-<span class="fc" id="L194">        gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 12);</span>
-<span class="fc" id="L195">        getContentPane().add(save, gridBagConstraints);</span>
+<span class="fc" id="L49">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="fc" id="L50">        gridBagConstraints.gridx = 0;</span>
+<span class="fc" id="L51">        gridBagConstraints.gridy = 0;</span>
+<span class="fc" id="L52">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
+<span class="fc" id="L53">        gridBagConstraints.ipadx = 20;</span>
+<span class="fc" id="L54">        gridBagConstraints.ipady = 2;</span>
+<span class="fc" id="L55">        gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 12);</span>
+<span class="fc" id="L56">        getContentPane().add(save, gridBagConstraints);</span>
 
-<span class="fc" id="L197">        Load.setActionCommand(&quot;load&quot;);</span>
-<span class="fc" id="L198">        Load.setBackground(new java.awt.Color(204, 204, 255));</span>
-<span class="fc" id="L199">        Load.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 14)); // NOI18N</span>
-<span class="fc" id="L200">        Load.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L201">        Load.setLabel(&quot;LOAD&quot;);</span>
-<span class="fc" id="L202">        Load.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="fc" id="L58">        Load.setActionCommand(&quot;load&quot;);</span>
+<span class="fc" id="L59">        Load.setBackground(new java.awt.Color(204, 204, 255));</span>
+<span class="fc" id="L60">        Load.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 14)); // NOI18N</span>
+<span class="fc" id="L61">        Load.setForeground(new java.awt.Color(51, 51, 51));</span>
+<span class="fc" id="L62">        Load.setLabel(&quot;LOAD&quot;);</span>
+<span class="fc" id="L63">        Load.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L204">                LoadActionPerformed(evt);</span>
-<span class="nc" id="L205">            }</span>
+<span class="nc" id="L65">                LoadActionPerformed(evt);</span>
+<span class="nc" id="L66">            }</span>
         });
-<span class="fc" id="L207">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L208">        gridBagConstraints.gridx = 2;</span>
-<span class="fc" id="L209">        gridBagConstraints.gridy = 0;</span>
-<span class="fc" id="L210">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
-<span class="fc" id="L211">        gridBagConstraints.ipadx = 20;</span>
-<span class="fc" id="L212">        gridBagConstraints.ipady = 2;</span>
-<span class="fc" id="L213">        gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 12);</span>
-<span class="fc" id="L214">        getContentPane().add(Load, gridBagConstraints);</span>
-<span class="fc" id="L215">        Load.getAccessibleContext().setAccessibleName(&quot;load&quot;);</span>
+<span class="fc" id="L68">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="fc" id="L69">        gridBagConstraints.gridx = 2;</span>
+<span class="fc" id="L70">        gridBagConstraints.gridy = 0;</span>
+<span class="fc" id="L71">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
+<span class="fc" id="L72">        gridBagConstraints.ipadx = 20;</span>
+<span class="fc" id="L73">        gridBagConstraints.ipady = 2;</span>
+<span class="fc" id="L74">        gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 12);</span>
+<span class="fc" id="L75">        getContentPane().add(Load, gridBagConstraints);</span>
+<span class="fc" id="L76">        Load.getAccessibleContext().setAccessibleName(&quot;load&quot;);</span>
 
-<span class="fc" id="L217">        mainMenu.setActionCommand(&quot;mainMenu&quot;);</span>
-<span class="fc" id="L218">        mainMenu.setBackground(new java.awt.Color(204, 204, 255));</span>
-<span class="fc" id="L219">        mainMenu.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 14)); // NOI18N</span>
-<span class="fc" id="L220">        mainMenu.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L221">        mainMenu.setLabel(&quot;MAIN MENU&quot;);</span>
-<span class="fc" id="L222">        mainMenu.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="fc" id="L78">        mainMenu.setActionCommand(&quot;mainMenu&quot;);</span>
+<span class="fc" id="L79">        mainMenu.setBackground(new java.awt.Color(204, 204, 255));</span>
+<span class="fc" id="L80">        mainMenu.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 14)); // NOI18N</span>
+<span class="fc" id="L81">        mainMenu.setForeground(new java.awt.Color(51, 51, 51));</span>
+<span class="fc" id="L82">        mainMenu.setLabel(&quot;MAIN MENU&quot;);</span>
+<span class="fc" id="L83">        mainMenu.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L224">                mainMenuActionPerformed(evt);</span>
-<span class="nc" id="L225">            }</span>
+<span class="nc" id="L85">                mainMenuActionPerformed(evt);</span>
+<span class="nc" id="L86">            }</span>
         });
-<span class="fc" id="L227">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L228">        gridBagConstraints.gridx = 4;</span>
-<span class="fc" id="L229">        gridBagConstraints.gridy = 0;</span>
-<span class="fc" id="L230">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
-<span class="fc" id="L231">        gridBagConstraints.ipadx = 20;</span>
-<span class="fc" id="L232">        gridBagConstraints.ipady = 2;</span>
-<span class="fc" id="L233">        gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 12);</span>
-<span class="fc" id="L234">        getContentPane().add(mainMenu, gridBagConstraints);</span>
+<span class="fc" id="L88">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="fc" id="L89">        gridBagConstraints.gridx = 4;</span>
+<span class="fc" id="L90">        gridBagConstraints.gridy = 0;</span>
+<span class="fc" id="L91">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
+<span class="fc" id="L92">        gridBagConstraints.ipadx = 20;</span>
+<span class="fc" id="L93">        gridBagConstraints.ipady = 2;</span>
+<span class="fc" id="L94">        gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 12);</span>
+<span class="fc" id="L95">        getContentPane().add(mainMenu, gridBagConstraints);</span>
 
-<span class="fc" id="L236">        deckListTitle.setAlignment(java.awt.Label.CENTER);</span>
-<span class="fc" id="L237">        deckListTitle.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));</span>
-<span class="fc" id="L238">        deckListTitle.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 14)); // NOI18N</span>
-<span class="fc" id="L239">        deckListTitle.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L240">        deckListTitle.setText(&quot;DECK LIST&quot;);</span>
-<span class="fc" id="L241">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L242">        gridBagConstraints.gridx = 7;</span>
-<span class="fc" id="L243">        gridBagConstraints.gridy = 0;</span>
-<span class="fc" id="L244">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
-<span class="fc" id="L245">        gridBagConstraints.ipadx = 20;</span>
-<span class="fc" id="L246">        gridBagConstraints.ipady = 2;</span>
-<span class="fc" id="L247">        gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 12);</span>
-<span class="fc" id="L248">        getContentPane().add(deckListTitle, gridBagConstraints);</span>
+<span class="fc" id="L97">        deckListTitle.setAlignment(java.awt.Label.CENTER);</span>
+<span class="fc" id="L98">        deckListTitle.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));</span>
+<span class="fc" id="L99">        deckListTitle.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 14)); // NOI18N</span>
+<span class="fc" id="L100">        deckListTitle.setForeground(new java.awt.Color(51, 51, 51));</span>
+<span class="fc" id="L101">        deckListTitle.setText(&quot;DECK LIST&quot;);</span>
+<span class="fc" id="L102">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="fc" id="L103">        gridBagConstraints.gridx = 7;</span>
+<span class="fc" id="L104">        gridBagConstraints.gridy = 0;</span>
+<span class="fc" id="L105">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
+<span class="fc" id="L106">        gridBagConstraints.ipadx = 20;</span>
+<span class="fc" id="L107">        gridBagConstraints.ipady = 2;</span>
+<span class="fc" id="L108">        gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 12);</span>
+<span class="fc" id="L109">        getContentPane().add(deckListTitle, gridBagConstraints);</span>
 
-<span class="fc" id="L250">        CardCollectionPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);</span>
-<span class="fc" id="L251">        CardCollectionPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);</span>
-<span class="fc" id="L252">        CardCollectionPane.setAutoscrolls(true);</span>
-<span class="fc" id="L253">        CardCollectionPane.setPreferredSize(new java.awt.Dimension(319, 2602));</span>
+<span class="fc" id="L111">        CardCollectionPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);</span>
+<span class="fc" id="L112">        CardCollectionPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);</span>
+<span class="fc" id="L113">        CardCollectionPane.setAutoscrolls(true);</span>
+<span class="fc" id="L114">        CardCollectionPane.setMaximumSize(null);</span>
+<span class="fc" id="L115">        CardCollectionPane.setMinimumSize(null);</span>
 
-<span class="fc" id="L255">        jPanel1.setMinimumSize(new java.awt.Dimension(300, 200));</span>
-<span class="fc" id="L256">        jPanel1.setPreferredSize(new java.awt.Dimension(300, 500));</span>
-<span class="fc" id="L257">        jPanel1.setLayout(new java.awt.GridBagLayout());</span>
-<span class="fc" id="L258">        CardCollectionPane.setViewportView(jPanel1);</span>
+<span class="fc" id="L117">        jPanel1.setMaximumSize(null);</span>
+<span class="fc" id="L118">        jPanel1.setMinimumSize(null);</span>
+<span class="fc" id="L119">        jPanel1.setName(&quot;&quot;); // NOI18N</span>
+<span class="fc" id="L120">        jPanel1.setPreferredSize(null);</span>
+<span class="fc" id="L121">        jPanel1.setLayout(new java.awt.GridBagLayout());</span>
+<span class="fc" id="L122">        CardCollectionPane.setViewportView(jPanel1);</span>
 
-<span class="fc" id="L260">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L261">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L262">        gridBagConstraints.gridy = 3;</span>
-<span class="fc" id="L263">        gridBagConstraints.gridwidth = 5;</span>
-<span class="fc" id="L264">        gridBagConstraints.gridheight = 5;</span>
-<span class="fc" id="L265">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
-<span class="fc" id="L266">        gridBagConstraints.weighty = 1.0;</span>
-<span class="fc" id="L267">        gridBagConstraints.insets = new java.awt.Insets(11, 11, 11, 11);</span>
-<span class="fc" id="L268">        getContentPane().add(CardCollectionPane, gridBagConstraints);</span>
+<span class="fc" id="L124">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="fc" id="L125">        gridBagConstraints.gridx = 0;</span>
+<span class="fc" id="L126">        gridBagConstraints.gridy = 3;</span>
+<span class="fc" id="L127">        gridBagConstraints.gridwidth = 5;</span>
+<span class="fc" id="L128">        gridBagConstraints.gridheight = 5;</span>
+<span class="fc" id="L129">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
+<span class="fc" id="L130">        gridBagConstraints.weighty = 1.0;</span>
+<span class="fc" id="L131">        gridBagConstraints.insets = new java.awt.Insets(11, 11, 11, 11);</span>
+<span class="fc" id="L132">        getContentPane().add(CardCollectionPane, gridBagConstraints);</span>
 
-<span class="fc" id="L270">        searchField.setBackground(new java.awt.Color(204, 204, 204));</span>
-<span class="fc" id="L271">        searchField.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L272">        searchField.setToolTipText(&quot;&quot;);</span>
-<span class="fc" id="L273">        searchField.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="fc" id="L134">        searchField.setBackground(new java.awt.Color(204, 204, 204));</span>
+<span class="fc" id="L135">        searchField.setForeground(new java.awt.Color(51, 51, 51));</span>
+<span class="fc" id="L136">        searchField.setToolTipText(&quot;&quot;);</span>
+<span class="fc" id="L137">        searchField.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L275">                searchFieldActionPerformed(evt);</span>
-<span class="nc" id="L276">            }</span>
+<span class="nc" id="L139">                searchFieldActionPerformed(evt);</span>
+<span class="nc" id="L140">            }</span>
         });
-<span class="fc" id="L278">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L279">        gridBagConstraints.gridx = 2;</span>
-<span class="fc" id="L280">        gridBagConstraints.gridy = 1;</span>
-<span class="fc" id="L281">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
-<span class="fc" id="L282">        gridBagConstraints.ipadx = 20;</span>
-<span class="fc" id="L283">        gridBagConstraints.ipady = 2;</span>
-<span class="fc" id="L284">        gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 12);</span>
-<span class="fc" id="L285">        getContentPane().add(searchField, gridBagConstraints);</span>
+<span class="fc" id="L142">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="fc" id="L143">        gridBagConstraints.gridx = 2;</span>
+<span class="fc" id="L144">        gridBagConstraints.gridy = 1;</span>
+<span class="fc" id="L145">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
+<span class="fc" id="L146">        gridBagConstraints.ipadx = 20;</span>
+<span class="fc" id="L147">        gridBagConstraints.ipady = 2;</span>
+<span class="fc" id="L148">        gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 12);</span>
+<span class="fc" id="L149">        getContentPane().add(searchField, gridBagConstraints);</span>
 
-<span class="fc" id="L287">        searchButton.setBackground(new java.awt.Color(204, 204, 204));</span>
-<span class="fc" id="L288">        searchButton.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 14)); // NOI18N</span>
-<span class="fc" id="L289">        searchButton.setLabel(&quot;SEARCH&quot;);</span>
-<span class="fc" id="L290">        searchButton.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="fc" id="L151">        searchButton.setBackground(new java.awt.Color(204, 204, 204));</span>
+<span class="fc" id="L152">        searchButton.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 14)); // NOI18N</span>
+<span class="fc" id="L153">        searchButton.setLabel(&quot;SEARCH&quot;);</span>
+<span class="fc" id="L154">        searchButton.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L292">                searchButtonActionPerformed(evt);</span>
-<span class="nc" id="L293">            }</span>
+<span class="nc" id="L156">                searchButtonActionPerformed(evt);</span>
+<span class="nc" id="L157">            }</span>
         });
-<span class="fc" id="L295">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L296">        gridBagConstraints.gridx = 4;</span>
-<span class="fc" id="L297">        gridBagConstraints.gridy = 1;</span>
-<span class="fc" id="L298">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
-<span class="fc" id="L299">        gridBagConstraints.ipadx = 20;</span>
-<span class="fc" id="L300">        gridBagConstraints.ipady = 2;</span>
-<span class="fc" id="L301">        gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 12);</span>
-<span class="fc" id="L302">        getContentPane().add(searchButton, gridBagConstraints);</span>
-
-<span class="fc" id="L304">        DeckScrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);</span>
-
-<span class="fc" id="L306">        DeckPane.setForeground(new java.awt.Color(204, 204, 255));</span>
-<span class="fc" id="L307">        DeckPane.setMinimumSize(new java.awt.Dimension(100, 720));</span>
-<span class="fc" id="L308">        DeckPane.setLayout(new java.awt.GridBagLayout());</span>
-
-<span class="fc" id="L310">        remove1.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L311">        remove1.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L312">        remove1.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L313">        remove1.addActionListener(new java.awt.event.ActionListener() {</span>
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L315">                remove1ActionPerformed(evt);</span>
-<span class="nc" id="L316">            }</span>
-        });
-<span class="fc" id="L318">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L319">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L320">        gridBagConstraints.gridy = 0;</span>
-<span class="fc" id="L321">        DeckPane.add(remove1, gridBagConstraints);</span>
-
-<span class="fc" id="L323">        remove2.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L324">        remove2.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L325">        remove2.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L326">        remove2.addActionListener(new java.awt.event.ActionListener() {</span>
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L328">                remove2ActionPerformed(evt);</span>
-<span class="nc" id="L329">            }</span>
-        });
-<span class="fc" id="L331">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L332">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L333">        gridBagConstraints.gridy = 1;</span>
-<span class="fc" id="L334">        DeckPane.add(remove2, gridBagConstraints);</span>
-
-<span class="fc" id="L336">        remove3.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L337">        remove3.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L338">        remove3.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L339">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L340">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L341">        gridBagConstraints.gridy = 2;</span>
-<span class="fc" id="L342">        DeckPane.add(remove3, gridBagConstraints);</span>
-
-<span class="fc" id="L344">        remove4.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L345">        remove4.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L346">        remove4.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L347">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L348">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L349">        gridBagConstraints.gridy = 3;</span>
-<span class="fc" id="L350">        DeckPane.add(remove4, gridBagConstraints);</span>
-
-<span class="fc" id="L352">        remove5.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L353">        remove5.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L354">        remove5.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L355">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L356">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L357">        gridBagConstraints.gridy = 4;</span>
-<span class="fc" id="L358">        DeckPane.add(remove5, gridBagConstraints);</span>
-
-<span class="fc" id="L360">        remove6.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L361">        remove6.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L362">        remove6.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L363">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L364">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L365">        gridBagConstraints.gridy = 5;</span>
-<span class="fc" id="L366">        DeckPane.add(remove6, gridBagConstraints);</span>
-
-<span class="fc" id="L368">        remove7.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L369">        remove7.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L370">        remove7.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L371">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L372">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L373">        gridBagConstraints.gridy = 6;</span>
-<span class="fc" id="L374">        DeckPane.add(remove7, gridBagConstraints);</span>
-
-<span class="fc" id="L376">        remove8.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L377">        remove8.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L378">        remove8.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L379">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L380">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L381">        gridBagConstraints.gridy = 7;</span>
-<span class="fc" id="L382">        DeckPane.add(remove8, gridBagConstraints);</span>
-
-<span class="fc" id="L384">        remove9.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L385">        remove9.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L386">        remove9.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L387">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L388">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L389">        gridBagConstraints.gridy = 8;</span>
-<span class="fc" id="L390">        DeckPane.add(remove9, gridBagConstraints);</span>
-
-<span class="fc" id="L392">        remove10.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L393">        remove10.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L394">        remove10.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L395">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L396">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L397">        gridBagConstraints.gridy = 9;</span>
-<span class="fc" id="L398">        DeckPane.add(remove10, gridBagConstraints);</span>
-
-<span class="fc" id="L400">        remove11.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L401">        remove11.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L402">        remove11.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L403">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L404">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L405">        gridBagConstraints.gridy = 10;</span>
-<span class="fc" id="L406">        DeckPane.add(remove11, gridBagConstraints);</span>
-
-<span class="fc" id="L408">        remove12.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L409">        remove12.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L410">        remove12.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L411">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L412">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L413">        gridBagConstraints.gridy = 11;</span>
-<span class="fc" id="L414">        DeckPane.add(remove12, gridBagConstraints);</span>
-
-<span class="fc" id="L416">        remove13.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L417">        remove13.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L418">        remove13.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L419">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L420">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L421">        gridBagConstraints.gridy = 12;</span>
-<span class="fc" id="L422">        DeckPane.add(remove13, gridBagConstraints);</span>
-
-<span class="fc" id="L424">        remove14.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L425">        remove14.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L426">        remove14.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L427">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L428">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L429">        gridBagConstraints.gridy = 13;</span>
-<span class="fc" id="L430">        DeckPane.add(remove14, gridBagConstraints);</span>
-
-<span class="fc" id="L432">        remove15.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L433">        remove15.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L434">        remove15.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L435">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L436">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L437">        gridBagConstraints.gridy = 14;</span>
-<span class="fc" id="L438">        DeckPane.add(remove15, gridBagConstraints);</span>
-
-<span class="fc" id="L440">        remove16.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L441">        remove16.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L442">        remove16.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L443">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L444">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L445">        gridBagConstraints.gridy = 15;</span>
-<span class="fc" id="L446">        DeckPane.add(remove16, gridBagConstraints);</span>
-
-<span class="fc" id="L448">        remove17.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L449">        remove17.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L450">        remove17.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L451">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L452">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L453">        gridBagConstraints.gridy = 16;</span>
-<span class="fc" id="L454">        DeckPane.add(remove17, gridBagConstraints);</span>
-
-<span class="fc" id="L456">        remove18.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L457">        remove18.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L458">        remove18.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L459">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L460">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L461">        gridBagConstraints.gridy = 17;</span>
-<span class="fc" id="L462">        DeckPane.add(remove18, gridBagConstraints);</span>
-
-<span class="fc" id="L464">        remove19.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L465">        remove19.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L466">        remove19.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L467">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L468">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L469">        gridBagConstraints.gridy = 18;</span>
-<span class="fc" id="L470">        DeckPane.add(remove19, gridBagConstraints);</span>
-
-<span class="fc" id="L472">        remove20.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L473">        remove20.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L474">        remove20.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L475">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L476">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L477">        gridBagConstraints.gridy = 19;</span>
-<span class="fc" id="L478">        DeckPane.add(remove20, gridBagConstraints);</span>
-
-<span class="fc" id="L480">        remove21.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L481">        remove21.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L482">        remove21.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L483">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L484">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L485">        gridBagConstraints.gridy = 20;</span>
-<span class="fc" id="L486">        DeckPane.add(remove21, gridBagConstraints);</span>
-
-<span class="fc" id="L488">        remove22.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L489">        remove22.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L490">        remove22.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L491">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L492">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L493">        gridBagConstraints.gridy = 21;</span>
-<span class="fc" id="L494">        DeckPane.add(remove22, gridBagConstraints);</span>
-
-<span class="fc" id="L496">        remove23.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L497">        remove23.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L498">        remove23.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L499">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L500">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L501">        gridBagConstraints.gridy = 22;</span>
-<span class="fc" id="L502">        DeckPane.add(remove23, gridBagConstraints);</span>
-
-<span class="fc" id="L504">        remove24.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L505">        remove24.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L506">        remove24.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L507">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L508">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L509">        gridBagConstraints.gridy = 23;</span>
-<span class="fc" id="L510">        DeckPane.add(remove24, gridBagConstraints);</span>
-
-<span class="fc" id="L512">        remove25.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L513">        remove25.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L514">        remove25.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L515">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L516">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L517">        gridBagConstraints.gridy = 24;</span>
-<span class="fc" id="L518">        DeckPane.add(remove25, gridBagConstraints);</span>
-
-<span class="fc" id="L520">        remove26.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L521">        remove26.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L522">        remove26.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L523">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L524">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L525">        gridBagConstraints.gridy = 25;</span>
-<span class="fc" id="L526">        DeckPane.add(remove26, gridBagConstraints);</span>
-
-<span class="fc" id="L528">        remove27.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L529">        remove27.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L530">        remove27.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L531">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L532">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L533">        gridBagConstraints.gridy = 26;</span>
-<span class="fc" id="L534">        DeckPane.add(remove27, gridBagConstraints);</span>
-
-<span class="fc" id="L536">        remove28.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L537">        remove28.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L538">        remove28.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L539">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L540">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L541">        gridBagConstraints.gridy = 27;</span>
-<span class="fc" id="L542">        DeckPane.add(remove28, gridBagConstraints);</span>
-
-<span class="fc" id="L544">        remove29.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L545">        remove29.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L546">        remove29.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L547">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L548">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L549">        gridBagConstraints.gridy = 28;</span>
-<span class="fc" id="L550">        DeckPane.add(remove29, gridBagConstraints);</span>
-
-<span class="fc" id="L552">        remove30.setBackground(new java.awt.Color(255, 51, 51));</span>
-<span class="fc" id="L553">        remove30.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L554">        remove30.setLabel(&quot;x&quot;);</span>
-<span class="fc" id="L555">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L556">        gridBagConstraints.gridx = 1;</span>
-<span class="fc" id="L557">        gridBagConstraints.gridy = 29;</span>
-<span class="fc" id="L558">        DeckPane.add(remove30, gridBagConstraints);</span>
-
-<span class="fc" id="L560">        card1.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L561">        card1.setText(&quot;label1&quot;);</span>
-<span class="fc" id="L562">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L563">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L564">        gridBagConstraints.gridy = 0;</span>
-<span class="fc" id="L565">        DeckPane.add(card1, gridBagConstraints);</span>
-
-<span class="fc" id="L567">        card2.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L568">        card2.setText(&quot;label2&quot;);</span>
-<span class="fc" id="L569">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L570">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L571">        gridBagConstraints.gridy = 1;</span>
-<span class="fc" id="L572">        DeckPane.add(card2, gridBagConstraints);</span>
-
-<span class="fc" id="L574">        card3.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L575">        card3.setText(&quot;label3&quot;);</span>
-<span class="fc" id="L576">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L577">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L578">        gridBagConstraints.gridy = 2;</span>
-<span class="fc" id="L579">        DeckPane.add(card3, gridBagConstraints);</span>
-
-<span class="fc" id="L581">        card4.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L582">        card4.setText(&quot;label4&quot;);</span>
-<span class="fc" id="L583">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L584">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L585">        gridBagConstraints.gridy = 3;</span>
-<span class="fc" id="L586">        DeckPane.add(card4, gridBagConstraints);</span>
-
-<span class="fc" id="L588">        card5.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L589">        card5.setText(&quot;label5&quot;);</span>
-<span class="fc" id="L590">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L591">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L592">        gridBagConstraints.gridy = 4;</span>
-<span class="fc" id="L593">        DeckPane.add(card5, gridBagConstraints);</span>
-
-<span class="fc" id="L595">        card6.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L596">        card6.setText(&quot;label6&quot;);</span>
-<span class="fc" id="L597">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L598">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L599">        gridBagConstraints.gridy = 5;</span>
-<span class="fc" id="L600">        DeckPane.add(card6, gridBagConstraints);</span>
-
-<span class="fc" id="L602">        card7.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L603">        card7.setText(&quot;label7&quot;);</span>
-<span class="fc" id="L604">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L605">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L606">        gridBagConstraints.gridy = 6;</span>
-<span class="fc" id="L607">        DeckPane.add(card7, gridBagConstraints);</span>
-
-<span class="fc" id="L609">        card8.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L610">        card8.setText(&quot;label8&quot;);</span>
-<span class="fc" id="L611">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L612">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L613">        gridBagConstraints.gridy = 7;</span>
-<span class="fc" id="L614">        DeckPane.add(card8, gridBagConstraints);</span>
-
-<span class="fc" id="L616">        card9.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L617">        card9.setText(&quot;label9&quot;);</span>
-<span class="fc" id="L618">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L619">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L620">        gridBagConstraints.gridy = 8;</span>
-<span class="fc" id="L621">        DeckPane.add(card9, gridBagConstraints);</span>
-
-<span class="fc" id="L623">        card10.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L624">        card10.setText(&quot;label10&quot;);</span>
-<span class="fc" id="L625">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L626">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L627">        gridBagConstraints.gridy = 9;</span>
-<span class="fc" id="L628">        DeckPane.add(card10, gridBagConstraints);</span>
-
-<span class="fc" id="L630">        card11.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L631">        card11.setText(&quot;label11&quot;);</span>
-<span class="fc" id="L632">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L633">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L634">        gridBagConstraints.gridy = 10;</span>
-<span class="fc" id="L635">        DeckPane.add(card11, gridBagConstraints);</span>
-
-<span class="fc" id="L637">        card12.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L638">        card12.setText(&quot;label12&quot;);</span>
-<span class="fc" id="L639">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L640">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L641">        gridBagConstraints.gridy = 11;</span>
-<span class="fc" id="L642">        DeckPane.add(card12, gridBagConstraints);</span>
-
-<span class="fc" id="L644">        card13.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L645">        card13.setText(&quot;label13&quot;);</span>
-<span class="fc" id="L646">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L647">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L648">        gridBagConstraints.gridy = 12;</span>
-<span class="fc" id="L649">        DeckPane.add(card13, gridBagConstraints);</span>
-
-<span class="fc" id="L651">        card14.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L652">        card14.setText(&quot;label14&quot;);</span>
-<span class="fc" id="L653">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L654">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L655">        gridBagConstraints.gridy = 13;</span>
-<span class="fc" id="L656">        DeckPane.add(card14, gridBagConstraints);</span>
-
-<span class="fc" id="L658">        card15.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L659">        card15.setText(&quot;label15&quot;);</span>
-<span class="fc" id="L660">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L661">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L662">        gridBagConstraints.gridy = 14;</span>
-<span class="fc" id="L663">        DeckPane.add(card15, gridBagConstraints);</span>
-
-<span class="fc" id="L665">        card16.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L666">        card16.setText(&quot;label16&quot;);</span>
-<span class="fc" id="L667">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L668">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L669">        gridBagConstraints.gridy = 15;</span>
-<span class="fc" id="L670">        DeckPane.add(card16, gridBagConstraints);</span>
-
-<span class="fc" id="L672">        card17.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L673">        card17.setText(&quot;label17&quot;);</span>
-<span class="fc" id="L674">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L675">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L676">        gridBagConstraints.gridy = 16;</span>
-<span class="fc" id="L677">        DeckPane.add(card17, gridBagConstraints);</span>
-
-<span class="fc" id="L679">        card18.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L680">        card18.setText(&quot;label18&quot;);</span>
-<span class="fc" id="L681">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L682">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L683">        gridBagConstraints.gridy = 17;</span>
-<span class="fc" id="L684">        DeckPane.add(card18, gridBagConstraints);</span>
-
-<span class="fc" id="L686">        card19.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L687">        card19.setText(&quot;label19&quot;);</span>
-<span class="fc" id="L688">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L689">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L690">        gridBagConstraints.gridy = 18;</span>
-<span class="fc" id="L691">        DeckPane.add(card19, gridBagConstraints);</span>
-
-<span class="fc" id="L693">        card20.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L694">        card20.setText(&quot;label20&quot;);</span>
-<span class="fc" id="L695">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L696">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L697">        gridBagConstraints.gridy = 19;</span>
-<span class="fc" id="L698">        DeckPane.add(card20, gridBagConstraints);</span>
-
-<span class="fc" id="L700">        card21.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L701">        card21.setText(&quot;label21&quot;);</span>
-<span class="fc" id="L702">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L703">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L704">        gridBagConstraints.gridy = 20;</span>
-<span class="fc" id="L705">        DeckPane.add(card21, gridBagConstraints);</span>
-
-<span class="fc" id="L707">        card22.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L708">        card22.setText(&quot;label22&quot;);</span>
-<span class="fc" id="L709">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L710">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L711">        gridBagConstraints.gridy = 21;</span>
-<span class="fc" id="L712">        DeckPane.add(card22, gridBagConstraints);</span>
-
-<span class="fc" id="L714">        card23.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L715">        card23.setText(&quot;label23&quot;);</span>
-<span class="fc" id="L716">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L717">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L718">        gridBagConstraints.gridy = 22;</span>
-<span class="fc" id="L719">        DeckPane.add(card23, gridBagConstraints);</span>
-
-<span class="fc" id="L721">        card24.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L722">        card24.setText(&quot;label24&quot;);</span>
-<span class="fc" id="L723">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L724">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L725">        gridBagConstraints.gridy = 23;</span>
-<span class="fc" id="L726">        DeckPane.add(card24, gridBagConstraints);</span>
-
-<span class="fc" id="L728">        card25.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L729">        card25.setText(&quot;label25&quot;);</span>
-<span class="fc" id="L730">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L731">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L732">        gridBagConstraints.gridy = 24;</span>
-<span class="fc" id="L733">        DeckPane.add(card25, gridBagConstraints);</span>
-
-<span class="fc" id="L735">        card26.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L736">        card26.setText(&quot;label26&quot;);</span>
-<span class="fc" id="L737">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L738">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L739">        gridBagConstraints.gridy = 25;</span>
-<span class="fc" id="L740">        DeckPane.add(card26, gridBagConstraints);</span>
-
-<span class="fc" id="L742">        card27.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L743">        card27.setText(&quot;label27&quot;);</span>
-<span class="fc" id="L744">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L745">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L746">        gridBagConstraints.gridy = 26;</span>
-<span class="fc" id="L747">        DeckPane.add(card27, gridBagConstraints);</span>
-
-<span class="fc" id="L749">        card28.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L750">        card28.setText(&quot;label28&quot;);</span>
-<span class="fc" id="L751">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L752">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L753">        gridBagConstraints.gridy = 27;</span>
-<span class="fc" id="L754">        DeckPane.add(card28, gridBagConstraints);</span>
-
-<span class="fc" id="L756">        card29.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L757">        card29.setText(&quot;label29&quot;);</span>
-<span class="fc" id="L758">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L759">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L760">        gridBagConstraints.gridy = 28;</span>
-<span class="fc" id="L761">        DeckPane.add(card29, gridBagConstraints);</span>
-
-<span class="fc" id="L763">        card30.setForeground(new java.awt.Color(51, 51, 51));</span>
-<span class="fc" id="L764">        card30.setText(&quot;label30&quot;);</span>
-<span class="fc" id="L765">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L766">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L767">        gridBagConstraints.gridy = 29;</span>
-<span class="fc" id="L768">        DeckPane.add(card30, gridBagConstraints);</span>
-
-<span class="fc" id="L770">        DeckScrollPane.setViewportView(DeckPane);</span>
-
-<span class="fc" id="L772">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L773">        gridBagConstraints.gridx = 7;</span>
-<span class="fc" id="L774">        gridBagConstraints.gridy = 1;</span>
-<span class="fc" id="L775">        gridBagConstraints.gridheight = 7;</span>
-<span class="fc" id="L776">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
-<span class="fc" id="L777">        getContentPane().add(DeckScrollPane, gridBagConstraints);</span>
-
-<span class="fc" id="L779">        pack();</span>
-<span class="fc" id="L780">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+<span class="fc" id="L159">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="fc" id="L160">        gridBagConstraints.gridx = 4;</span>
+<span class="fc" id="L161">        gridBagConstraints.gridy = 1;</span>
+<span class="fc" id="L162">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
+<span class="fc" id="L163">        gridBagConstraints.ipadx = 20;</span>
+<span class="fc" id="L164">        gridBagConstraints.ipady = 2;</span>
+<span class="fc" id="L165">        gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 12);</span>
+<span class="fc" id="L166">        getContentPane().add(searchButton, gridBagConstraints);</span>
+
+<span class="fc" id="L168">        DeckScrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);</span>
+<span class="fc" id="L169">        DeckScrollPane.setMinimumSize(new java.awt.Dimension(300, 6));</span>
+<span class="fc" id="L170">        DeckScrollPane.setPreferredSize(new java.awt.Dimension(300, 200));</span>
+
+<span class="fc" id="L172">        DeckPane.setForeground(new java.awt.Color(204, 204, 255));</span>
+<span class="fc" id="L173">        DeckPane.setMaximumSize(null);</span>
+<span class="fc" id="L174">        DeckPane.setMinimumSize(null);</span>
+<span class="fc" id="L175">        DeckPane.setPreferredSize(null);</span>
+<span class="fc" id="L176">        DeckPane.setLayout(new java.awt.GridBagLayout());</span>
+<span class="fc" id="L177">        DeckScrollPane.setViewportView(DeckPane);</span>
+
+<span class="fc" id="L179">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="fc" id="L180">        gridBagConstraints.gridx = 7;</span>
+<span class="fc" id="L181">        gridBagConstraints.gridy = 1;</span>
+<span class="fc" id="L182">        gridBagConstraints.gridheight = 7;</span>
+<span class="fc" id="L183">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
+<span class="fc" id="L184">        getContentPane().add(DeckScrollPane, gridBagConstraints);</span>
+
+<span class="fc" id="L186">        pack();</span>
+<span class="fc" id="L187">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
 
     private void searchFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchFieldActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L784">    }//GEN-LAST:event_searchFieldActionPerformed</span>
+<span class="nc" id="L191">    }//GEN-LAST:event_searchFieldActionPerformed</span>
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
-<span class="nc" id="L787">        Controller.search(searchField);</span>
-<span class="nc" id="L788">    }//GEN-LAST:event_searchButtonActionPerformed</span>
+<span class="nc" id="L194">        Controller.search(searchField);</span>
+<span class="nc" id="L195">    }//GEN-LAST:event_searchButtonActionPerformed</span>
 
     private void mainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainMenuActionPerformed
-<span class="nc" id="L791">        Controller.mainMenu();</span>
-<span class="nc" id="L792">    }//GEN-LAST:event_mainMenuActionPerformed</span>
+<span class="nc" id="L198">        Controller.mainMenu();</span>
+<span class="nc" id="L199">    }//GEN-LAST:event_mainMenuActionPerformed</span>
 
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
-<span class="nc" id="L795">        Controller.saveDeck();</span>
-<span class="nc" id="L796">    }//GEN-LAST:event_saveActionPerformed</span>
+<span class="nc" id="L202">        Controller.saveDeck();</span>
+<span class="nc" id="L203">    }//GEN-LAST:event_saveActionPerformed</span>
 
     private void LoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoadActionPerformed
-<span class="nc" id="L799">        Controller.loadDeck();</span>
-<span class="nc" id="L800">    }//GEN-LAST:event_LoadActionPerformed</span>
-
-    private void remove1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_remove1ActionPerformed
-        // TODO add your handling code here:
-<span class="nc" id="L804">    }//GEN-LAST:event_remove1ActionPerformed</span>
-
-    private void remove2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_remove2ActionPerformed
-        // TODO add your handling code here:
-<span class="nc" id="L808">    }//GEN-LAST:event_remove2ActionPerformed</span>
+<span class="nc" id="L206">        Controller.loadDeck();</span>
+<span class="nc" id="L207">    }//GEN-LAST:event_LoadActionPerformed</span>
 
     public void addCards(String buttonID, String buttonText, int PositionY) {
-<span class="fc" id="L811">        JButton button = new JButton(buttonText);</span>
-<span class="fc" id="L812">        button.setName(buttonID);</span>
-<span class="fc" id="L813">        button.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="fc" id="L210">        JButton button = new JButton(buttonText);</span>
+<span class="fc" id="L211">        button.setName(buttonID);</span>
+<span class="fc" id="L212">        button.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L815">                addActionPerformed(evt);</span>
-<span class="nc" id="L816">            }</span>
+<span class="nc" id="L214">                addActionPerformed(evt);</span>
+<span class="nc" id="L215">            }</span>
         });
         
         GridBagConstraints gridBagConstraints;
-<span class="fc" id="L820">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
-<span class="fc" id="L821">        gridBagConstraints.gridx = 0;</span>
-<span class="fc" id="L822">        gridBagConstraints.gridy = PositionY;</span>
-<span class="fc" id="L823">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
-<span class="fc" id="L824">        gridBagConstraints.weightx = 1.0;</span>
-<span class="fc" id="L825">        gridBagConstraints.weighty = 0.0;</span>
-<span class="fc" id="L826">        gridBagConstraints.insets = new java.awt.Insets(3, 3, 3, 3);</span>
-<span class="fc" id="L827">        jPanel1.add(button, gridBagConstraints);</span>
-<span class="fc" id="L828">    }</span>
+<span class="fc" id="L219">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="fc" id="L220">        gridBagConstraints.gridx = 0;</span>
+<span class="fc" id="L221">        gridBagConstraints.gridy = PositionY;</span>
+<span class="fc" id="L222">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
+<span class="fc" id="L223">        gridBagConstraints.weightx = 1.0;</span>
+<span class="fc" id="L224">        gridBagConstraints.weighty = 0.0;</span>
+<span class="fc" id="L225">        gridBagConstraints.insets = new java.awt.Insets(3, 3, 3, 3);</span>
+<span class="fc" id="L226">        jPanel1.add(button, gridBagConstraints);</span>
+<span class="fc" id="L227">    }</span>
+    
+    public void addCardLabel(String cardID, String labelText, int PositionY) {
+<span class="fc" id="L230">        JLabel label = new JLabel(labelText);</span>
+<span class="fc" id="L231">        label.setForeground(new java.awt.Color(51, 51, 51));</span>
+<span class="fc" id="L232">        label.setName(cardID);</span>
+<span class="fc" id="L233">        label.setText(labelText);</span>
+        
+        GridBagConstraints gridBagConstraints;
+<span class="fc" id="L236">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="fc" id="L237">        gridBagConstraints.gridx = 0;</span>
+<span class="fc" id="L238">        gridBagConstraints.gridy = PositionY;</span>
+<span class="fc" id="L239">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
+<span class="fc" id="L240">        gridBagConstraints.weightx = 1.0;</span>
+<span class="fc" id="L241">        gridBagConstraints.weighty = 0.0;</span>
+<span class="fc" id="L242">        gridBagConstraints.insets = new java.awt.Insets(3, 3, 3, 3);</span>
+
+<span class="fc" id="L244">        DeckPane.add(label, gridBagConstraints);</span>
+<span class="fc" id="L245">    }</span>
+    
+    public void addRemoveButton(String cardID, int PositionY) {
+<span class="fc" id="L248">        String buttonText = &quot;x&quot;;</span>
+<span class="fc" id="L249">        JButton button = new JButton(buttonText);</span>
+<span class="fc" id="L250">        button.setBackground(new java.awt.Color(255, 51, 51));</span>
+<span class="fc" id="L251">        button.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="fc" id="L252">        button.setName(cardID);</span>
+<span class="fc" id="L253">        button.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L255">                removeActionPerformed(evt);</span>
+<span class="nc" id="L256">            }</span>
+        });
+        
+        GridBagConstraints gridBagConstraints;
+<span class="fc" id="L260">        gridBagConstraints = new java.awt.GridBagConstraints();</span>
+<span class="fc" id="L261">        gridBagConstraints.gridx = 1;</span>
+<span class="fc" id="L262">        gridBagConstraints.gridy = PositionY;</span>
+<span class="fc" id="L263">        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;</span>
+<span class="fc" id="L264">        gridBagConstraints.weightx = 0.0;</span>
+<span class="fc" id="L265">        gridBagConstraints.weighty = 0.0;</span>
+<span class="fc" id="L266">        gridBagConstraints.insets = new java.awt.Insets(3, 3, 3, 3);</span>
+<span class="fc" id="L267">        DeckPane.add(button, gridBagConstraints);</span>
+<span class="fc" id="L268">    }</span>
     
     private void addActionPerformed(java.awt.event.ActionEvent evt) {
         // Controller
-<span class="nc" id="L832">        Controller.add((JButton)evt.getSource());</span>
-<span class="nc" id="L833">    }</span>
+<span class="nc" id="L272">        Controller.add((JButton)evt.getSource());</span>
+<span class="nc" id="L273">    }</span>
+    
+    private void removeActionPerformed(java.awt.event.ActionEvent evt) {
+        // Controller
+<span class="nc" id="L277">        Controller.remove((JButton)evt.getSource());</span>
+<span class="nc" id="L278">    }</span>
+    
+    public void removeCard(String buttonID) {
+        
+<span class="nc" id="L282">    }</span>
+   
+    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane CardCollectionPane;
@@ -838,69 +289,9 @@ public class DeckScreen extends javax.swing.JFrame {
     private javax.swing.JScrollPane DeckScrollPane;
     private java.awt.Button Load;
     private java.awt.Button button22;
-    private java.awt.Label card1;
-    private java.awt.Label card10;
-    private java.awt.Label card11;
-    private java.awt.Label card12;
-    private java.awt.Label card13;
-    private java.awt.Label card14;
-    private java.awt.Label card15;
-    private java.awt.Label card16;
-    private java.awt.Label card17;
-    private java.awt.Label card18;
-    private java.awt.Label card19;
-    private java.awt.Label card2;
-    private java.awt.Label card20;
-    private java.awt.Label card21;
-    private java.awt.Label card22;
-    private java.awt.Label card23;
-    private java.awt.Label card24;
-    private java.awt.Label card25;
-    private java.awt.Label card26;
-    private java.awt.Label card27;
-    private java.awt.Label card28;
-    private java.awt.Label card29;
-    private java.awt.Label card3;
-    private java.awt.Label card30;
-    private java.awt.Label card4;
-    private java.awt.Label card5;
-    private java.awt.Label card6;
-    private java.awt.Label card7;
-    private java.awt.Label card8;
-    private java.awt.Label card9;
     private java.awt.Label deckListTitle;
     public javax.swing.JPanel jPanel1;
     private java.awt.Button mainMenu;
-    private java.awt.Button remove1;
-    private java.awt.Button remove10;
-    private java.awt.Button remove11;
-    private java.awt.Button remove12;
-    private java.awt.Button remove13;
-    private java.awt.Button remove14;
-    private java.awt.Button remove15;
-    private java.awt.Button remove16;
-    private java.awt.Button remove17;
-    private java.awt.Button remove18;
-    private java.awt.Button remove19;
-    private java.awt.Button remove2;
-    private java.awt.Button remove20;
-    private java.awt.Button remove21;
-    private java.awt.Button remove22;
-    private java.awt.Button remove23;
-    private java.awt.Button remove24;
-    private java.awt.Button remove25;
-    private java.awt.Button remove26;
-    private java.awt.Button remove27;
-    private java.awt.Button remove28;
-    private java.awt.Button remove29;
-    private java.awt.Button remove3;
-    private java.awt.Button remove30;
-    private java.awt.Button remove4;
-    private java.awt.Button remove5;
-    private java.awt.Button remove6;
-    private java.awt.Button remove7;
-    private java.awt.Button remove8;
-    private java.awt.Button remove9;
     private java.awt.Button save;
     private java.awt.Button searchButton;
     private javax.swing.JTextField searchField;

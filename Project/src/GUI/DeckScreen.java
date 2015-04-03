@@ -2,6 +2,7 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
+import Deck.*;
 
 public class DeckScreen extends javax.swing.JFrame {
     
@@ -114,10 +115,7 @@ public class DeckScreen extends javax.swing.JFrame {
         CardCollectionPane.setMaximumSize(null);
         CardCollectionPane.setMinimumSize(null);
 
-        jPanel1.setMaximumSize(null);
-        jPanel1.setMinimumSize(null);
         jPanel1.setName(""); // NOI18N
-        jPanel1.setPreferredSize(null);
         jPanel1.setLayout(new java.awt.GridBagLayout());
         CardCollectionPane.setViewportView(jPanel1);
 
@@ -170,9 +168,6 @@ public class DeckScreen extends javax.swing.JFrame {
         DeckScrollPane.setPreferredSize(new java.awt.Dimension(300, 200));
 
         DeckPane.setForeground(new java.awt.Color(204, 204, 255));
-        DeckPane.setMaximumSize(null);
-        DeckPane.setMinimumSize(null);
-        DeckPane.setPreferredSize(null);
         DeckPane.setLayout(new java.awt.GridBagLayout());
         DeckScrollPane.setViewportView(DeckPane);
 
@@ -206,6 +201,7 @@ public class DeckScreen extends javax.swing.JFrame {
         Controller.loadDeck();
     }//GEN-LAST:event_LoadActionPerformed
 
+    // Create a button for the card and add it to the card collection pane
     public void addCards(String buttonID, String buttonText, int PositionY) {
         JButton button = new JButton(buttonText);
         button.setName(buttonID);
@@ -226,6 +222,7 @@ public class DeckScreen extends javax.swing.JFrame {
         jPanel1.add(button, gridBagConstraints);
     }
     
+    // Create a label for a card and add it to the deck pane
     public void addCardLabel(String cardID, String labelText, int PositionY) {
         JLabel label = new JLabel(labelText);
         label.setForeground(new java.awt.Color(51, 51, 51));
@@ -244,6 +241,7 @@ public class DeckScreen extends javax.swing.JFrame {
         DeckPane.add(label, gridBagConstraints);
     }
     
+    // Create a remove button for a card and add it to the deck pane
     public void addRemoveButton(String cardID, int PositionY) {
         String buttonText = "x";
         JButton button = new JButton(buttonText);
@@ -277,15 +275,10 @@ public class DeckScreen extends javax.swing.JFrame {
         Controller.remove((JButton)evt.getSource());
     }
     
-    public void removeCard(String buttonID) {
-        
-    }
-   
-    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane CardCollectionPane;
-    private javax.swing.JPanel DeckPane;
+    public javax.swing.JPanel DeckPane;
     private javax.swing.JScrollPane DeckScrollPane;
     private java.awt.Button Load;
     private java.awt.Button button22;

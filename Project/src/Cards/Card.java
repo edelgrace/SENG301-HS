@@ -13,7 +13,8 @@ public class Card {
     private String id;
     
     /* CONSTRUCTORS */
-    
+
+    // Constructor for a blank, default card
     public Card() {
         name = null;
         cost = 0;
@@ -24,6 +25,7 @@ public class Card {
         id = null;
     }
     
+    // Constructor for creating a card with attributes
     public Card(Object newName, Object newCost, Object newClass, Object newAttack, Object newHealth, Object newDurability, Object newID)
     {
         // Change name
@@ -67,36 +69,44 @@ public class Card {
     
     /* GETTERS */
     
+    // Get name of card
     public String getName() {
         return name;
     }
     
+    // Get cost of card
     public int getCost() {
         return cost;
     }
     
+    // Get player class
     public String getPlayerClass() {
         return playerClass;
     }
     
+    // Get attack
     public int getAttack() {
         return attack;
     }
     
+    // Get health
     public int getHealth() {
         return health;
     }
     
+    // Get durability
     public int getDurability() {
         return durability;
     }
     
+    // Get ID
     public String getID() {
         return id;
     }
     
     /* CONVERSION METHODS */
     
+    // Convert card into an array
     public Object[] toArray() {
         Object[] array = new Object[7];
         
@@ -111,6 +121,7 @@ public class Card {
         return array;
     }
     
+    // convert card to a string
     public String toString() {
         String string = "";
         
