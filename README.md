@@ -1,4 +1,7 @@
-#SENG301: How to build
+#Repo link
+http://github.com/edelaltares/SENG301-HS
+
+#How to build
 
 1. Download files to computer
 2. Navigate to dist folder
