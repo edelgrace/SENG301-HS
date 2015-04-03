@@ -13,7 +13,7 @@ public class Main {
     private static String deckClass;
     private static LoadDeck loadDeck;
     private static SaveDeck saveDeck;
-    private static DeckScreen deckScreen = new DeckScreen("");
+    private static DeckScreen deckScreen = new DeckScreen();
     private static Deck deck = new Deck();
     
     private static JFrame[] windowStack = new JFrame[10];

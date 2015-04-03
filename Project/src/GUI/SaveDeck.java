@@ -5,6 +5,15 @@ public class SaveDeck extends javax.swing.JFrame {
         initComponents();
     }
     
+    public static void main(String[] args) {
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new SaveDeck().setVisible(true);
+            }
+        });
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
