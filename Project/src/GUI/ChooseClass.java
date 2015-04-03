@@ -5,6 +5,15 @@ public class ChooseClass extends javax.swing.JFrame {
         initComponents();
     }
     
+    public static void main(String[] args) {
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new ChooseClass().setVisible(true);
+            }
+        });
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {

@@ -6,8 +6,18 @@ import Deck.*;
 
 public class DeckScreen extends javax.swing.JFrame {
     
-    public DeckScreen(String init) {
+    public DeckScreen() {
         initComponents();
+    }
+    
+    public static void main(String[] args) {
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new DeckScreen().setVisible(true);
+            }
+        });
     }
 
     @SuppressWarnings("unchecked")
