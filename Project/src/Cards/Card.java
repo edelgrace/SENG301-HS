@@ -13,7 +13,8 @@ public class Card {
     private String id;
     
     /* CONSTRUCTORS */
-    
+
+    // Constructor for a blank, default card
     public Card() {
         name = null;
         cost = 0;
@@ -24,20 +25,12 @@ public class Card {
         id = null;
     }
     
-    /**
-     *
-     * @param newName
-     * @param newCost
-     * @param newClass
-     * @param newAttack
-     * @param newHealth
-     * @param newDurability
-     * @param newID
-     */
+    // Constructor for creating a card with attributes
     public Card(Object newName, Object newCost, Object newClass, Object newAttack, Object newHealth, Object newDurability, Object newID)
     {
         // Change name
         if(newName != null) {  name = (String) newName; }
+        else { return; }
         
         // Change cost
         if(newCost != null) {
@@ -76,66 +69,44 @@ public class Card {
     
     /* GETTERS */
     
+    // Get name of card
     public String getName() {
         return name;
     }
     
+    // Get cost of card
     public int getCost() {
         return cost;
     }
     
+    // Get player class
     public String getPlayerClass() {
         return playerClass;
     }
     
+    // Get attack
     public int getAttack() {
         return attack;
     }
     
+    // Get health
     public int getHealth() {
         return health;
     }
     
+    // Get durability
     public int getDurability() {
         return durability;
     }
     
+    // Get ID
     public String getID() {
         return id;
     }
     
-    /* SETTERS */
-    
-    public void setName(String newName) {
-        name = newName;
-    }
-    
-    public void setCost(int newCost) {
-        cost = newCost;
-    }
-    
-    public void setPlayerClass(String newClass) {
-        playerClass = newClass;
-    }
-    
-    public void setAttack(int newAttack) {
-        attack = newAttack;
-    }
-    
-    public void setHealth(int newHealth) {
-        health = newHealth;
-    }
-    
-    public void setDurability(int newDurability) {
-        durability = newDurability;
-    }
-    
-    public void setID(String newID) {
-        id = newID;
-    }
-    
     /* CONVERSION METHODS */
     
+    // Convert card into an array
     public Object[] toArray() {
         Object[] array = new Object[7];
         
@@ -150,6 +121,7 @@ public class Card {
         return array;
     }
     
+    // convert card to a string
     public String toString() {
         String string = "";
         
@@ -167,7 +139,6 @@ public class Card {
         
         if(id != null) { string += id; }
         
-        if(this == null) { return "Card is null and cannot be converted to string."; }
         return string;
     }
 }

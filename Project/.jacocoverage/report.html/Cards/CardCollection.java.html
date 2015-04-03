@@ -6,52 +6,190 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import java.io.*;
-import java.util.Iterator;
 
 public class CardCollection {
     private Card[] cardList;
-<span class="fc" id="L13">    private int cardListSize = 210;</span>
-  
+    private int cardListSize;
+<span class="fc" id="L13">    private int totalClassCard = 97;</span>
     
+    // Initialize card collection for all cards
 <span class="fc" id="L16">    public CardCollection() {</span>
+        // Parse the json file containiing all the cards
+<span class="fc" id="L18">        JSONArray list = parseCards();</span>
+            
+        // Create an array for all the cards
+<span class="fc" id="L21">        cardList = new Card[list.size()];</span>
+<span class="fc" id="L22">        cardListSize = list.size();</span>
         
-        try {
-<span class="fc" id="L19">            FileReader path = new FileReader(&quot;C:\\Users\\Altares\\Desktop\\Copy\\SCHOOL\\[2015 - WINTER]\\SENG 301\\HS\\SENG301-HS\\Project\\src\\Cards\\Basic.enGB.json&quot;);</span>
-   
-            // read the json file
-<span class="fc" id="L22">            JSONParser jsonParser = new JSONParser();</span>
-            JSONArray list;
-<span class="fc" id="L24">            list = (JSONArray) jsonParser.parse(path);</span>
+        // Go through parsed array
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        for(int i = 0; i &lt; list.size(); i++) {</span>
+<span class="fc" id="L26">            JSONObject card = (JSONObject) list.get(i);</span>
+
+<span class="fc" id="L28">            Object name = card.get(&quot;name&quot;);</span>
+<span class="fc" id="L29">            Object cost = card.get(&quot;cost&quot;);</span>
+<span class="fc" id="L30">            Object playerClass = card.get(&quot;playerClass&quot;);</span>
+<span class="fc" id="L31">            Object attack = card.get(&quot;attack&quot;);</span>
+<span class="fc" id="L32">            Object health = card.get(&quot;health&quot;);</span>
+<span class="fc" id="L33">            Object durability = card.get(&quot;durability&quot;);</span>
+<span class="fc" id="L34">            Object id = card.get(&quot;id&quot;);</span>
+
+<span class="fc" id="L36">            Card aCard = new Card(name, cost, playerClass, attack, health, durability, id);</span>
+
+<span class="fc" id="L38">            cardList[i] = aCard;</span>
+        }
+<span class="fc" id="L40">    }</span>
+    
+    // Initialize card collection for a certain class
+<span class="fc" id="L43">    public CardCollection(String chosenClass) {</span>
+        // Parsae the json file containing all the cards
+<span class="fc" id="L45">        JSONArray list = parseCards();</span>
             
-<span class="fc" id="L26">            cardList = new Card[list.size()];</span>
+<span class="fc" id="L47">        int classCount = 0;</span>
+        
+        // Check if shaman class was chosen
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        if(chosenClass.equalsIgnoreCase(&quot;Shaman&quot;)) {</span>
+<span class="fc" id="L51">                classCount = 13;        // Number of shaman cards</span>
+        }
+        else {
+<span class="fc" id="L54">                classCount = 12;        // Number of cards per class</span>
+        }
+        
+        // Get number of cards in the card collection for specified class
+<span class="fc" id="L58">        cardListSize = list.size() - totalClassCard + classCount;</span>
+        
+        // Create array for all cards
+<span class="fc" id="L61">        cardList = new Card[cardListSize];</span>
+<span class="fc" id="L62">        int index = 0;</span>
             
-<span class="fc bfc" id="L28" title="All 2 branches covered.">            for(int i = 0; i &lt; list.size(); i++) {</span>
-<span class="fc" id="L29">                JSONObject card = (JSONObject) list.get(i);</span>
-                
-<span class="fc" id="L31">                Object name = card.get(&quot;name&quot;);</span>
-<span class="fc" id="L32">                Object cost = card.get(&quot;cost&quot;);</span>
-<span class="fc" id="L33">                Object playerClass = card.get(&quot;playerClass&quot;);</span>
-<span class="fc" id="L34">                Object attack = card.get(&quot;attack&quot;);</span>
-<span class="fc" id="L35">                Object health = card.get(&quot;health&quot;);</span>
-<span class="fc" id="L36">                Object durability = card.get(&quot;durability&quot;);</span>
-<span class="fc" id="L37">                Object id = card.get(&quot;id&quot;);</span>
-                
-<span class="fc" id="L39">                Card aCard = new Card(name, cost, playerClass, attack, health, durability, id);</span>
-                
-<span class="fc" id="L41">                cardList[i] = aCard;</span>
+        // Go through parsed array and put cards in card list
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        for(int i = 0; i &lt; list.size(); i++) {</span>
+<span class="fc" id="L66">            JSONObject card = (JSONObject) list.get(i);</span>
+            
+<span class="fc" id="L68">            Object name = card.get(&quot;name&quot;);</span>
+<span class="fc" id="L69">            Object cost = card.get(&quot;cost&quot;);</span>
+<span class="fc" id="L70">            Object playerClass = card.get(&quot;playerClass&quot;);</span>
+<span class="fc" id="L71">            Object attack = card.get(&quot;attack&quot;);</span>
+<span class="fc" id="L72">            Object health = card.get(&quot;health&quot;);</span>
+<span class="fc" id="L73">            Object durability = card.get(&quot;durability&quot;);</span>
+<span class="fc" id="L74">            Object id = card.get(&quot;id&quot;);</span>
+
+<span class="fc" id="L76">            Card aCard = new Card(name, cost, playerClass, attack, health, durability, id);</span>
+            
+            // If card is of chosen class, add to classs
+<span class="fc bfc" id="L79" title="All 2 branches covered.">            if(aCard.getPlayerClass() != null) {</span>
+<span class="pc bpc" id="L80" title="1 of 4 branches missed.">                if(aCard.getPlayerClass().equalsIgnoreCase(chosenClass) || </span>
+                    aCard.getPlayerClass().isEmpty()) {
+<span class="fc" id="L82">                    cardList[index] = aCard;</span>
+<span class="fc" id="L83">                    index++;</span>
+                }
+            }
+            // If card does not have a specified class, add to the deck
+            else {
+<span class="fc" id="L88">                cardList[index] = aCard;</span>
+<span class="fc" id="L89">                index++;</span>
             }
         }
-<span class="nc" id="L44">        catch (Exception e){</span>
-<span class="nc" id="L45">            e.printStackTrace();</span>
-<span class="fc" id="L46">        }</span>
-<span class="fc" id="L47">    }</span>
+<span class="fc" id="L92">    }</span>
     
-    public Card get(int i) {
-<span class="fc" id="L50">        return cardList[i];</span>
+    // Parse the cards in the file
+    private JSONArray parseCards() {
+        try {
+<span class="fc" id="L97">            FileReader path = new FileReader(&quot;src\\Cards\\Basic.enGB.json&quot;);</span>
+
+            // read the json file
+<span class="fc" id="L100">            JSONParser jsonParser = new JSONParser();</span>
+            JSONArray list;
+<span class="fc" id="L102">            list = (JSONArray) jsonParser.parse(path);</span>
+            
+<span class="fc" id="L104">            path.close();</span>
+            
+<span class="fc" id="L106">            return list;</span>
+        }
+<span class="nc" id="L108">        catch (Exception e) {</span>
+<span class="nc" id="L109">            e.printStackTrace();</span>
+        }
+        
+<span class="nc" id="L112">        return null;</span>
     }
     
+    // Get card at a specified index
+    public Card get(int i) {
+<span class="fc" id="L117">        return cardList[i];</span>
+    }
+    
+    // Get a card using cardID
+    public Card get(String ID) {
+<span class="fc" id="L122">        Card aCard = new Card();</span>
+        
+        // Iterate through card list array to match IDs
+<span class="fc bfc" id="L125" title="All 2 branches covered.">        for(int i = 0; i &lt; cardListSize; i++) {</span>
+<span class="fc" id="L126">            Card card = cardList[i];</span>
+            
+<span class="pc bpc" id="L128" title="1 of 2 branches missed.">            if(card != null) {</span>
+<span class="fc" id="L129">                String cardID = card.getID();</span>
+
+<span class="pc bpc" id="L131" title="1 of 2 branches missed.">                if(cardID.equalsIgnoreCase(ID)) {</span>
+<span class="nc" id="L132">                    aCard = card;</span>
+<span class="nc" id="L133">                    return aCard;</span>
+                }
+            }
+        }
+        
+<span class="fc" id="L138">        return aCard;</span>
+    }
+    
+    
+    // Grab the size of the card array
     public int getSize() {
-<span class="fc" id="L54">        return cardListSize;</span>
+<span class="fc" id="L144">        return cardListSize;</span>
+    }
+    
+    // Find a card of a search term
+    public String[] query(String searchTerm) {
+<span class="fc" id="L149">        String[] result = new String[1];</span>
+                
+<span class="pc bpc" id="L151" title="1 of 4 branches missed.">        if(searchTerm == null || searchTerm.isEmpty()) {</span>
+<span class="fc" id="L152">            result[0] = &quot;No search term was entered. Please try again.&quot;;</span>
+<span class="fc" id="L153">            return result;</span>
+        }
+        
+<span class="nc" id="L156">        result = findCard(searchTerm);</span>
+        
+<span class="nc" id="L158">        return result;</span>
+    }
+    
+    // Actually use the search term to find 
+    public String[] findCard(String searchTerm) {
+<span class="fc" id="L163">        searchTerm = searchTerm.toLowerCase();</span>
+<span class="fc" id="L164">        String[] result = new String[cardListSize];</span>
+<span class="fc" id="L165">        int pointer = 0;</span>
+        
+        /* find card */
+<span class="fc bfc" id="L168" title="All 2 branches covered.">        for(int i = 0; i &lt; cardListSize; i++) {</span>
+<span class="fc" id="L169">            Card aCard = this.get(i);</span>
+            
+<span class="pc bpc" id="L171" title="1 of 2 branches missed.">            if(aCard != null) {</span>
+<span class="fc" id="L172">                String aCardName = aCard.getName();</span>
+<span class="fc" id="L173">                String aCardID = aCard.getID();</span>
+
+<span class="fc bfc" id="L175" title="All 2 branches covered.">                if(aCardName.toLowerCase().contains(searchTerm)) {</span>
+<span class="fc" id="L176">                    result[pointer] = aCardID;</span>
+<span class="fc" id="L177">                    pointer++;</span>
+                }
+            }
+        }
+        
+<span class="fc bfc" id="L182" title="All 2 branches covered.">        if(pointer == 0) {</span>
+<span class="fc" id="L183">            result = new String[1];</span>
+<span class="fc" id="L184">            result[0] = &quot;No results.&quot;;</span>
+        }
+        
+<span class="fc" id="L187">        return result;</span>
+    }
+    
+    
+    public Card[] toArray() {
+<span class="fc" id="L192">        return cardList;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.4.201502262128</span></div></body></html>

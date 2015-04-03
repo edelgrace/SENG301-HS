@@ -1,32 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Deck.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Project&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">Deck</a> &gt; <span class="el_source">Deck.java</span></div><h1>Deck.java</h1><pre class="source lang-java linenums">package Deck;
 
+import Cards.*;
+
 public class Deck {
     private String[] list;              // Array that stores all the cards
-<span class="fc" id="L5">    private int next = 0;               // Pointer pointing to next index of array</span>
+<span class="fc" id="L7">    private int next = 0;               // Pointer pointing to next index of array</span>
+<span class="fc" id="L8">    private int deckSize = 30;</span>
+<span class="fc" id="L9">    private int maxCopies = 2;</span>
+    private String playerClass;
     
-<span class="fc" id="L7">    public Deck() {</span>
-<span class="fc" id="L8">        list = new String[30];</span>
-<span class="fc" id="L9">    }</span>
+    // Constructor for a deck, intialize deck array
+<span class="fc" id="L13">    public Deck() {</span>
+<span class="fc" id="L14">        list = new String[deckSize];</span>
+<span class="fc" id="L15">    }</span>
     
-    public void add(String cardID) {
-<span class="fc" id="L12">        list[next] = cardID;</span>
-<span class="fc" id="L13">        next++;</span>
-<span class="fc" id="L14">    }</span>
+    // Add a card to a deck
+    public String add(String cardID) {
+        // Check if next points to a valid index
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        if(next != deckSize) {</span>
+            // Check number of copies of cards
+            // If not larger than the max copies, don't add card
+<span class="fc bfc" id="L23" title="All 2 branches covered.">            if(getCardCopies(cardID) &lt; maxCopies) {</span>
+<span class="fc" id="L24">                list[next] = cardID;</span>
+<span class="fc" id="L25">                next++;</span>
+<span class="fc" id="L26">                return null;</span>
+            }
+            // If max number of cards exist, don't add
+            else {
+<span class="fc" id="L30">                return cannotAddTwo();</span>
+            }
+        }
+        // If max number of cards in deck, don't add
+        else {
+<span class="fc" id="L35">            return cannotAddFull();</span>
+        }
+    }
     
+    // Error message for adding to a full deck
+    public String cannotAddFull() {
+<span class="fc" id="L41">        return &quot;Cannot add card to deck. Deck is full.&quot;;</span>
+    }
+
+    // Error message for adding more than two copies of a card to a deck
+    public String cannotAddTwo() {
+<span class="fc" id="L46">        return &quot;Cannot add more than two copies of a card to a deck.&quot;;</span>
+    }
+    
+    // Remove a card
+    public String remove(String cardID) {
+<span class="fc" id="L51">        int removeCount = 0;</span>
+        
+        // Remove only one copy of card with specified cardID
+<span class="fc bfc" id="L54" title="All 2 branches covered.">        for(int i = 0; i &lt; deckSize; i++) {</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">            if(list[i] != null) {</span>
+<span class="pc bpc" id="L56" title="1 of 2 branches missed.">                if(list[i].equalsIgnoreCase(cardID)) {</span>
+<span class="fc" id="L57">                    list[i] = null;</span>
+<span class="fc" id="L58">                    removeCount++;</span>
+<span class="fc" id="L59">                    return &quot;Removed &quot; + removeCount + &quot; card(s) with ID &quot; + cardID;</span>
+                }
+            }
+        }
+        
+        // If not removed, return error
+<span class="fc" id="L65">        return cannotRemove();</span>
+    }
+    
+    public String cannotRemove() {
+<span class="fc" id="L69">        return &quot;Cannot remove card from deck. Card not found.&quot;;</span>
+    }
+    
+    // Get size of deck
     public int size() {
-<span class="fc" id="L17">        return list.length;</span>
+<span class="fc" id="L74">        return list.length;</span>
     }
     
     public String[] toArray() {
-<span class="fc" id="L21">        return list;</span>
+<span class="fc" id="L78">        return list;</span>
     }
     
+    // Check if deck is valid
     static public boolean isValid(Deck aDeck) {
-<span class="pc bpc" id="L25" title="1 of 2 branches missed.">        if(aDeck == null) {</span>
-<span class="fc" id="L26">            return false;</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">        if(aDeck == null) {</span>
+<span class="fc" id="L84">            return false;</span>
         }
         
-<span class="nc" id="L29">        return true;</span>
+<span class="fc" id="L87">        return true;</span>
+    }
+    
+    // Get number of copies of a card in the deck
+    public int getCardCopies(String cardID) {
+<span class="fc" id="L92">        int numOfCopies = 0;</span>
+        
+<span class="fc bfc" id="L94" title="All 2 branches covered.">        for(int i = 0; i &lt; deckSize; i++) {</span>
+<span class="fc bfc" id="L95" title="All 2 branches covered.">            if(list[i] != null) {</span>
+<span class="fc bfc" id="L96" title="All 2 branches covered.">                if(list[i].contains(cardID)) {</span>
+<span class="fc" id="L97">                    numOfCopies++;</span>
+                }
+            }
+        }
+        
+<span class="fc" id="L102">        return numOfCopies;</span>
+    }
+    
+    // Get card at a specified index
+    public String get(int i) {
+<span class="fc" id="L107">        return list[i];</span>
+    }
+    
+    // Return the next value
+    public int getNext() {
+<span class="fc" id="L112">        return next;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.4.201502262128</span></div></body></html>

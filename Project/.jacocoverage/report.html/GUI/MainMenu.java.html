@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>MainMenu.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Project&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">GUI</a> &gt; <span class="el_source">MainMenu.java</span></div><h1>MainMenu.java</h1><pre class="source lang-java linenums">package GUI;
+
+public class MainMenu extends javax.swing.JFrame {
+<span class="fc" id="L4">    public MainMenu() {</span>
+<span class="fc" id="L5">        initComponents();</span>
+<span class="fc" id="L6">    }</span>
+    
+    @SuppressWarnings(&quot;unchecked&quot;)
+    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+<span class="fc" id="L12">        MainMenuPanel = new javax.swing.JPanel();</span>
+<span class="fc" id="L13">        MenuTitle = new java.awt.Label();</span>
+<span class="fc" id="L14">        NewDeck = new java.awt.Button();</span>
+<span class="fc" id="L15">        LoadDeck = new java.awt.Button();</span>
+<span class="fc" id="L16">        Exit = new java.awt.Button();</span>
+
+<span class="fc" id="L18">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+<span class="fc" id="L19">        setMaximumSize(new java.awt.Dimension(600, 600));</span>
+<span class="fc" id="L20">        setMinimumSize(new java.awt.Dimension(600, 600));</span>
+<span class="fc" id="L21">        setResizable(false);</span>
+
+<span class="fc" id="L23">        MainMenuPanel.setBackground(new java.awt.Color(0, 51, 102));</span>
+<span class="fc" id="L24">        MainMenuPanel.setMaximumSize(new java.awt.Dimension(960, 640));</span>
+<span class="fc" id="L25">        MainMenuPanel.setMinimumSize(new java.awt.Dimension(600, 600));</span>
+<span class="fc" id="L26">        MainMenuPanel.setPreferredSize(new java.awt.Dimension(600, 600));</span>
+<span class="fc" id="L27">        MainMenuPanel.setLayout(new java.awt.GridLayout(4, 1, 0, 20));</span>
+
+<span class="fc" id="L29">        MenuTitle.setAlignment(java.awt.Label.CENTER);</span>
+<span class="fc" id="L30">        MenuTitle.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 0, 34)); // NOI18N</span>
+<span class="fc" id="L31">        MenuTitle.setForeground(new java.awt.Color(255, 255, 0));</span>
+<span class="fc" id="L32">        MenuTitle.setText(&quot;HEARTHSTONE DECK BUILDERINO&quot;);</span>
+<span class="fc" id="L33">        MainMenuPanel.add(MenuTitle);</span>
+
+<span class="fc" id="L35">        NewDeck.setActionCommand(&quot;NewDeck&quot;);</span>
+<span class="fc" id="L36">        NewDeck.setBackground(new java.awt.Color(204, 204, 255));</span>
+<span class="fc" id="L37">        NewDeck.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 18)); // NOI18N</span>
+<span class="fc" id="L38">        NewDeck.setForeground(new java.awt.Color(51, 51, 51));</span>
+<span class="fc" id="L39">        NewDeck.setLabel(&quot;NEW DECK&quot;);</span>
+<span class="fc" id="L40">        NewDeck.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L42">                NewDeckActionPerformed(evt);</span>
+<span class="nc" id="L43">            }</span>
+        });
+<span class="fc" id="L45">        MainMenuPanel.add(NewDeck);</span>
+<span class="fc" id="L46">        NewDeck.getAccessibleContext().setAccessibleName(&quot;NewDeck&quot;);</span>
+
+<span class="fc" id="L48">        LoadDeck.setActionCommand(&quot;LoadDeck&quot;);</span>
+<span class="fc" id="L49">        LoadDeck.setBackground(new java.awt.Color(204, 204, 255));</span>
+<span class="fc" id="L50">        LoadDeck.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 18)); // NOI18N</span>
+<span class="fc" id="L51">        LoadDeck.setForeground(new java.awt.Color(51, 51, 51));</span>
+<span class="fc" id="L52">        LoadDeck.setLabel(&quot;LOAD DECK&quot;);</span>
+<span class="fc" id="L53">        LoadDeck.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L55">                LoadDeckActionPerformed(evt);</span>
+<span class="nc" id="L56">            }</span>
+        });
+<span class="fc" id="L58">        MainMenuPanel.add(LoadDeck);</span>
+<span class="fc" id="L59">        LoadDeck.getAccessibleContext().setAccessibleName(&quot;LoadDeck&quot;);</span>
+<span class="fc" id="L60">        LoadDeck.getAccessibleContext().setAccessibleDescription(&quot;&quot;);</span>
+
+<span class="fc" id="L62">        Exit.setActionCommand(&quot;Exit&quot;);</span>
+<span class="fc" id="L63">        Exit.setBackground(new java.awt.Color(204, 204, 255));</span>
+<span class="fc" id="L64">        Exit.setFont(new java.awt.Font(&quot;Lucida Console&quot;, 1, 18)); // NOI18N</span>
+<span class="fc" id="L65">        Exit.setForeground(new java.awt.Color(51, 51, 51));</span>
+<span class="fc" id="L66">        Exit.setLabel(&quot;EXIT&quot;);</span>
+<span class="fc" id="L67">        Exit.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L69">                ExitActionPerformed(evt);</span>
+<span class="nc" id="L70">            }</span>
+        });
+<span class="fc" id="L72">        MainMenuPanel.add(Exit);</span>
+<span class="fc" id="L73">        Exit.getAccessibleContext().setAccessibleName(&quot;Exit&quot;);</span>
+
+<span class="fc" id="L75">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="fc" id="L76">        getContentPane().setLayout(layout);</span>
+<span class="fc" id="L77">        layout.setHorizontalGroup(</span>
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(MainMenuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+<span class="fc" id="L81">        layout.setVerticalGroup(</span>
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(MainMenuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+<span class="fc" id="L86">        pack();</span>
+<span class="fc" id="L87">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+
+    private void NewDeckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewDeckActionPerformed
+<span class="nc" id="L90">        Main.newDeck();</span>
+<span class="nc" id="L91">    }//GEN-LAST:event_NewDeckActionPerformed</span>
+
+    private void LoadDeckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoadDeckActionPerformed
+<span class="nc" id="L94">        Main.loadDeck();</span>
+<span class="nc" id="L95">    }//GEN-LAST:event_LoadDeckActionPerformed</span>
+
+    private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
+<span class="nc" id="L98">        System.exit(0);</span>
+<span class="nc" id="L99">    }//GEN-LAST:event_ExitActionPerformed</span>
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Button Exit;
+    private java.awt.Button LoadDeck;
+    private javax.swing.JPanel MainMenuPanel;
+    private java.awt.Label MenuTitle;
+    private java.awt.Button NewDeck;
+    // End of variables declaration//GEN-END:variables
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.4.201502262128</span></div></body></html>
