@@ -217,7 +217,7 @@ public class LoadDeck extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
-        Controller.back();
+        Main.back();
     }//GEN-LAST:event_BackActionPerformed
 
     private void Load1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Load1ActionPerformed

@@ -186,19 +186,19 @@ public class DeckScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_searchFieldActionPerformed
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
-        Controller.search(searchField);
+        Main.search(searchField);
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void mainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainMenuActionPerformed
-        Controller.mainMenu();
+        Main.mainMenu();
     }//GEN-LAST:event_mainMenuActionPerformed
 
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
-        Controller.saveDeck();
+        Main.saveDeck();
     }//GEN-LAST:event_saveActionPerformed
 
     private void LoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoadActionPerformed
-        Controller.loadDeck();
+        Main.loadDeck();
     }//GEN-LAST:event_LoadActionPerformed
 
     // Create a button for the card and add it to the card collection pane
@@ -267,12 +267,12 @@ public class DeckScreen extends javax.swing.JFrame {
     
     private void addActionPerformed(java.awt.event.ActionEvent evt) {
         // Controller
-        Controller.add((JButton)evt.getSource());
+        Main.add((JButton)evt.getSource());
     }
     
     private void removeActionPerformed(java.awt.event.ActionEvent evt) {
         // Controller
-        Controller.remove((JButton)evt.getSource());
+        Main.remove((JButton)evt.getSource());
     }
     
     

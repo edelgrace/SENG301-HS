@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Project&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">GUI</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package GUI;
+import Cards.*;
+import Deck.*;
+import java.awt.*;
+import java.awt.Frame;
+import javax.swing.*;
+
+<span class="nc" id="L8">public class Main {</span>
+    
+<span class="fc" id="L10">    private static CardCollection cards = new CardCollection();</span>
+<span class="fc" id="L11">    private static MainMenu main = new MainMenu();</span>
+    private static ChooseClass chooseClass;
+    private static String deckClass;
+    private static LoadDeck loadDeck;
+    private static SaveDeck saveDeck;
+<span class="fc" id="L16">    private static DeckScreen deckScreen = new DeckScreen(&quot;&quot;);</span>
+<span class="fc" id="L17">    private static Deck deck = new Deck();</span>
+    
+<span class="fc" id="L19">    private static JFrame[] windowStack = new JFrame[10];</span>
+<span class="fc" id="L20">    private static int stackPointer = 0;</span>
+    
+    // Main function
+    public static void main(String[] args) {
+        // Main menu is visible
+<span class="nc" id="L25">        main.setVisible(true);</span>
+        
+        // Update window stack
+<span class="nc" id="L28">        windowStack[stackPointer] = main;</span>
+<span class="nc" id="L29">        stackPointer++;</span>
+<span class="nc" id="L30">    }</span>
+    
+    // New deck
+    public static Deck newDeck() {
+        // Choose class screen
+<span class="nc" id="L35">        chooseClass = new ChooseClass();</span>
+<span class="nc" id="L36">        chooseClass.setVisible(true);</span>
+        
+        // Update stack
+<span class="nc" id="L39">        JFrame previousFrame = windowStack[stackPointer-1];</span>
+        
+<span class="nc" id="L41">        windowStack[stackPointer] = chooseClass;</span>
+        
+        // Close previous screen
+<span class="nc" id="L44">        previousFrame.setVisible(false);</span>
+        
+<span class="nc" id="L46">        return deck;</span>
+    }
+    
+    // Searching for a card
+    public static String[] search(JTextField search) {
+        // Search with keyword from text field
+<span class="nc" id="L52">        String keyword = search.getText();</span>
+        
+<span class="nc" id="L54">        cards = new CardCollection(deckClass);</span>
+        
+<span class="nc" id="L56">        String[] results = cards.query(keyword);</span>
+        
+        // Get results and display them
+<span class="nc" id="L59">        displayCards(results);</span>
+        
+<span class="nc" id="L61">        return results;</span>
+    }
+    
+    // Main Menu screen
+    public static JFrame mainMenu() {
+        // Update stack, close previous screen, open main menu
+<span class="nc" id="L67">        JFrame previousFrame = windowStack[stackPointer-1];</span>
+        
+<span class="nc" id="L69">        previousFrame.setVisible(false);</span>
+        
+<span class="nc" id="L71">        main.setVisible(true);</span>
+        
+<span class="nc" id="L73">        windowStack[stackPointer-1] = main;</span>
+        
+<span class="nc" id="L75">        stackPointer -= 1;</span>
+        
+<span class="nc" id="L77">        return windowStack[stackPointer];</span>
+    }
+        
+    // Load Deck secreen
+    public static JFrame loadDeck() {
+        // Load Deck screen visible
+<span class="nc" id="L83">        loadDeck = new LoadDeck();</span>
+<span class="nc" id="L84">        loadDeck.setVisible(true);</span>
+        
+        // Update stack
+<span class="nc" id="L87">        windowStack[stackPointer] = loadDeck;</span>
+<span class="nc" id="L88">        JFrame previousFrame = windowStack[stackPointer-1];</span>
+        
+        // Remove previous frame
+<span class="nc" id="L91">        previousFrame.setVisible(false);</span>
+        
+<span class="nc" id="L93">        return windowStack[stackPointer];</span>
+    }
+    
+    // Save Deck screen
+    public static JFrame saveDeck() {
+        // Visible save deck screen
+<span class="nc" id="L99">        saveDeck = new SaveDeck();</span>
+<span class="nc" id="L100">        saveDeck.setVisible(true);</span>
+        
+        // Update stack
+<span class="nc" id="L103">        windowStack[stackPointer] = saveDeck;</span>
+<span class="nc" id="L104">        JFrame previousFrame = windowStack[stackPointer-1];</span>
+        
+        // Remove previous frame
+<span class="nc" id="L107">        previousFrame.setVisible(false);</span>
+        
+<span class="nc" id="L109">        return windowStack[stackPointer];</span>
+    }
+    
+    // Back function
+    public static JFrame[] back() {
+        // Update stack to go back to previous frame
+<span class="nc" id="L115">        JFrame previousFrame = windowStack[stackPointer-1];</span>
+<span class="nc bnc" id="L116" title="All 2 branches missed.">        if (previousFrame != null) { previousFrame.setVisible(true); }</span>
+        
+<span class="nc" id="L118">        windowStack[stackPointer-1] = previousFrame;</span>
+        
+<span class="nc" id="L120">        JFrame currentFrame = windowStack[stackPointer];</span>
+<span class="nc bnc" id="L121" title="All 2 branches missed.">        if (currentFrame != null) { currentFrame.setVisible(false); }</span>
+        
+<span class="nc" id="L123">        return windowStack;</span>
+    }
+    
+    // Initialize after choosing a class
+    public static Card[] chooseClass(String chosenClass) {
+        // Get the cards for chosen class
+<span class="fc" id="L129">        Card[] cardList = displayCollection(chosenClass);</span>
+<span class="fc" id="L130">        deckClass = chosenClass;</span>
+        
+        // Close previous frame
+<span class="fc" id="L133">        JFrame previousFrame = windowStack[stackPointer];</span>
+        
+<span class="fc bfc" id="L135" title="All 2 branches covered.">        if (previousFrame != null) { previousFrame.setVisible(false); }</span>
+        
+        // Update stake
+<span class="fc" id="L138">        windowStack[stackPointer] = deckScreen;</span>
+        
+<span class="fc" id="L140">        stackPointer++;</span>
+        
+<span class="fc" id="L142">        return cardList;</span>
+    }
+    
+    // Display cards in a Card[] list
+    public static Card[] displayCards(Card[] cardList) {
+<span class="fc" id="L147">        resetCardScreen();</span>
+        
+        // If null list, display error message
+<span class="fc bfc" id="L150" title="All 2 branches covered.">        if(cardList == null) {</span>
+<span class="fc" id="L151">            String buttonText = &quot;Error displaying cards&quot;;</span>
+<span class="fc" id="L152">            JLabel aLabel = new JLabel(buttonText);</span>
+<span class="fc" id="L153">            deckScreen.addCards(buttonText,buttonText,0);</span>
+            
+<span class="fc" id="L155">            return cardList;</span>
+        }
+        
+        // Go through cardList and add buttons to the deckScreen
+<span class="fc bfc" id="L159" title="All 2 branches covered.">        for(int i = 0; i &lt; cardList.length; i ++) {</span>
+<span class="fc" id="L160">            Card aCard = cardList[i];</span>
+<span class="pc bpc" id="L161" title="1 of 2 branches missed.">            if(aCard != null) {</span>
+<span class="fc" id="L162">                String buttonID = aCard.getID();</span>
+<span class="fc" id="L163">                String buttonText = &quot;&lt;html&gt;&quot; + aCard.getName() + &quot;&lt;br /&gt;Attack:&quot; + aCard.getAttack() + &quot; Health: &quot; + aCard.getHealth() + &quot; Cost: &quot; + aCard.getCost() + &quot;&lt;/html&gt;&quot;;</span>
+<span class="fc" id="L164">                JButton cardButton = new JButton(buttonText);</span>
+<span class="fc" id="L165">                deckScreen.addCards(buttonID, buttonText,i);</span>
+            }
+        }
+        
+<span class="fc" id="L169">        deckScreen.setVisible(true);</span>
+        
+<span class="fc" id="L171">        return cardList;</span>
+    } 
+    
+    // Reset cardcollections
+    private static void resetCardScreen() {
+<span class="fc" id="L176">        deckScreen.jPanel1.removeAll();</span>
+<span class="fc" id="L177">        deckScreen.jPanel1.revalidate();</span>
+<span class="fc" id="L178">        deckScreen.jPanel1.repaint();</span>
+<span class="fc" id="L179">    }</span>
+    
+    // Reset deck screen
+    private static void resetDeckScreen() {
+<span class="nc" id="L183">        deckScreen.DeckPane.removeAll();</span>
+<span class="nc" id="L184">        deckScreen.DeckPane.revalidate();</span>
+<span class="nc" id="L185">        deckScreen.DeckPane.repaint();</span>
+<span class="nc" id="L186">    }</span>
+    
+    // Display cards in String[] array
+    public static String[] displayCards(String[] cardList) {
+<span class="fc" id="L190">        resetCardScreen();</span>
+        
+        // Display error if cardList is null
+<span class="pc bpc" id="L193" title="1 of 2 branches missed.">        if(cardList == null) {</span>
+<span class="fc" id="L194">            String buttonText = &quot;No cards to be displayed.&quot;;</span>
+<span class="fc" id="L195">            JLabel aLabel = new JLabel(buttonText);</span>
+<span class="fc" id="L196">            deckScreen.addCards(buttonText, buttonText ,0);</span>
+            
+<span class="fc" id="L198">            String[] error = new String[1];</span>
+<span class="fc" id="L199">            error[0] = buttonText;</span>
+            
+<span class="fc" id="L201">            return error;</span>
+        }
+        
+        // Go through cardList and add each card to the deckScreen
+<span class="nc bnc" id="L205" title="All 2 branches missed.">        for(int i = 0; i &lt; cardList.length; i++) {</span>
+<span class="nc" id="L206">            String ID = cardList[i];</span>
+            
+<span class="nc bnc" id="L208" title="All 2 branches missed.">            if(ID != null) {</span>
+<span class="nc bnc" id="L209" title="All 2 branches missed.">                if(ID.equalsIgnoreCase(&quot;No results.&quot;)) {</span>
+<span class="nc" id="L210">                    deckScreen.addCards(&quot;No results.&quot;, &quot;No results.&quot;, 0);</span>
+<span class="nc" id="L211">                    return cardList;</span>
+                }
+<span class="nc bnc" id="L213" title="All 2 branches missed.">                if(!ID.isEmpty()) {</span>
+                    
+<span class="nc" id="L215">                    Card card = cards.get(ID);</span>
+
+<span class="nc" id="L217">                    String buttonText = &quot;&lt;html&gt;&quot; + card.getName() + &quot;&lt;br /&gt;Attack:&quot; + card.getAttack() + &quot; Health: &quot; + card.getHealth() + &quot; Cost: &quot; + card.getCost() + &quot;&lt;/html&gt;&quot;;</span>
+
+<span class="nc" id="L219">                    deckScreen.addCards(ID, buttonText, i);</span>
+                }
+            }
+        }
+        
+        // Update the deck screen
+<span class="nc bnc" id="L225" title="All 2 branches missed.">        if(!deckScreen.isVisible()) { deckScreen.setVisible(true); }</span>
+        else {
+<span class="nc" id="L227">            deckScreen.jPanel1.revalidate();</span>
+<span class="nc" id="L228">            deckScreen.jPanel1.repaint();</span>
+<span class="nc" id="L229">            deckScreen.repaint();</span>
+        }
+        
+<span class="nc" id="L232">        return cardList;</span>
+    } 
+    
+    // Display all cards available
+    public static Card[] displayCollection(String chosenClass) {
+        CardCollection allCards;
+        
+        // If no chosen class specified, get all card
+<span class="pc bpc" id="L240" title="1 of 2 branches missed.">        if(chosenClass.isEmpty()) {</span>
+<span class="nc" id="L241">            allCards = new CardCollection();</span>
+        }
+        // Get cards specific to class
+        else {
+<span class="fc" id="L245">            allCards = new CardCollection(chosenClass);</span>
+        }
+        // Go through card list and add buttons to deckScreen
+<span class="fc bfc" id="L248" title="All 2 branches covered.">        for(int i = 0; i &lt; allCards.getSize(); i ++) {</span>
+<span class="fc" id="L249">            Card aCard = allCards.get(i);</span>
+<span class="fc bfc" id="L250" title="All 2 branches covered.">            if(aCard != null) {</span>
+<span class="fc" id="L251">                String buttonID = aCard.getID();</span>
+<span class="fc" id="L252">                String buttonText = &quot;&lt;html&gt;&quot; + aCard.getName() + &quot;&lt;br /&gt;Attack:&quot; + aCard.getAttack() + &quot; Health: &quot; + aCard.getHealth() + &quot; Cost: &quot; + aCard.getCost() + &quot;&lt;/html&gt;&quot;;</span>
+<span class="fc" id="L253">                JButton cardButton = new JButton(buttonText);</span>
+<span class="fc" id="L254">                deckScreen.addCards(buttonID, buttonText,i);</span>
+            }
+        }
+        
+        // Make deck screen visible
+<span class="fc" id="L259">        deckScreen.setVisible(true);</span>
+        
+<span class="fc" id="L261">        return allCards.toArray();</span>
+    }
+    
+    // Function when adding cards
+    public static Deck add(JButton button) {
+<span class="fc" id="L266">        String buttonID = button.getName();</span>
+        
+<span class="fc" id="L268">        String addTrue = deck.add(buttonID);</span>
+        
+        // If add was successful
+<span class="pc bpc" id="L271" title="1 of 2 branches missed.">        if(addTrue == null) {</span>
+            // Grab card from card collection
+<span class="fc" id="L273">            Card aCard = cards.get(buttonID);</span>
+
+<span class="fc" id="L275">            String buttonName = aCard.getName();</span>
+            
+            // Add label and remove button
+<span class="fc" id="L278">            deckScreen.addCardLabel(buttonID, buttonName, deck.getNext());</span>
+<span class="fc" id="L279">            deckScreen.addRemoveButton(buttonID, deck.getNext());</span>
+
+            // Redraw deckscreen
+<span class="fc" id="L282">            deckScreen.revalidate();</span>
+<span class="fc" id="L283">            deckScreen.repaint();</span>
+        }
+        
+<span class="fc" id="L286">        return deck;</span>
+    }
+    
+    // Remove function
+    public static Deck remove(JButton button) {
+<span class="nc" id="L291">        String buttonID = button.getName();</span>
+        
+<span class="nc" id="L293">        String removeTrue = deck.remove(buttonID);</span>
+        
+        // If remove was successful from deck
+<span class="nc bnc" id="L296" title="All 2 branches missed.">        if(removeTrue != deck.cannotRemove()) {</span>
+            // Reset deckscreen
+<span class="nc" id="L298">            resetDeckScreen();</span>
+            // Go through deck and redraw all cards
+<span class="nc bnc" id="L300" title="All 2 branches missed.">            for(int i = 0; i &lt; deck.size(); i++) {</span>
+<span class="nc" id="L301">                String newID = deck.get(i);</span>
+<span class="nc bnc" id="L302" title="All 2 branches missed.">                if(newID != null) {</span>
+                    // Look for card in card collection
+<span class="nc" id="L304">                    String newName = cards.get(newID).getName();</span>
+
+<span class="nc" id="L306">                    deckScreen.addCardLabel(newID, newName, i);</span>
+<span class="nc" id="L307">                    deckScreen.addRemoveButton(newID, i);</span>
+                }
+            }
+            
+            // Repaint deckscreen with changes
+<span class="nc" id="L312">            deckScreen.revalidate();</span>
+<span class="nc" id="L313">            deckScreen.repaint();</span>
+        }
+        
+<span class="nc" id="L316">        return deck;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.4.201502262128</span></div></body></html>

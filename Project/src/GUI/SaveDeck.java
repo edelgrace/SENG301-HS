@@ -172,7 +172,7 @@ public class SaveDeck extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        Controller.back();
+        Main.back();
     }            
     
     private void Save1ActionPerformed(java.awt.event.ActionEvent evt) {                                      

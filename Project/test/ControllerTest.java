@@ -9,6 +9,32 @@ import org.junit.*;
 public class ControllerTest {
     private final int deckSize = 30;
     
+    /* MAIN MENU */
+    
+    @Test
+    public void Test_MainMenu() {
+        // Call main menu
+        JFrame aFrame = Main.mainMenu();
+        
+        // Assertion
+        assertTrue(aFrame instanceof MainMenu);
+    }
+    
+    /* NEW DECK */
+    
+    @Test
+    public void Test_NewDeck() {
+        // Create new deck via controller
+        String[] aDeck = Main.newDeck().toArray();
+        
+        // Expected
+        Deck expectedDeck = new Deck();
+        String[] expected = expectedDeck.toArray();
+        
+        // Assertions
+        assertArrayEquals("New deck was not intialized properly.", expected, aDeck);
+    }
+    
     /* CHOOSING A CLASS */
     
     @Test
@@ -16,7 +42,7 @@ public class ControllerTest {
         // Choose a druid
         CardCollection allCards = new CardCollection();
         
-        Card[] classCards = Controller.chooseClass("Druid");
+        Card[] classCards = Main.chooseClass("Druid");
         
         // Expected
         Card[] expected = new Card[allCards.getSize() - 85];
@@ -30,7 +56,7 @@ public class ControllerTest {
         // Choose a hunter
         CardCollection allCards = new CardCollection();
         
-        Card[] classCards = Controller.chooseClass("Hunter");
+        Card[] classCards = Main.chooseClass("Hunter");
         
         // Expected
         Card[] expected = new Card[allCards.getSize() - 85];
@@ -44,7 +70,7 @@ public class ControllerTest {
         // Choose a mage
         CardCollection allCards = new CardCollection();
         
-        Card[] classCards = Controller.chooseClass("Mage");
+        Card[] classCards = Main.chooseClass("Mage");
         
         // Expected
         Card[] expected = new Card[allCards.getSize() - 85];
@@ -58,7 +84,7 @@ public class ControllerTest {
         // Choose a paladin
         CardCollection allCards = new CardCollection();
         
-        Card[] classCards = Controller.chooseClass("Paladin");
+        Card[] classCards = Main.chooseClass("Paladin");
         
         // Expected
         Card[] expected = new Card[allCards.getSize() - 85];
@@ -72,7 +98,7 @@ public class ControllerTest {
         // Choose a priest
         CardCollection allCards = new CardCollection();
         
-        Card[] classCards = Controller.chooseClass("Priest");
+        Card[] classCards = Main.chooseClass("Priest");
         
         // Expected
         Card[] expected = new Card[allCards.getSize() - 85];
@@ -86,7 +112,7 @@ public class ControllerTest {
         // Choose a shaman
         CardCollection allCards = new CardCollection();
         
-        Card[] classCards = Controller.chooseClass("Shaman");
+        Card[] classCards = Main.chooseClass("Shaman");
         
         // Expected
         Card[] expected = new Card[allCards.getSize() - 84];
@@ -100,7 +126,7 @@ public class ControllerTest {
         // Choose a warrior
         CardCollection allCards = new CardCollection();
         
-        Card[] classCards = Controller.chooseClass("Warrior");
+        Card[] classCards = Main.chooseClass("Warrior");
         
         // Expected
         Card[] expected = new Card[allCards.getSize() - 85];
@@ -114,7 +140,7 @@ public class ControllerTest {
         // Choose a warlock
         CardCollection allCards = new CardCollection();
         
-        Card[] classCards = Controller.chooseClass("Warlock");
+        Card[] classCards = Main.chooseClass("Warlock");
         
         // Expected
         Card[] expected = new Card[allCards.getSize() - 85];
@@ -123,48 +149,51 @@ public class ControllerTest {
         assertEquals("Card collection is not as expected for warlock class.", expected.length, classCards.length);
     }
     
+    /* DISPLAYING */
+    
     @Test
-    public void Test_DisplayListNoCards() {
-        // Create a list with null values and attempt to display them
-        Card[] cards = new Card[deckSize];
+    public void Test_DisplayNullList() {
+        // Create a null list
+        String[] cards = null;
         
-        for(int i = 0; i < deckSize; i++) {
-            cards[i] = null;
-        }
-        
-        Card[] cardDisplay = Controller.displayCards(cards);
+        String[] cardDisplay = Main.displayCards(cards);
         
         // Expected
-        String[] expected = new String[30];
+        String[] expected = new String[1];
         expected[0] = "No cards to be displayed.";
         
         // Assertion
         assertArrayEquals("Cannot properly handle displaying a list of null card.", expected, cardDisplay);
     }
     
-    /* NEW DECK */
     @Test
-    public void Test_NewDeck() {
-        // Create new deck via controller
-        String[] aDeck = Controller.newDeck().toArray();
+    public void Test_DisplayNullListCards() {
+        // Create a null list
+        Card[] cards = null;
+        
+        Card[] cardDisplay = Main.displayCards(cards);
         
         // Expected
-        Deck expectedDeck = new Deck();
-        String[] expected = expectedDeck.toArray();
-        
-        // Assertions
-        assertArrayEquals("New deck was not intialized properly.", expected, aDeck);
-    }
-    
-    /* MAIN MENU */
-    
-    @Test
-    public void Test_MainMenu() {
-        // Call main menu
-        JFrame aFrame = Controller.mainMenu();
+        Card[] expected = null;
         
         // Assertion
-        assertTrue(aFrame instanceof MainMenu);
+        assertArrayEquals("Cannot properly handle displaying a list of null card.", expected, cardDisplay);
+    }
+    
+    @Test
+    public void Test_DisplayCard() {
+        // Create a null list
+        Card[] cards = new Card[1];
+        Card aCard = new Card();
+        cards[0] = aCard;
+        
+        Card[] cardDisplay = Main.displayCards(cards);
+        
+        // Expected
+        Card[] expected = cards;
+        
+        // Assertion
+        assertArrayEquals("Cannot properly handle displaying a list of one card.", expected, cardDisplay);
     }
     
     /* DISPLAY DECK */
@@ -212,7 +241,7 @@ public class ControllerTest {
         JButton aButton = new JButton();
         String cardID = "AB1_234";
         aButton.setName(cardID);
-        Deck aDeck = Controller.add(aButton);
+        Deck aDeck = Main.add(aButton);
         
         // Expected deck
         int expectedSize = 30;    
@@ -222,5 +251,40 @@ public class ControllerTest {
         // Assertions
         assertArrayEquals("Deck is empty.", expectedList, aDeck.toArray());
         assertEquals("Size of deck does not equal 30.", expectedSize, aDeck.size());
+    }
+    
+    /* SEARCH */
+    
+    @Test public void Test_ControllerSearch() {
+        // Controller search
+        CardCollection cards = new CardCollection();
+        JTextField field = new JTextField("Swamp");
+        String[] results = Main.search(field);
+        
+        // Expected
+        String[] expected = new String[67];
+        Card aCard = new Card("Acidic Swamp Ooze", 2, null, 3, 2, null, "EX1_066");
+        expected[0] = aCard.getID();
+        
+        // Assert
+        assertArrayEquals("Search through controller does not work as expected.", expected, results);
+    }
+    
+    @Test
+    public void Test_LoadDeckScreen() {
+        // Get load deck screen
+        JFrame aFrame = Main.loadDeck();
+        
+        // Assert
+        assertTrue(aFrame instanceof LoadDeck);
+    }
+    
+    @Test
+    public void Test_SaveDeckScreen() {
+        // Get load deck screen
+        JFrame aFrame = Main.saveDeck();
+        
+        // Assert
+        assertTrue(aFrame instanceof SaveDeck);
     }
 }

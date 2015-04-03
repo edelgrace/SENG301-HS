@@ -13,122 +13,133 @@ public class Card {
     private String id;
     
     /* CONSTRUCTORS */
+
+    // Constructor for a blank, default card
+<span class="fc" id="L18">    public Card() {</span>
+<span class="fc" id="L19">        name = null;</span>
+<span class="fc" id="L20">        cost = 0;</span>
+<span class="fc" id="L21">        playerClass = null;</span>
+<span class="fc" id="L22">        attack = 0;</span>
+<span class="fc" id="L23">        health = 0;</span>
+<span class="fc" id="L24">        durability = 0;</span>
+<span class="fc" id="L25">        id = null;</span>
+<span class="fc" id="L26">    }</span>
     
-<span class="fc" id="L17">    public Card() {</span>
-<span class="fc" id="L18">        name = null;</span>
-<span class="fc" id="L19">        cost = 0;</span>
-<span class="fc" id="L20">        playerClass = null;</span>
-<span class="fc" id="L21">        attack = 0;</span>
-<span class="fc" id="L22">        health = 0;</span>
-<span class="fc" id="L23">        durability = 0;</span>
-<span class="fc" id="L24">        id = null;</span>
-<span class="fc" id="L25">    }</span>
-    
+    // Constructor for creating a card with attributes
     public Card(Object newName, Object newCost, Object newClass, Object newAttack, Object newHealth, Object newDurability, Object newID)
-<span class="fc" id="L28">    {</span>
+<span class="fc" id="L30">    {</span>
         // Change name
-<span class="fc bfc" id="L30" title="All 2 branches covered.">        if(newName != null) {  name = (String) newName; }</span>
-<span class="fc" id="L31">        else { return; }</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        if(newName != null) {  name = (String) newName; }</span>
+<span class="fc" id="L33">        else { return; }</span>
         
         // Change cost
-<span class="fc bfc" id="L34" title="All 2 branches covered.">        if(newCost != null) {</span>
-<span class="fc bfc" id="L35" title="All 2 branches covered.">            if(newCost instanceof Long) { cost = (int) (long) newCost; }</span>
-<span class="fc" id="L36">            else { cost = (int) newCost; }</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        if(newCost != null) {</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">            if(newCost instanceof Long) { cost = (int) (long) newCost; }</span>
+<span class="fc" id="L38">            else { cost = (int) newCost; }</span>
         }
-<span class="fc" id="L38">        else { cost = 0; }</span>
+<span class="fc" id="L40">        else { cost = 0; }</span>
         
         // Change class
-<span class="fc bfc" id="L41" title="All 2 branches covered.">        if(newClass != null) {  playerClass = (String) newClass; }</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">        if(newClass != null) {  playerClass = (String) newClass; }</span>
         
         // Change attack
-<span class="fc bfc" id="L44" title="All 2 branches covered.">        if(newAttack != null) {</span>
-<span class="fc bfc" id="L45" title="All 2 branches covered.">            if(newAttack instanceof Long) { attack = (int) (long) newAttack; }</span>
-<span class="fc" id="L46">            else { attack = (int) newCost; }</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        if(newAttack != null) {</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">            if(newAttack instanceof Long) { attack = (int) (long) newAttack; }</span>
+<span class="fc" id="L48">            else { attack = (int) newCost; }</span>
         }
-<span class="fc" id="L48">        else { attack = 0; }</span>
+<span class="fc" id="L50">        else { attack = 0; }</span>
         
         // Change health
-<span class="fc bfc" id="L51" title="All 2 branches covered.">        if(newHealth != null) {</span>
-<span class="fc bfc" id="L52" title="All 2 branches covered.">            if(newHealth instanceof Long) { health = (int) (long) newHealth; }</span>
-<span class="fc" id="L53">            else { health = (int) newCost; }</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">        if(newHealth != null) {</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">            if(newHealth instanceof Long) { health = (int) (long) newHealth; }</span>
+<span class="fc" id="L55">            else { health = (int) newCost; }</span>
         }
-<span class="fc" id="L55">        else { health = 0; }</span>
+<span class="fc" id="L57">        else { health = 0; }</span>
         
         // Change durability
-<span class="fc bfc" id="L58" title="All 2 branches covered.">        if(newDurability != null) {</span>
-<span class="fc bfc" id="L59" title="All 2 branches covered.">            if(newDurability instanceof Long) { durability = (int) (long) newDurability; }</span>
-<span class="fc" id="L60">            else { durability = (int) newCost; }</span>
+<span class="fc bfc" id="L60" title="All 2 branches covered.">        if(newDurability != null) {</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">            if(newDurability instanceof Long) { durability = (int) (long) newDurability; }</span>
+<span class="fc" id="L62">            else { durability = (int) newCost; }</span>
         }
-<span class="fc" id="L62">        else { durability = 0; }</span>
+<span class="fc" id="L64">        else { durability = 0; }</span>
         
         // Change ID
-<span class="pc bpc" id="L65" title="1 of 2 branches missed.">        if(newID != null) {  id = (String) newID; }</span>
-<span class="fc" id="L66">    }</span>
+<span class="pc bpc" id="L67" title="1 of 2 branches missed.">        if(newID != null) {  id = (String) newID; }</span>
+<span class="fc" id="L68">    }</span>
     
     /* GETTERS */
     
+    // Get name of card
     public String getName() {
-<span class="fc" id="L71">        return name;</span>
+<span class="fc" id="L74">        return name;</span>
     }
     
+    // Get cost of card
     public int getCost() {
-<span class="fc" id="L75">        return cost;</span>
+<span class="fc" id="L79">        return cost;</span>
     }
     
+    // Get player class
     public String getPlayerClass() {
-<span class="fc" id="L79">        return playerClass;</span>
+<span class="fc" id="L84">        return playerClass;</span>
     }
     
+    // Get attack
     public int getAttack() {
-<span class="fc" id="L83">        return attack;</span>
+<span class="fc" id="L89">        return attack;</span>
     }
     
+    // Get health
     public int getHealth() {
-<span class="fc" id="L87">        return health;</span>
+<span class="fc" id="L94">        return health;</span>
     }
     
+    // Get durability
     public int getDurability() {
-<span class="fc" id="L91">        return durability;</span>
+<span class="fc" id="L99">        return durability;</span>
     }
     
+    // Get ID
     public String getID() {
-<span class="fc" id="L95">        return id;</span>
+<span class="fc" id="L104">        return id;</span>
     }
     
     /* CONVERSION METHODS */
     
+    // Convert card into an array
     public Object[] toArray() {
-<span class="fc" id="L101">        Object[] array = new Object[7];</span>
+<span class="fc" id="L111">        Object[] array = new Object[7];</span>
         
-<span class="fc" id="L103">        array[0] = name;</span>
-<span class="fc" id="L104">        array[1] = cost;</span>
-<span class="fc" id="L105">        array[2] = playerClass;</span>
-<span class="fc" id="L106">        array[3] = attack;</span>
-<span class="fc" id="L107">        array[4] = health;</span>
-<span class="fc" id="L108">        array[5] = durability;</span>
-<span class="fc" id="L109">        array[6] = id;</span>
+<span class="fc" id="L113">        array[0] = name;</span>
+<span class="fc" id="L114">        array[1] = cost;</span>
+<span class="fc" id="L115">        array[2] = playerClass;</span>
+<span class="fc" id="L116">        array[3] = attack;</span>
+<span class="fc" id="L117">        array[4] = health;</span>
+<span class="fc" id="L118">        array[5] = durability;</span>
+<span class="fc" id="L119">        array[6] = id;</span>
         
-<span class="fc" id="L111">        return array;</span>
+<span class="fc" id="L121">        return array;</span>
     }
     
+    // convert card to a string
     public String toString() {
-<span class="fc" id="L115">        String string = &quot;&quot;;</span>
+<span class="fc" id="L126">        String string = &quot;&quot;;</span>
         
-<span class="fc bfc" id="L117" title="All 2 branches covered.">        if(name != null) { string += name + &quot;, &quot;; }</span>
-<span class="fc" id="L118">        else { string += &quot; , &quot;; }</span>
+<span class="fc bfc" id="L128" title="All 2 branches covered.">        if(name != null) { string += name + &quot;, &quot;; }</span>
+<span class="fc" id="L129">        else { string += &quot; , &quot;; }</span>
         
-<span class="fc" id="L120">        string += cost + &quot;, &quot;;</span>
+<span class="fc" id="L131">        string += cost + &quot;, &quot;;</span>
         
-<span class="fc bfc" id="L122" title="All 2 branches covered.">        if(playerClass != null) { string += playerClass + &quot;, &quot;; }</span>
-<span class="fc" id="L123">        else { string += &quot;, &quot;; }</span>
+<span class="fc bfc" id="L133" title="All 2 branches covered.">        if(playerClass != null) { string += playerClass + &quot;, &quot;; }</span>
+<span class="fc" id="L134">        else { string += &quot;, &quot;; }</span>
         
-<span class="fc" id="L125">        string += attack + &quot;, &quot;;</span>
-<span class="fc" id="L126">        string += health + &quot;, &quot;;</span>
-<span class="fc" id="L127">        string += durability + &quot;, &quot;;</span>
+<span class="fc" id="L136">        string += attack + &quot;, &quot;;</span>
+<span class="fc" id="L137">        string += health + &quot;, &quot;;</span>
+<span class="fc" id="L138">        string += durability + &quot;, &quot;;</span>
         
-<span class="fc bfc" id="L129" title="All 2 branches covered.">        if(id != null) { string += id; }</span>
+<span class="fc bfc" id="L140" title="All 2 branches covered.">        if(id != null) { string += id; }</span>
         
-<span class="fc" id="L131">        return string;</span>
+<span class="fc" id="L142">        return string;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.4.201502262128</span></div></body></html>

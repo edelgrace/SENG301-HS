@@ -217,43 +217,43 @@ public class ChooseClass extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        Controller.back();
+        Main.back();
     }                                     
 
     private void DruidActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        Controller.chooseClass("Druid");
+        Main.chooseClass("Druid");
     }                                     
 
     private void HunterActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        Controller.chooseClass("Hunter");
+        Main.chooseClass("Hunter");
     }                                     
 
     private void MageActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        Controller.chooseClass("Mage");
+        Main.chooseClass("Mage");
     }                                     
 
     private void PaladinActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        Controller.chooseClass("Paladin");
+        Main.chooseClass("Paladin");
     }                                    
 
     private void PriestActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        Controller.chooseClass("Priest");
+        Main.chooseClass("Priest");
     }                                     
 
     private void RogueActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        Controller.chooseClass("Rogue");
+        Main.chooseClass("Rogue");
     }                                     
 
     private void ShamanActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        Controller.chooseClass("Shaman");
+        Main.chooseClass("Shaman");
     }                                     
 
     private void WarriorActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        Controller.chooseClass("Warrior");
+        Main.chooseClass("Warrior");
     }                                     
 
     private void WarlockActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        Controller.chooseClass("Warlock");
+        Main.chooseClass("Warlock");
     }                                  
 
     // Variables declaration - do not modify                     

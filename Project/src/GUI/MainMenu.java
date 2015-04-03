@@ -87,11 +87,11 @@ public class MainMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void NewDeckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewDeckActionPerformed
-        Controller.newDeck();
+        Main.newDeck();
     }//GEN-LAST:event_NewDeckActionPerformed
 
     private void LoadDeckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoadDeckActionPerformed
-        Controller.loadDeck();
+        Main.loadDeck();
     }//GEN-LAST:event_LoadDeckActionPerformed
 
     private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed

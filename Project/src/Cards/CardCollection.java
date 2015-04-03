@@ -170,22 +170,19 @@ public class CardCollection {
             
             if(aCard != null) {
                 String aCardName = aCard.getName();
+                String aCardID = aCard.getID();
 
                 if(aCardName.toLowerCase().contains(searchTerm)) {
-                    result[pointer] = aCardName;
+                    result[pointer] = aCardID;
                     pointer++;
                 }
             }
         }
         
-        for(int i = 0; i < cardListSize; i++) {
-            if(result[i] != null) {
-                return result;
-            }
+        if(pointer == 0) {
+            result = new String[1];
+            result[0] = "No results.";
         }
-        
-        result = new String[1];
-        result[0] = "No results.";
         
         return result;
     }
